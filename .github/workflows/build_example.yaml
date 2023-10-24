@@ -21,11 +21,11 @@ jobs:
 
     - name: Build Hugo site
       run: |
-        REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}
+        repo_name=$(basename ${{ github.repository }})
         cd exampleSite && \
         hugo \
           --themesDir ../.. \
-          --baseURL https://${GITHUB_REPOSITORY_OWNER}.github.io/${REPO_NAME}/
+          --baseURL https://${{ github.repository }}.github.io/${repo_name}/
 
     - name: Deploy production 🚀
       uses: JamesIves/github-pages-deploy-action@v4
