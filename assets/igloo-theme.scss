@@ -1,0 +1,34 @@
+
+$global-background: lighten($primary, 65%);
+$global-primary-background: lighten($primary, 50%);
+$global-secondary-background: $secondary;
+
+$global-emphasis-color: darken($primary, 20%);
+$global-color: darken($primary, 60%);
+$global-inverse-color: lighten($secondary, 40%); 
+
+$global-muted-background: desaturate(lighten($global-secondary-background, 75%), 10%);
+$global-muted-color: lighten($global-secondary-background, 40%);
+
+$global-border: lighten($primary, 10%);
+
+$global-link-color: $global-secondary-background;
+$global-link-hover-color: darken($global-link-color, 10%);
+
+$subnav-item-color: $global-emphasis-color;
+$dropdown-color: $subnav-item-color;
+$label-background: $secondary;
+$label-color: lighten($secondary, 40%);
+
+$base-ins-background: lighten($global-background, 20%);
+$base-mark-background: lighten($global-background, 20%);
+$base-selection-background: $global-primary-background;
+
+$table-row-active-background: lighten($global-background, 20%);
+$tooltip-background: $global-background;
+
+$box-shadow-bottom-background: darken($primary, 20%);
+$global-small-box-shadow: 0 2px 8px transparentize($box-shadow-bottom-background, 0.01);
+$global-medium-box-shadow: 0 5px 15px transparentize($box-shadow-bottom-background, 0.8);
+$global-large-box-shadow: 0 14px 25px transparentize($box-shadow-bottom-background, 0.16);
+$global-xlarge-box-shadow: 0 28px 50px transparentize($box-shadow-bottom-background, 0.16);

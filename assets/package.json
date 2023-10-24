@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "tachyons-sass": "^4.9.5",
+    "uikit": "^3.17.4"
+  }
+}
