@@ -1,13 +1,12 @@
 # Theme config.
 baseURL = "."
 languageCode = "en-us"
+theme = "igloo"
 title = "Igloo"
 
-theme                   = "igloo"
 enforce_ssl             = true
 builddrafts             = false               # Include pages with draft status of true
 canonifyurls            = true                # Turns relative urls into absolute urls
-
 
 [[menu.main]]
    name    = "Home"
