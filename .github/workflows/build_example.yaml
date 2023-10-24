@@ -21,7 +21,7 @@ jobs:
     - name: Build Hugo site
       run: |
         cd exampleSite
-        hugo --theme igloo --themesDir ../../  # Adjust the path to your exampleSite folder
+        hugo --theme hugo-igloo --themesDir ../../  # Adjust the path to your exampleSite folder
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
