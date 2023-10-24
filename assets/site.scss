@@ -13,8 +13,10 @@
 $size: 300px;  // size
 $margin: 4px;  // margin
 
+
 .uk-navbar-container {
   border-bottom: 1px solid $primary;
+  letter-spacing: .1rem;
 }
 
 .image-shape {
@@ -145,6 +147,7 @@ $margin: 4px;  // margin
   background-color: darken($primary, 25%);
   overflow: hidden;
   h1 {
+    margin-top: -15px;
     font-size : 12rem;
     font-weight : 800;
     text-transform : uppercase;
@@ -182,32 +185,40 @@ $margin: 4px;  // margin
 
 .home{
   height: 90vh !important;
-  color : lighten(desaturate($primary, 25%), 20%);
 
   h1 {
+    margin-top: 20px;
     font-size : 6rem;
     font-weight : 600;
+    letter-spacing: .5rem;
     text-transform : none;
     color : lighten(desaturate($primary, 25%), 20%);
   }
-  p {
+  h2 {
     font-size : 2rem;
     font-weight : 400;
+    letter-spacing: .3rem;
+    color : lighten(desaturate($primary, 25%), 20%);
   }
   @media (max-width: $breakpoint-medium) {
-    height: 92vh !important;
 
     h1 {
       font-size : 4rem;
     }
   }
-  p {
+  h2 {
     font-size : 1.5rem;
   }
 }
 
 .tags {
   background-color: $secondary;
+  color: lighten($secondary, 60%);
+  &:hover{
+    background-color: lighten($secondary, 10%);
+    color: lighten($secondary, 90%);
+    text-decoration: none;
+  }
   .counter{
     top: -8px;
     font-size: 1rem;

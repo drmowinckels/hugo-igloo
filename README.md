@@ -4,6 +4,9 @@
 
 This is a template for creating a website theme for the [Hugo](https://gohugo.io/) static site generator.
 
+![Alt text](images/landing.png)
+![Alt text](images/blog.png)
+
 ## Getting Started
 
 To get started, clone this repository and modify the files in the `layouts` and `static` directories to create your own custom theme.
@@ -14,7 +17,7 @@ To use your custom theme with Hugo, copy the theme directory to the `themes` dir
 
 ## Contributing
 
-If you find a bug or have a feature request, please open an issue on the [GitHub repository](https://github.com/your-username/hugo-theme-template). Pull requests are also welcome!
+If you find a bug or have a feature request, please open an issue on the [GitHub repository](https://github.com/drmowinckels/hugo-igloo). Pull requests are also welcome!
 
 ## License
 

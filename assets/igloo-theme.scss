@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Space+Mono:wght@400;700&display=swap');
+$base-body-font-family: 'Karla', sans-serif !default;
+$base-heading-font-family: 'Cormorant Garamond', serif !default;
+$base-code-font-family: 'Space Mono', monospace !default;
+$navbar-nav-item-font-family: $base-heading-font-family !default;
+$global-font-size: 20px !default;
+
 
 $global-background: lighten($primary, 65%);
 $global-primary-background: lighten($primary, 50%);

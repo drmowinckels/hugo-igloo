@@ -1,8 +1,10 @@
 {{ define "main" }}
     <article class="uk-article">
         <h1 class="uk-article-title">{{ .Title }}</h1>
-        <p class="uk-article-meta">
-            {{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}
+        <div class="uk-article-meta">
+            <h3 class="uk-margin-top-small">
+                {{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}
+            </h3>
             {{ with .GetTerms "tags" }}
                 <div class="uk-flex uk-flex-wrap uk-flex-right">
                     {{ range . }} 
@@ -19,7 +21,7 @@
                     {{ end }}
                 </div>
             {{ end }}
-        </p>
+        </div>
         {{ .Content }}
     </article>
     <!-- End post content -->
