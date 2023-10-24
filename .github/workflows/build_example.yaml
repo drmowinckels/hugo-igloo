@@ -21,8 +21,7 @@ jobs:
 
     - name: Build Hugo site
       run: |
-        cd exampleSite 
-        HUGO_THEME="hugo-igloo" 
+        cd exampleSite && \
         hugo --themesDir ../..
 
     - name: Deploy to GitHub Pages

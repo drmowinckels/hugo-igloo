@@ -1,7 +1,7 @@
 # Theme config.
 baseURL = "."
 languageCode = "en-us"
-theme = "igloo"
+theme = "hugo-igloo"
 title = "Igloo"
 
 enforce_ssl             = true
