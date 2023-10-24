@@ -19,15 +19,22 @@ jobs:
         hugo-version: '0.117.0' 
         extended: true
 
+    - name: Extract GitHub Pages link
+      run: |
+        repo_fullname="${{ github.repository }}"
+        owner=$(echo $repo_fullname | sed -n 's/^\(.*\)\/.*/\1/p')
+        repo_name=$(echo $repo_fullname | sed -n 's/.*\/\([^/]*\)$/\1/p')
+        github_pages_link="https://$owner.github.io/$repo_name/"
+        echo "GitHub Pages Link: $github_pages_link"
+
     - name: Build Hugo site
       env:
         repo_name: $(basename ${{ github.repository }})
-        repo_owne: ${{ github.repository_owner }}
       run: |
         cd exampleSite && \
         hugo \
           --themesDir ../.. \
-          --baseURL https://${{ env.repo_owne }}.github.io/${{ env.repo_name }}/
+          --baseURL https://${{ github.repository_owner }}.github.io/${{ env.repo_name }}/
 
     - name: Deploy production 🚀
       uses: JamesIves/github-pages-deploy-action@v4
