@@ -25,7 +25,7 @@ jobs:
         cd exampleSite && \
         hugo \
           --themesDir ../.. \
-          --baseURL https://$GITHUB_REPOSITORY_OWNER.github.io/$REPO_NAME/
+          --baseURL https://${GITHUB_REPOSITORY_OWNER}.github.io/${REPO_NAME}/
 
     - name: Deploy production 🚀
       uses: JamesIves/github-pages-deploy-action@v4
