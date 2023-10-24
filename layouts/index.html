@@ -19,7 +19,7 @@
                 <h1>Blog</h1>
             </div>
         </div>
-        <div class="uk-container uk-container-small" style="border: 1px solid red;">
+        <div class="uk-container uk-container-small">
             <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column  uk-margin-small">
                 {{- range ( where site.RegularPages "Section" "blog" | first 1 ) }}
                     {{ partial "cards.html" . }}

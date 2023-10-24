@@ -1,14 +1,105 @@
 # Theme config.
-baseURL = "http://example.org/"
+baseURL = "."
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Igloo"
+
+theme                   = "igloo"
+enforce_ssl             = true
+builddrafts             = false               # Include pages with draft status of true
+canonifyurls            = true                # Turns relative urls into absolute urls
+
+
+[[menu.main]]
+   name    = "Home"
+   url     = ""
+   weight  = 1
+[[menu.main]]
+   name    = "About"
+   url     = "about"
+   weight  = 2
+[[menu.main]]
+   name    = "Blog"
+   url     = "blog"
+   weight  = 4
+[[menu.main]]
+   name    = "Contact"
+   url     = "#contact"
+   weight  = 6
+
+# We only use tag as a taxonomies
+# You can add more by yourself
+[taxonomies]
+  tag = "tags"
+  category = "categories"
 
 [params]
-# square, rabbet, bevel
-# hexagon, octagon,
-thumbShape = "hexagon"
+    # square, rabbet, bevel
+    # hexagon, octagon,
+    thumbShape = "hexagon"
 
-# icicle, lollipop, mint,
-# moss, paper, plum, poppy,
-# violet, water
-theme = "icicle"
+    # icicle, lollipop, mint,
+    # moss, paper, plum, poppy,
+    # violet, water
+    theme = "icicle"
+
+    favicon                      = "/img/fav.ico.png"      # Path to favicon file
+    logo                         = "/images/theme.png"
+    logo_size                    = "50%"
+    subtitle                     = "a frozen experience"
+    banner                       = "/img/profile_orig.png"
+    showRSSButton                = false                   # Show rss button in navigation
+    dateFormat                   = "Jan 2, 2006"
+    customCSS                    = []   # Include custom css files placed under assets/
+
+    [params.analytics]
+    [params.analytics.plausible]
+        domain = ""
+
+    [params.blog]
+        citation = true
+
+    [params.giscus]
+        repo = ""
+        repo_id = ""
+        category = "Comments"
+        category_id = ""
+        mapping = "pathname"
+        reactions_enabled = "1"
+        emit_metadata = "0"
+        #theme = "/css/giscus.css"
+        theme = "light"
+        lang = "en"
+
+    # Social icons appear in introduction and contact section. Add as many more as you like.
+    # Icon pack "fab" includes social network icons, see: https://fontawesome.com/icons?d=gallery&s=brands&m=free
+    # Icon pack "fas" includes solid style icons, see: https://fontawesome.com/icons?d=gallery&s=solid&m=free
+    [[params.social]]
+        url   = ""
+        icon  = "mastodon" # icon name without the 'fa-'
+        icon_pack = "fab"
+    [[params.social]]
+        url   = ""
+        icon  = "twitter-square" # icon name without the 'fa-'
+        icon_pack = "fab"
+    [[params.social]]
+        url   = ""
+        icon  = "github-square" # icon name without the 'fa-'
+        icon_pack = "fab"
+    [[params.social]]
+        url   = ""
+        icon  = "linkedin" # icon name without the 'fa-'
+        icon_pack = "fab"
+
+    [[params.social]]
+        url   = ""
+        icon  = "stack-overflow" # icon name without the 'fa-'
+        icon_pack = "fab"
+    [[params.social]]
+        url   = ""
+        icon  = "orcid" # icon name without the 'fa-'
+        icon_pack = "fa-brands"
+    [[params.social]]
+        url   = ""
+        icon  = "researchgate" # icon name without the 'fa-'
+        icon_pack = "fab"
+
