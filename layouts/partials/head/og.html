@@ -1,10 +1,28 @@
-<meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ site.Title }}" />
-<meta property="og:description" content="{{ .Params.subtitle }}" />
+
+  <!-- HTML Meta Tags -->
+  <title>Igloo</title>
+  <meta name="description" content="a frozen experience">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="{{ site.BaseURL }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ site.Title }}">
+  <meta property="og:description" content="{{ .Params.subtitle }}">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="{{ site.BaseURL }}">
+  <meta name="twitter:title" content="Igloo">
+  <meta name="twitter:description" content="{{ .Params.subtitle }}">
+
 
 {{ if isset .Params "image" }}
     {{ $image := .Resources.Get .Params.image }}
     <meta property="og:image" content="{{ $image.Permalink | absURL }}" />
+    <meta name="twitter:image" content="{{ $image.Permalink | absURL }}">
 {{ else }}
     <!-- Use a default OG image -->
     <meta property="og:image" content="{{ .Site.Params.logo | absURL }}" />
+    <meta name="twitter:image" content="{{ .Site.Params.logo| absURL }}">
+
 {{ end }}
