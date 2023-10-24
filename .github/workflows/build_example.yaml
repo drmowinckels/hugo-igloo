@@ -24,8 +24,8 @@ jobs:
         cd exampleSite && \
         hugo --themesDir ../..
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Deploy production 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        personal_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./exampleSite/public  # Adjust the path to your public folder
+        branch: gh-pages
+        folder: ./exampleSite/public
