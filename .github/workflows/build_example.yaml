@@ -16,12 +16,14 @@ jobs:
     - name: Set up Hugo
       uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: '0.117.0'  # Specify your desired Hugo version
+        hugo-version: '0.117.0' 
+        extended: true
 
     - name: Build Hugo site
       run: |
-        cd exampleSite
-        hugo --theme hugo-igloo --themesDir ../../  # Adjust the path to your exampleSite folder
+        cd exampleSite 
+        HUGO_THEME="hugo-theme-introduction" 
+        hugo --themesDir ../.. -v
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
