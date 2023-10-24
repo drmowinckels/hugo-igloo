@@ -25,16 +25,14 @@ jobs:
         owner=$(echo $repo_fullname | sed -n 's/^\(.*\)\/.*/\1/p')
         repo_name=$(echo $repo_fullname | sed -n 's/.*\/\([^/]*\)$/\1/p')
         github_pages_link="https://$owner.github.io/$repo_name/"
-        echo "GitHub Pages Link: $github_pages_link"
+        echo "gh-pages=$github_pages_link" >> $GITHUB_ENV
 
     - name: Build Hugo site
-      env:
-        repo_name: $(basename ${{ github.repository }})
       run: |
         cd exampleSite && \
         hugo \
           --themesDir ../.. \
-          --baseURL https://${{ github.repository_owner }}.github.io/${{ env.repo_name }}/
+          --baseURL ${{ env.gh-pages }}
 
     - name: Deploy production 🚀
       uses: JamesIves/github-pages-deploy-action@v4
