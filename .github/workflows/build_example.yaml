@@ -21,8 +21,11 @@ jobs:
 
     - name: Build Hugo site
       run: |
+        REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}
         cd exampleSite && \
-        hugo --themesDir ../..
+        hugo \
+          --themesDir ../.. \
+          --baseURL https://$GITHUB_REPOSITORY_OWNER.github.io/$REPO_NAME/
 
     - name: Deploy production 🚀
       uses: JamesIves/github-pages-deploy-action@v4
