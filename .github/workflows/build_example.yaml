@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set up Hugo
       uses: peaceiris/actions-hugo@v2
@@ -21,9 +21,9 @@ jobs:
 
     - name: Extract GitHub Pages link
       run: |
-        repo_fullname="${{ github.repository }}"
-        owner=$(echo $repo_fullname | sed -n 's/^\(.*\)\/.*/\1/p')
-        repo_name=$(echo $repo_fullname | sed -n 's/.*\/\([^/]*\)$/\1/p')
+        repo="${{ github.repository }}"
+        owner=$(echo $repo | sed -n 's/^\(.*\)\/.*/\1/p')
+        repo_name=$(echo $repo | sed -n 's/.*\/\([^/]*\)$/\1/p')
         github_pages_link="https://$owner.github.io/$repo_name/"
         echo "gh-pages=$github_pages_link" >> $GITHUB_ENV
 
