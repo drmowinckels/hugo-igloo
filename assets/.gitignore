@@ -1,6 +1,7 @@
-# ignore node modules
-node_modules/
-# except for uikit
-!node_modules/uikit/src/sass
-
+uikit/build
+uikit/src/js
+uikit/src/less
+uikit/dist/css
+uikit/tests
+uikit/*.*
 package-lock.json

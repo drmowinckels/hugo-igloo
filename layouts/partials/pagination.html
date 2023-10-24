@@ -1,0 +1,12 @@
+{{ if .Paginator.HasPrev }}
+<a class="uk-button uk-button-default" 
+    href="{{ .Paginator.Prev.URL }}">
+    Previous
+</a>
+{{ end }}
+
+{{ if .Paginator.HasNext }}
+<a class="uk-button uk-button-default uk-align-right" 
+    href="{{ .Paginator.Next.URL }}">Next
+</a>
+{{ end }}

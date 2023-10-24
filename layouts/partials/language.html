@@ -1,0 +1,16 @@
+<div class="uk-navbar-item">
+    <div class="uk-inline">
+        <button class="uk-button uk-button-default" type="button">
+            {{ with .Site.Language }}{{ .LanguageName }}{{ else }}Language{{ end }} <span uk-icon="icon: chevron-down"></span>
+        </button>
+        <div uk-dropdown="mode: click">
+            <ul class="uk-nav uk-dropdown-nav">
+                {{ range .Site.Languages }}
+                    <li>
+                        <a href="{{ .Lang }}{{ .RelPermalink }}" hreflang="{{ .Lang }}">{{ .LanguageName }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</div>

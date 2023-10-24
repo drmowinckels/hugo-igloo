@@ -1,0 +1,49 @@
+{{ $menuLen :=  len .Site.Menus.main }}
+{{ $menuSplit := div $menuLen 2 }}
+{{ $menuLen :=  sub $menuLen 1 }}
+<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+    <nav class="uk-navbar-container ">
+            <div uk-navbar>
+                <div class="uk-navbar-center">
+                {{ range $i, $el := .Site.Menus.main  }}
+                    {{ if  eq $i 0 }}
+                        <div class="uk-navbar-center-left">
+                            <ul class="uk-navbar-nav">
+                    {{ end }}
+                    {{ if eq $i $menuSplit }}
+                        {{ with $.Site.Params.logo }}
+                            <a class="uk-navbar-item uk-logo" href="{{$.Site.BaseURL }}">
+                                <img src="{{ .}}" width="40">
+                            </a>
+                        {{ end }}
+                        <div class="uk-navbar-center-right">
+                            <ul class="uk-navbar-nav"> 
+                    {{ end }}
+                    <li>
+                        <a href="{{ $el.URL | relLangURL }}" class="uk-text-emphasis">
+                            {{ $el.Name }}
+                            {{ if $el.HasChildren }}
+                            <span uk-icon="chevron-down"></span>
+                            {{ end }}
+                        </a>
+                        {{ if $el.HasChildren }}
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    {{ range $el.Children }}
+                                        <li><a href="{{ .URL | relLangURL }}">
+                                            {{ .Name }}
+                                        </a></li>
+                                    {{ end }}
+                                </ul>
+                            </div>                            
+                        {{ end }}
+                    </li>
+                    {{ if or (eq $i (sub $menuSplit 1)) (eq $i $menuLen ) }}
+                            </ul>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </nav>
+</div>

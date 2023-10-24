@@ -1,0 +1,27 @@
+{{ define "main" }}
+    <article class="uk-article">
+        <h1 class="uk-article-title">{{ .Title }}</h1>
+        <p class="uk-article-meta">
+            {{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}
+            {{ with .GetTerms "tags" }}
+                <div class="uk-flex uk-flex-wrap uk-flex-right">
+                    {{ range . }} 
+                        {{ $url := .RelPermalink }}
+                        {{ $lastFolder := last 2 (split $url "/") }}
+                        {{ $lastFolder := index $lastFolder 0 }}
+                        {{ $sect := index .Site.Taxonomies .Section }}
+                        {{ $tag := slice (index $sect $lastFolder ) }}
+                        <div class="uk-card uk-margin-left uk-margin-bottom">
+                            <a href="{{ .RelPermalink }}" class="uk-label uk-label-secondary tags" >
+                                {{ .LinkTitle }}
+                            </a>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </p>
+        {{ .Content }}
+    </article>
+    <!-- End post content -->
+    {{ partial "comments.html" . }}
+{{ end }}

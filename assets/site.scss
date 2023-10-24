@@ -2,13 +2,13 @@
 @import "igloo-theme.scss";
 
 // 2. Import default variables and available mixins.
-@import "node_modules/uikit/src/scss/variables.scss";
-@import "node_modules/uikit/src/scss/mixins.scss";
+@import "uikit/src/scss/variables.scss";
+@import "uikit/src/scss/mixins.scss";
 
 // 3. Your custom mixin overwrites.
 
 // 4. Import UIkit.
-@import "node_modules/uikit/src/scss/uikit.scss";
+@import "uikit/src/scss/uikit.scss";
 
 $size: 300px;  // size
 $margin: 4px;  // margin

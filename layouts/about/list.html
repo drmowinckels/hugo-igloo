@@ -1,0 +1,35 @@
+{{ define "main" }}
+   <!-- Sidebar -->
+   <div class="uk-width-1-4@m uk-visible@m">
+        <div class="uk-sticky" uk-sticky="bottom: #top; offset: 30;">
+            <nav id="sidebar-nav" class="uk-nav-default" uk-nav="multiple: true"></nav>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="uk-width-expand@m">
+        <main class="uk-padding uk-container">
+            <!-- Content from your Markdown or content file goes here -->
+            {{ .Content }}
+        </main>
+    </div>
+
+       <!-- JavaScript to Generate Table of Contents -->
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const content = document.querySelector(".uk-container");
+        const sidebarNav = document.querySelector("#sidebar-nav");
+        const headings = content.querySelectorAll("h2, h3, h4, h5, h6");
+
+        headings.forEach(function (heading) {
+            const link = document.createElement("a");
+            link.href = "#" + heading.id;
+            link.textContent = heading.textContent;
+            link.classList.add("uk-nav-sub");
+            link.style.paddingLeft = (heading.tagName.charAt(1) - 1) * 20 + "px"; // Indent based on heading level
+
+            sidebarNav.appendChild(link);
+        });
+    });
+</script>
+{{- end}}

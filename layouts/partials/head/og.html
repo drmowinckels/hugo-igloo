@@ -1,0 +1,10 @@
+<meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ site.Title }}" />
+<meta property="og:description" content="{{ .Params.subtitle }}" />
+
+{{ if isset .Params "image" }}
+    {{ $image := .Resources.Get .Params.image }}
+    <meta property="og:image" content="{{ $image.Permalink | absURL }}" />
+{{ else }}
+    <!-- Use a default OG image -->
+    <meta property="og:image" content="{{ .Site.Params.logo | absURL }}" />
+{{ end }}

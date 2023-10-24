@@ -1,0 +1,29 @@
+<div class="card"
+    data-tags="{{ range .Params.tags }}{{ . | urlize}} {{ end }}">
+    <div class="left image-shape">
+        <div class="border {{ .Site.Params.thumbShape }}">
+            <div class="shape {{ .Site.Params.thumbShape }}" 
+                {{ $image := .Resources.Get .Params.image }}
+                {{ $image := $image.Resize "x360" }}
+                style="background-image: url({{ $image.Permalink }});">
+            </div> 
+        </div> 
+    </div>
+    <div class="right uk-padding uk-box-shadow-large">
+        <a href="{{ .RelPermalink}}" >
+            <h1>{{ .Title }}</h1>
+        </a>
+        <hr class="uk-divider">
+        <div class="uk-grid">
+            {{ if isset .Params "date" }}
+                <div class="uk-width-1-4">
+                    <h5>{{ .Date.Format "Jan 02, 2006" }}</h5>
+                </div>
+            {{ end }}
+            <div class="uk-width-expand">
+                <p>{{ .Summary  | safeHTML }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+ 

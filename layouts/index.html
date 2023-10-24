@@ -1,0 +1,30 @@
+{{ define "main" }}
+    <div class="section uk-section uk-padding-remove-vertical">
+        <div class="banner">
+            <div class="uk-container uk-margin-left-large">
+            <h1>About me</h1>
+            </div>
+        </div>
+    </div>
+    <div class="section uk-section uk-padding-remove-vertical">
+        <div class="banner">
+            <div class="uk-container uk-margin-left-large">
+            <h1>Projects</h1>
+            </div>
+        </div>
+    </div>
+    <div class="section uk-section uk-padding-remove-vertical">
+        <div class="banner">
+            <div class="uk-container uk-margin-left-large">
+                <h1>Blog</h1>
+            </div>
+        </div>
+        <div class="uk-container uk-container-small" style="border: 1px solid red;">
+            <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column  uk-margin-small">
+                {{- range ( where site.RegularPages "Section" "blog" | first 1 ) }}
+                    {{ partial "cards.html" . }}
+                {{- end }}
+            </div>
+        </div>
+    </div>
+{{ end }}

@@ -1,0 +1,14 @@
+# Theme config.
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+
+[params]
+# square, rabbet, bevel
+# hexagon, octagon,
+thumbShape = "hexagon"
+
+# icicle, lollipop, mint,
+# moss, paper, plum, poppy,
+# violet, water
+theme = "icicle"

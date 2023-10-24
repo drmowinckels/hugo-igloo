@@ -1,0 +1,42 @@
+<!-- CSS -->  
+{{ $data := newScratch }}
+{{ $data.Set "colors" "custom.scss" }}
+
+{{ $site := resources.Get "site.scss" }}
+{{ $data.Set "themes" "" }}
+
+{{ $themes := resources.Match "themes/*" }} 
+{{ range $themes }}
+    {{ $data.Add "themes" (.Name | replaceRE "^.+/" "" | replaceRE "\\..+$" "" )}}
+{{ end }}
+{{ if in ($data.Get "themes") site.Params.theme }}
+    {{ with site.Params.theme }}
+        {{ $data.Set "colors" (printf "themes/%s.scss" .) }}
+    {{ end }}
+{{ end }}
+
+{{ $custom := resources.Get ($data.Get "colors") }}
+{{ $scss := slice $custom $site | resources.Concat "bundle.scss" }}
+
+{{ with $scss | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" 
+    integrity="{{ .Data.Integrity }}" 
+    crossorigin="anonymous">
+{{ end }}
+
+<!-- frontawesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
+
+<!-- highlight.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<!-- uikitjs -->
+{{ with resources.Get "uikit/dist/js/uikit.min.js" }}
+    <script src="{{ .RelPermalink }}"></script>
+{{ end }}
+{{ with resources.Get "uikit/dist/js/uikit-icons.min.js" }}
+    <script src="{{ .RelPermalink }}"></script>
+{{ end }}
+
