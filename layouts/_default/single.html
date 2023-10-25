@@ -1,4 +1,19 @@
 {{ define "main" }}
+{{ $data := newScratch }}
+{{ $data.Set "image" ( $.Site.Params.logo | relURL ) }}
+{{ if isset .Params "image" }}
+{{ $data.Set "image" .Params.logo}}
+
+    {{ $image := .Resources.Get .Params.image }}
+    <meta property="og:image" content="{{ $image.Permalink | absURL }}" />
+    <meta property="og:image" content="https://drmowinckels.github.io/images/theme.png">
+
+{{ else }}
+    <!-- Use a default OG image -->
+    <meta property="og:image" content="{{ .Site.Params.logo | absURL }}" />
+{{ end }}
+{{ $data.Get "image" }}
+
     <article class="uk-article">
         <h1 class="uk-article-title">{{ .Title }}</h1>
         <div class="uk-article-meta">
