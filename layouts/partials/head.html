@@ -10,7 +10,7 @@
     <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ site.Title }}</title>
   
     <!-- Meta -->
-    <meta name="theme-color" />
+    <meta name="hugo-igloo" />
   
     {{ $site_author := or site.Author.name site.Params.name site.Title }}
     <!---->
@@ -28,6 +28,8 @@
   
     {{ partial "head/og.html" . }}
     {{ partial "head/css.html" . }}
+    {{ partial "head/favico.html" . }}
+
 
     {{ if and .IsPage (not site.Params.disableHLJS) }}
     <script
@@ -59,11 +61,7 @@
     <!---->
     {{ end }}
     <!---->
-  
-    <!-- Favicon -->
-    <link rel="icon" href="{{ `favicon_io/favicon.ico` | absURL }}" />
-    <link rel="apple-touch-icon" href="{{ `favicon_io/apple-touch-icon.png` | absURL }}" />
-  
+    
     <!-- Generator -->
     {{ hugo.Generator }}
   
