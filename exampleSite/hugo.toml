@@ -5,8 +5,8 @@ title = "Igloo"
 theme = "hugo-igloo"
 
 enforce_ssl             = true
-builddrafts             = false               # Include pages with draft status of true
-canonifyurls            = true                # Turns relative urls into absolute urls
+builddrafts             = false  # Include pages with draft status of true
+canonifyurls            = true   # Turns relative urls into absolutet]
 
 [[menu.main]]
    name    = "Home"
@@ -34,22 +34,20 @@ canonifyurls            = true                # Turns relative urls into absolut
 [params]
     # square, rabbet, bevel
     # hexagon, octagon,
-    thumbShape = "hexagon"
-    favicon                      = "/img/fav.ico.png"      # Path to favicon file
-    logo                         = "/images/theme.png"
-    logo_size                    = "50%"
-    subtitle                     = "a frozen experience"
-    banner                       = "/img/profile_orig.png"
-    showRSSButton                = false                   # Show rss button in navigation
-    dateFormat                   = "Jan 2, 2006"
-    customCSS                    = []   # Include custom css files placed under assets/
-
+    thumbShape     = "hexagon"
+    favicon        = "favicon.png"      # Path to favicon file from the assets/ directory
+    logo           = "/images/theme.png"
+    subtitle       = "a frozen experience"
+    showRSSButton  = false                   # Show rss button in navigation
+    dateFormat     = "Jan 2, 2006"
+    customCSS      = []   # Include custom css files placed under assets/
 
     [params.aesthetics]
     # icicle, lollipop, mint,
     # moss, paper, plum, poppy,
     # violet, water
     design = "icicle"
+    # Or set your own custom colours
     #primary = "#ff3355"
     #secondary = "#000"
 
