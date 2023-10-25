@@ -1,8 +1,8 @@
 # Theme config.
 baseURL = "."
 languageCode = "en-us"
-theme = "hugo-igloo"
 title = "Igloo"
+theme = "hugo-igloo"
 
 enforce_ssl             = true
 builddrafts             = false               # Include pages with draft status of true
@@ -35,12 +35,6 @@ canonifyurls            = true                # Turns relative urls into absolut
     # square, rabbet, bevel
     # hexagon, octagon,
     thumbShape = "hexagon"
-
-    # icicle, lollipop, mint,
-    # moss, paper, plum, poppy,
-    # violet, water
-    theme = "icicle"
-
     favicon                      = "/img/fav.ico.png"      # Path to favicon file
     logo                         = "/images/theme.png"
     logo_size                    = "50%"
@@ -49,6 +43,15 @@ canonifyurls            = true                # Turns relative urls into absolut
     showRSSButton                = false                   # Show rss button in navigation
     dateFormat                   = "Jan 2, 2006"
     customCSS                    = []   # Include custom css files placed under assets/
+
+
+    [params.aesthetics]
+    # icicle, lollipop, mint,
+    # moss, paper, plum, poppy,
+    # violet, water
+    design = "icicle"
+    #primary = "#ff3355"
+    #secondary = "#000"
 
     [params.analytics]
     [params.analytics.plausible]

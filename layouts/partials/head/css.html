@@ -1,22 +1,11 @@
 <!-- CSS -->  
-{{ $data := newScratch }}
-{{ $data.Set "colors" "custom.scss" }}
+{{ $site := resources.Get "igloo-site.scss" }}
+{{ $theme := resources.Get "igloo-theme.scss" }}
 
-{{ $site := resources.Get "site.scss" }}
-{{ $data.Set "themes" "" }}
+{{ $colors := resources.Get "igloo-colors.scss" }}
+{{ $colors := $colors | resources.ExecuteAsTemplate "colors.scss" . }}
 
-{{ $themes := resources.Match "themes/*" }} 
-{{ range $themes }}
-    {{ $data.Add "themes" (.Name | replaceRE "^.+/" "" | replaceRE "\\..+$" "" )}}
-{{ end }}
-{{ if in ($data.Get "themes") site.Params.theme }}
-    {{ with site.Params.theme }}
-        {{ $data.Set "colors" (printf "themes/%s.scss" .) }}
-    {{ end }}
-{{ end }}
-
-{{ $custom := resources.Get ($data.Get "colors") }}
-{{ $scss := slice $custom $site | resources.Concat "bundle.scss" }}
+{{ $scss := slice $colors $theme $site | resources.Concat "bundle.scss" }} 
 
 {{ with $scss | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" 

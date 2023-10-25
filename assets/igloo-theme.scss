@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300 !default;0,400 !default;0,500 !default;0,600 !default;0,700 !default;1,300 !default;1,400 !default;1,500 !default;1,600 !default;1,700&family=Karla:ital,wght@0,200 !default;0,300 !default;0,400 !default;1,200 !default;1,300 !default;1,400&family=Space+Mono:wght@400 !default;700&display=swap');
+
 $base-body-font-family: 'Karla', sans-serif !default;
 $base-heading-font-family: 'Cormorant Garamond', serif !default;
 $base-code-font-family: 'Space Mono', monospace !default;
@@ -6,36 +7,36 @@ $navbar-nav-item-font-family: $base-heading-font-family !default;
 $global-font-size: 20px !default;
 
 
-$global-background: lighten($primary, 65%);
-$global-primary-background: lighten($primary, 50%);
-$global-secondary-background: $secondary;
+$global-background: lighten($primary, 65%) !default;
+$global-primary-background: lighten($primary, 50%) !default;
+$global-secondary-background: $secondary !default;
 
-$global-emphasis-color: darken($primary, 20%);
-$global-color: darken($primary, 60%);
-$global-inverse-color: lighten($secondary, 40%); 
+$global-emphasis-color: darken($primary, 20%) !default;
+$global-color: darken($primary, 60%) !default;
+$global-inverse-color: lighten($secondary, 40%) !default; 
 
-$global-muted-background: desaturate(lighten($global-secondary-background, 75%), 10%);
-$global-muted-color: lighten($global-secondary-background, 40%);
+$global-muted-background: desaturate(lighten($global-secondary-background, 75%), 10%) !default;
+$global-muted-color: lighten($global-secondary-background, 40%) !default;
 
-$global-border: lighten($primary, 10%);
+$global-border: lighten($primary, 10%) !default;
 
-$global-link-color: $global-secondary-background;
-$global-link-hover-color: darken($global-link-color, 10%);
+$global-link-color: $global-secondary-background !default;
+$global-link-hover-color: darken($global-link-color, 10%) !default;
 
-$subnav-item-color: $global-emphasis-color;
-$dropdown-color: $subnav-item-color;
-$label-background: $secondary;
-$label-color: lighten($secondary, 40%);
+$subnav-item-color: $global-emphasis-color !default;
+$dropdown-color: $subnav-item-color !default;
+$label-background: $secondary !default;
+$label-color: lighten($secondary, 40%) !default;
 
-$base-ins-background: lighten($global-background, 20%);
-$base-mark-background: lighten($global-background, 20%);
-$base-selection-background: $global-primary-background;
+$base-ins-background: lighten($global-background, 20%) !default;
+$base-mark-background: lighten($global-background, 20%) !default;
+$base-selection-background: $global-primary-background !default;
 
-$table-row-active-background: lighten($global-background, 20%);
-$tooltip-background: $global-background;
+$table-row-active-background: lighten($global-background, 20%) !default;
+$tooltip-background: $global-background !default;
 
-$box-shadow-bottom-background: darken($primary, 20%);
-$global-small-box-shadow: 0 2px 8px transparentize($box-shadow-bottom-background, 0.01);
-$global-medium-box-shadow: 0 5px 15px transparentize($box-shadow-bottom-background, 0.8);
-$global-large-box-shadow: 0 14px 25px transparentize($box-shadow-bottom-background, 0.16);
-$global-xlarge-box-shadow: 0 28px 50px transparentize($box-shadow-bottom-background, 0.16);
+$box-shadow-bottom-background: darken($primary, 20%) !default;
+$global-small-box-shadow: 0 2px 8px transparentize($box-shadow-bottom-background, 0.01) !default;
+$global-medium-box-shadow: 0 5px 15px transparentize($box-shadow-bottom-background, 0.8) !default;
+$global-large-box-shadow: 0 14px 25px transparentize($box-shadow-bottom-background, 0.16) !default;
+$global-xlarge-box-shadow: 0 28px 50px transparentize($box-shadow-bottom-background, 0.16) !default;
