@@ -7,17 +7,27 @@
 
 // 3. Your custom mixin overwrites.
 
+@mixin hook-navbar-misc() {
+  .uk-navbar-container {
+    border-bottom: 1px solid $primary;
+    letter-spacing: .1rem;
+  }
+
+  .uk-navbar-nav {
+    a {
+     font-weight: 400;
+     font-size: 1.25rem !important;
+    }
+ }
+}
+
+
 // 4. Import UIkit.
 @import "uikit/src/scss/uikit.scss";
 
 $size: 300px;  // size
 $margin: 4px;  // margin
 
-
-.uk-navbar-container {
-  border-bottom: 1px solid $primary;
-  letter-spacing: .1rem;
-}
 
 .image-shape {
   width: $size;
@@ -140,23 +150,33 @@ $margin: 4px;  // margin
   }
 }
 
+.footer {
+  bottom: 0;
+  height: 500px !important;
+  h1 {
+  }
+  @media (max-width: $breakpoint-small) {
+    h1 {
+      margin-top: calc(7rem * -0.33) !important;
+    }
+  }
+}
 
 .banner {
-	top : 0;
   height: 160px !important;
   background-color: darken($primary, 25%);
   overflow: hidden;
+
   h1 {
-    margin-top: -15px;
     font-size : 12rem;
     font-weight : 800;
     text-transform : uppercase;
     color : desaturate(darken($primary, 15%), 10%);
   }
   @media (max-width: $breakpoint-small) {
-    height: 100px !important;
     h1 {
-      font-size : 8rem;
+      font-size : 7rem;
+      margin-top: calc(7rem * 0.33);
     }
   }
 }
@@ -226,12 +246,7 @@ $margin: 4px;  // margin
   }
 }
 
-.uk-navbar-nav {
-   a {
-    font-weight: 400;
-    font-size: 1.25rem !important;
-   }
-}
+
 /* Styles for screens up to 768px wide (small screens) */
 @media (max-width: $breakpoint-small) {
   /* Your styles for small screens go here */
