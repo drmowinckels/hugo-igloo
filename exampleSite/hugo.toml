@@ -8,10 +8,7 @@ enforce_ssl             = true
 builddrafts             = false  # Include pages with draft status of true
 canonifyurls            = true   # Turns relative urls into absolutet]
 
-[[menu.main]]
-   name    = "Home"
-   url     = ""
-   weight  = 1
+
 [[menu.main]]
    name    = "About"
    url     = "about"
@@ -20,10 +17,7 @@ canonifyurls            = true   # Turns relative urls into absolutet]
    name    = "Blog"
    url     = "blog"
    weight  = 4
-[[menu.main]]
-   name    = "Contact"
-   url     = "#contact"
-   weight  = 6
+
 
 # We only use tag as a taxonomies
 # You can add more by yourself
@@ -32,24 +26,26 @@ canonifyurls            = true   # Turns relative urls into absolutet]
   category = "categories"
 
 [params]
-    # square, rabbet, bevel
-    # hexagon, octagon,
-    thumbShape     = "hexagon"
-    favicon        = "favicon.png"      # Path to favicon file from the assets/ directory
-    logo           = "/images/theme.png"
     subtitle       = "a frozen experience"
     showRSSButton  = false                   # Show rss button in navigation
     dateFormat     = "Jan 2, 2006"
-    customCSS      = []   # Include custom css files placed under assets/
 
     [params.aesthetics]
-    # icicle, lollipop, mint,
-    # moss, paper, plum, poppy,
-    # violet, water
-    design = "icicle"
-    # Or set your own custom colours
-    #primary = "#ff3355"
-    #secondary = "#000"
+        # icicle, lollipop, mint,
+        # moss, paper, plum, poppy,
+        # violet, water
+        design = "icicle"
+        # Or set your own custom colours
+        #primary = "#ff3355"
+        #secondary = "#000"
+        # Include custom css files placed under assets/css/
+        customCSS      = [] 
+
+        # square, rabbet, bevel
+        # hexagon, octagon,
+        thumbShape     = "hexagon"
+        favicon        = "favicon.png"      # Path to favicon file from the assets/ directory
+        logo           = "/images/theme.png"
 
     [params.analytics]
     [params.analytics.plausible]
