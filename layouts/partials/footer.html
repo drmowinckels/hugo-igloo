@@ -1,13 +1,9 @@
-<div class="section uk-section uk-padding-remove-vertical">
+<div class="section uk-section uk-padding-remove-vertical uk-margin">
     <div class="banner footer">
-        <div class="uk-container uk-margin-left-large">
+        <div class="uk-container uk-margin-left-large uk-text-right">
             <h1>{{ .Site.Title }}</h1>
         </div>
 
-        <div class="uk-text-center uk-padding" 
-         uk-parallax="start: 100%; end: 100%; stroke: 100%;">
-            <img src="{{ $.Site.Params.aesthetics.logo }}" width="50" height="340" alt="" uk-svg>
-        </div>
         {{ if gt (len .Site.Languages) 1 }}
             <div class="uk-navbar-item">
                 <div class="uk-inline">

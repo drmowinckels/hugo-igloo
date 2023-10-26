@@ -16,7 +16,7 @@
   .uk-navbar-nav {
     a {
      font-weight: 400;
-     font-size: 1.25rem !important;
+     font-size: 1.25rem;
     }
  }
 }
@@ -82,82 +82,48 @@ $margin: 4px;  // margin
   }
 }
 
+.card {  
+  height: 650px;
 
-/* The card */
-.card {
-  position: relative;
-  height: 500px;
-  width: 100%;
-  max-width: 1200px;
-  margin-bottom: 180px; 
-
-  .left{
+  .image {
     position: relative;
-    bottom: calc(#{$size} * -.9);
-    left: 0;
-    z-index: 2;
+    top: 250px;
   }
 
-  /* Right side of the card */
-  .right {
-    position: absolute;
+  .content{
+    position:relative;
     width: 75%;
-    right: 5px;
-    top: 0;
-    height: 85%;
-    text-align: left;
-    margin-bottom: 20px;
-    background-color: lighten($global-background, 40%);
-    overflow: hidden; 
-
-    p {
-      margin-top: 10px;
-      margin-right: 20px;
-    } 
+    bottom: 330px;
+    min-height: 600px;
 
     h1 {
-      padding-top: 20px;
+      margin: 30px;
+    }
+    p {
+      margin-bottom: 20px;
       margin-right: 20px;
     }
-
+    
     h5 {
-      text-align: right;
-      font-size: 1.5rem;
-      margin-top: 10px;
+      margin-left: 30px;
     }
   }
 
-  @media (max-width: calc(#{$breakpoint-small} * 1.2)) {
-    height: 670px;
-    margin-top: calc(#{$size} * 0.5 + 20px ) !important;
-    margin-bottom: 10%; 
-
-    .left{
-      top: -25%;
+  @media (max-width: $breakpoint-medium) {
+    height: unset;;
+    .image {
+      top: 0;
       left: 50%;
       transform: translate(-50%, 0%);
     }
 
-    .right {
-      width: unset;
-      height: unset;
+    .content {
+      width: 100%;
+      top: -160px;
 
-      h1{
-        margin-top: calc(#{$size} * 0.5 ) !important;;
-        text-align: center;
+      h1 {
+        margin-top: 200px;
       }
-    }
-  }
-}
-
-.footer {
-  bottom: 0;
-  height: 500px !important;
-  h1 {
-  }
-  @media (max-width: $breakpoint-small) {
-    h1 {
-      margin-top: calc(7rem * -0.33) !important;
     }
   }
 }
@@ -228,6 +194,18 @@ $margin: 4px;  // margin
   }
   h2 {
     font-size : 1.5rem;
+  }
+}
+
+.footer {
+  height: 50vh !important;
+  h1 {
+    margin-top: calc(50vh * 0.7) !important;
+  }
+  @media (max-width: $breakpoint-small) {
+    h1 {
+      margin-top: calc(7rem * -0.33) !important;
+    }
   }
 }
 
