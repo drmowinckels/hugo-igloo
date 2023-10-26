@@ -9,39 +9,41 @@
 {{ end }}
 
 {{- $sizes := slice
-    (dict "size" "16x16")
-    (dict "size" "32x32")
-    (dict "size" "57x57")
-    (dict "size" "76x76")
-    (dict "size" "96x96")
-    (dict "size" "128x128")
-    (dict "size" "120x120" "rel" "apple-touch-icon" )
-    (dict "size" "150x150")
-    (dict "size" "152x152" "rel" "apple-touch-icon" )
-    (dict "size" "144x144")
-    (dict "size" "180x180" "rel" "apple-touch-icon")
-    (dict "size" "192x192")
-    (dict "size" "196x196" "rel" "shortcut icon")
+    (dict "size" "16")
+    (dict "size" "32")
+    (dict "size" "57")
+    (dict "size" "76")
+    (dict "size" "96")
+    (dict "size" "128")
+    (dict "size" "120" "rel" "apple-touch-icon" )
+    (dict "size" "150")
+    (dict "size" "152" "rel" "apple-touch-icon" )
+    (dict "size" "144")
+    (dict "size" "180" "rel" "apple-touch-icon")
+    (dict "size" "192")
+    (dict "size" "196" "rel" "shortcut icon")
   }}
 
-{{- $faviconName := .Site.Params.favicon | default "favicon.png"  }}
+{{- $faviconName := .Site.Params.aesthetics.favicon | default "favicon.png"  }}
 {{- $favicon := resources.Get $faviconName }}
 {{- range $sizes }}
-    {{- $img := $favicon.Resize .size }}
-    {{ if eq .size "144x144" }}
+    {{ $sizeS := printf "%sx%s" .size .size }}
+    {{ $sizeR := printf "%sx" .size }}
+    {{- $img := $favicon.Resize $sizeR }}
+    {{ if eq $sizeR  "144x" }}
         <meta name="msapplication-TileImage" 
             content="{{ $img.RelPermalink }}">
-    {{ else if eq .size "32x32" }}
+    {{ else if eq $sizeR  "32x" }}
         {{ $ico := $img.Content | resources.FromString "/favicon.ico" }}
         <link rel="shortcut icon" href="{{ $ico.Permalink }}" type="image/x-icon">
     {{ end }}
     <link
         rel="{{ default `icon` .rel }}"
         href="{{ $img.RelPermalink }}"
-        sizes="{{ .size }}"
+        sizes="{{ $sizeS }}"
         type="{{ $img.MediaType }}"
     />
 {{- end }}
 <meta name="msapplication-TileColor" content="{{ $data.Get "color" }}">
-<meta name="theme-color" content="{{ $data.Get "color" }}">
+<meta name="theme-color" content="{{ $data.Get "color" }}"> 
 <meta name="msapplication-TileColor" content="{{ $data.Get "color" }}">

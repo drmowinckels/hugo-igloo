@@ -3,34 +3,6 @@
         {{ .Content }}
     </div>
 
-    <div class="uk-container" uk-filter="target: .js-filter; duration: 650">
-        {{ if and (ne .Section "tags") (ne .Section "categories") }}
-            <!-- Filter controls -->
-            {{ with index .Site.Taxonomies "tags" }}
-                <ul class="uk-subnav uk-subnav-pill" uk-margin>
-                    <li>
-                        <a href="#">Filter tag <span uk-icon="icon: triangle-down"></span></a>
-                        <div uk-dropdown="mode: click;">
-                            <ul class="uk-nav uk-dropdown-nav uk-dropdown-scrollable">
-                                <li class="uk-active" uk-filter-control><a href="#">All</a></li>
-                                {{ range $tag, $pages := . }}
-                                    <li uk-filter-control="filter: [data-tags*='{{ $tag | urlize}}']">
-                                        <a  class="dropd" href="#">
-                                            {{ $tag | humanize}}
-                                        </a>
-                                    </li>
-                                {{ end }}
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            {{ end }}
-        {{ end }}
-        <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column js-filter">
-            {{ range .Pages }}
-                {{ partial "cards.html" . }}
-            {{ end }}
-        </div>
-    </div>
-    {{ partial "pagination.html" . }}
+    {{ partial "cards/filter.html" . }}
+    {{ partial "cards/li.html" .Pages }}
 {{ end }}

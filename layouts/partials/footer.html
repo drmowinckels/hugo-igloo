@@ -1,33 +1,39 @@
-<div class="uk-container" >
-    <div class="uk-text-center uk-padding" 
+<div class="section uk-section uk-padding-remove-vertical">
+    <div class="banner footer">
+        <div class="uk-container uk-margin-left-large">
+            <h1>{{ .Site.Title }}</h1>
+        </div>
+
+        <div class="uk-text-center uk-padding" 
          uk-parallax="start: 100%; end: 100%; stroke: 100%;">
-        <img src="{{ $.Site.Params.logo }}" width="50" height="340" alt="" uk-svg>
-    </div>
-    {{ if gt (len .Site.Languages) 1 }}
-        <div class="uk-navbar-item">
-            <div class="uk-inline">
-                <button class="uk-button uk-button-default" type="button">
-                    {{ with .Site.Language }}
-                        {{ .LanguageName }}
-                    {{ else }}
-                        Language
-                    {{ end }} 
-                    <span uk-icon="icon: chevron-down"></span>
-                </button>
-                <div uk-dropdown="mode: click">
-                    <ul class="uk-nav uk-dropdown-nav">
-                        {{ range .Site.Languages }}
-                            {{ $currentPage := . }}
-                            <li>
-                                <a href="{{ $currentPage.Permalink }}" 
-                                   hreflang="{{ .Lang }}">
-                                   {{ .LanguageName }}
-                                </a>
-                            </li>
-                        {{ end }}
-                    </ul>
+            <img src="{{ $.Site.Params.aesthetics.logo }}" width="50" height="340" alt="" uk-svg>
+        </div>
+        {{ if gt (len .Site.Languages) 1 }}
+            <div class="uk-navbar-item">
+                <div class="uk-inline">
+                    <button class="uk-button uk-button-default" type="button">
+                        {{ with .Site.Language }}
+                            {{ .LanguageName }}
+                        {{ else }}
+                            Language
+                        {{ end }} 
+                        <span uk-icon="icon: chevron-down"></span>
+                    </button>
+                    <div uk-dropdown="mode: click">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            {{ range .Site.Languages }}
+                                {{ $currentPage := . }}
+                                <li>
+                                    <a href="{{ $currentPage.Permalink }}" 
+                                    hreflang="{{ .Lang }}">
+                                    {{ .LanguageName }}
+                                    </a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    {{ end }}
+        {{ end }}
+    </div>
 </div>

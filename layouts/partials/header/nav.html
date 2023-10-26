@@ -3,15 +3,15 @@
 {{ $menuLen :=  sub $menuLen 1 }}
 <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
     <nav class="uk-navbar-container ">
-            <div uk-navbar>
-                <div class="uk-navbar-center">
+        <div uk-navbar>
+            <div class="uk-navbar-center">
                 {{ range $i, $el := .Site.Menus.main  }}
                     {{ if  eq $i 0 }}
                         <div class="uk-navbar-center-left">
                             <ul class="uk-navbar-nav">
                     {{ end }}
                     {{ if eq $i $menuSplit }}
-                        {{ with $.Site.Params.logo }}
+                        {{ with $.Site.Params.aesthetics.logo }}
                             <a class="uk-navbar-item uk-logo" href="{{$.Site.BaseURL }}">
                                 <img src="{{ .}}" width="40">
                             </a>

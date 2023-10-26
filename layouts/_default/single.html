@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $data := newScratch }}
-{{ $data.Set "image" ( $.Site.Params.logo | relURL ) }}
+{{ $data.Set "image" ( $.Site.Params.aesthetics.logo | relURL ) }}
 {{ if isset .Params "image" }}
 {{ $data.Set "image" .Params.logo}}
 
@@ -10,7 +10,7 @@
 
 {{ else }}
     <!-- Use a default OG image -->
-    <meta property="og:image" content="{{ .Site.Params.logo | absURL }}" />
+    <meta property="og:image" content="{{ .Site.Params.aesthetics.logo | absURL }}" />
 {{ end }}
 {{ $data.Get "image" }}
 

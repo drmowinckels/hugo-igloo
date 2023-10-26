@@ -1,17 +1,17 @@
 
-<div class=" uk-flex uk-cover-container uk-height-medium banner {{ if .IsHome}} home" uk-parallax="bgy: -200 {{ end }}">
-{{ if .IsHome}}
-    <div class="uk-text-center uk-margin-auto  uk-margin-auto-vertical">
-        <div class="uk-animation-toggle" tabindex="0">
-            <img class="uk-animation-stroke" src="{{ $.Site.Params.logo }}" 
-                width="350" height="340" alt="" uk-svg="stroke-animation: true">
+<div class="banner {{ if .IsHome}} uk-flex home" uk-parallax="bgy: -200 {{ end }}">
+    {{ if .IsHome}}
+        <div class="uk-text-center uk-margin-auto  uk-margin-auto-vertical">
+            <div class="uk-animation-toggle" tabindex="0">
+                <img class="uk-animation-stroke" src="{{ $.Site.Params.aesthetics.logo }}" 
+                    width="350" height="340" alt="" uk-svg="stroke-animation: true">
+            </div>
+            <h1>{{ .Site.Title }}</h1>
+            <h2>{{ .Site.Params.subtitle | markdownify }}</h2>
         </div>
-        <h1>{{ .Site.Title }}</h1>
-        <h2>{{ .Site.Params.subtitle | markdownify }}</h2>
-    </div>
-{{ else }}
-    <div class="uk-container uk-container-small uk-margin">
-        <h1>{{ .Section }}</h1>
-    </div>
-{{ end }}
+    {{ else }}
+        <div class="uk-container uk-container-small">
+            <h1>{{ .Section }}</h1>
+        </div>
+    {{ end }}
 </div>

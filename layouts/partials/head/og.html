@@ -17,7 +17,7 @@
     <meta property="og:image" content="{{ $image.Permalink | absURL }}" />
     <meta name="twitter:image" content="{{ $image.Permalink | absURL }}">
 {{ else }}
-    <meta property="og:image" content="{{ .Site.Params.logo | absURL }}" />
-    <meta name="twitter:image" content="{{ .Site.Params.logo | absURL }}">
+    <meta property="og:image" content="{{ .Site.Params.aesthetics.logo | absURL }}" />
+    <meta name="twitter:image" content="{{ .Site.Params.aesthetics.logo | absURL }}">
 {{ end }}
 

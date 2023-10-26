@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html>
-    {{- partial "head.html" . -}}
+    <head>
+        {{ partial "head/general.html" . }}
+        {{ partial "head/og.html" . }}
+        {{ partial "head/css.html" . }}
+        {{ partial "head/favico.html" . }}
+    </head>
     <body>
-        {{- partial "header.html" . -}}
+        {{ partial "header/banner.html" .}}
+        {{ partial "header/nav.html" .}}
+
         <div id="content" class="uk-container uk-container-small uk-margin-large-top">
             {{- block "main" . }}{{- end }}
         </div>
