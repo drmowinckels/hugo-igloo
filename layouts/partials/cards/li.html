@@ -3,15 +3,17 @@
         {{- range . }}
             <div class="card uk-margin-bottom"
                 data-tags="{{ range .Params.tags }}{{ . | urlize}} {{ end }}">
-                <div class="image image-shape">
-                    <div class="border {{ .Site.Params.aesthetics.thumbShape }}">
-                        <div class="shape {{ .Site.Params.aesthetics.thumbShape }}" 
-                            {{ $image := .Resources.Get .Params.image }}
-                            {{ $image := $image.Resize "x360" }}
-                            style="background-image: url({{ $image.Permalink }});">
+                {{ if isset .Params "image" }}
+                    <div class="image image-shape">
+                        <div class="border {{ .Site.Params.aesthetics.thumbShape }}">
+                            <div class="shape {{ .Site.Params.aesthetics.thumbShape }}" 
+                                {{ $image := .Resources.Get .Params.image }}
+                                {{ $image := $image.Resize "x360" }}
+                                style="background-image: url({{ $image.Permalink }});">
+                            </div> 
                         </div> 
-                    </div> 
-                </div>
+                    </div>
+                {{ end }}
                 <div class="content uk-container uk-container-small uk-align-right uk-margin uk-box-shadow-large uk-box-shadow-hover-xlarge">
                     <a href="{{ .RelPermalink}}" style="text-decoration: none;">
                         <h1 class="uk-heading-divider">{{ .Title }}</h1>
