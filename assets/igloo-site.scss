@@ -29,6 +29,10 @@ $size: 300px;  // size
 $margin: 4px;  // margin
 
 
+h1, h2, h3, h4, h5 {
+  scroll-margin-top: -20px;
+}
+
 .image-shape {
   width: $size;
   height: $size;
