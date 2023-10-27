@@ -17,16 +17,14 @@
 
 
 
-  <meta name="description" content="I&rsquo;m the frozen theme for your website needs!" />
+  
+  <meta
+    name="description"
+    content="a frozen experience"
+  />
   <meta name="author" content="Igloo" />
 
 
-
-<script
-  defer
-  src="https://drmowinckels.github.io/hugo-igloo/highlight.min.js"
-  onload="hljs.initHighlightingOnLoad();"
-></script>
 
 
 
@@ -36,6 +34,13 @@
 <meta name="generator" content="Hugo 0.117.0">
 
 
+
+<link
+  rel="alternate"
+  type="application/rss&#43;xml"
+  href="https://drmowinckels.github.io/hugo-igloo/about/index.xml"
+  title="Igloo"
+/>
 
         
 
@@ -68,8 +73,8 @@
  
 
 
-    <link rel="stylesheet" href="https://drmowinckels.github.io/hugo-igloo/bundle.min.4325547ff4a65fd7a501e984feaa3076e7451da9b13e9032bbe46fac5fe0db81.css" 
-    integrity="sha256-QyVUf/SmX9elAemE/qowdudFHamxPpAyu&#43;RvrF/g24E=" 
+    <link rel="stylesheet" href="https://drmowinckels.github.io/hugo-igloo/bundle.min.31ab71e256ed72a707f82f36fde33f6c1b94c7f82eebfd78ff1f20d6fdccfab5.css" 
+    integrity="sha256-Matx4lbtcqcH&#43;C82/eM/bBuUx/gu6/14/x8g1v3M&#43;rU=" 
     crossorigin="anonymous">
 
 
@@ -230,7 +235,7 @@
 <div class="banner ">
     
         <div class="uk-container uk-container-small">
-            <h1></h1>
+            <h1>about</h1>
         </div>
     
 </div>
@@ -288,21 +293,51 @@
 </div>
 
         <div id="content" class="uk-container uk-container-small uk-margin-large-top">
-    <article class="uk-article">
-        <h1 class="uk-article-title">Hugo Igloo</h1>
-        <div class="uk-article-meta">
-            <h3 class="uk-margin-top-small">
-                Jan 1, 0001
-            </h3>
-            
-        </div>
+    <div class="uk-markdown">
         <p>I&rsquo;m the frozen theme for your website needs!</p>
 
-    </article>
-    
-    <div class="uk-container uk-margin-top">
-</div>
+    </div>
 
+        <div class="uk-container" uk-filter="target: .js-filter; duration: 650">
+        
+            
+            
+                <ul class="uk-subnav uk-subnav-pill" uk-margin>
+                    <li>
+                        <a href="#">Filter tag <span uk-icon="icon: triangle-down"></span></a>
+                        <div uk-dropdown="mode: click;">
+                            <ul class="uk-nav uk-dropdown-nav uk-dropdown-scrollable">
+                                <li class="uk-active" uk-filter-control><a href="#">All</a></li>
+                                
+                                    <li uk-filter-control="filter: [data-tags*='hugo']">
+                                        <a  class="dropd" href="#">
+                                            Hugo
+                                        </a>
+                                    </li>
+                                
+                                    <li uk-filter-control="filter: [data-tags*='igloo']">
+                                        <a  class="dropd" href="#">
+                                            Igloo
+                                        </a>
+                                    </li>
+                                
+                                    <li uk-filter-control="filter: [data-tags*='penguin']">
+                                        <a  class="dropd" href="#">
+                                            Penguin
+                                        </a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            
+        
+    </div>
+    <div class="uk-container uk-container-small">
+    <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column">
+    </div>
+</div>
 
         </div><div class="section uk-section uk-padding-remove-vertical uk-margin">
     <div class="banner footer">
