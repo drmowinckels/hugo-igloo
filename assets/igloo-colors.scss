@@ -1,3 +1,4 @@
+
 {{ with .Site.Params.aesthetics.primary }}
     $primary: {{.}};    
 {{ else }}
@@ -7,6 +8,25 @@
 {{ with .Site.Params.aesthetics.secondary }}
     $secondary: {{.}};    
 {{ else }}
-    $secondary: darken($primary, 20%);
+    $secondary: desaturate(complement($primary), 20%);
+{{ end }}
+
+{{ with .Site.Params.aesthetics.muted }}
+    $muted: {{.}};    
+{{ else }}
+    $muted: lighten(desaturate($primary, 10%), 50%);
+{{ end }}
+
+{{ with .Site.Params.aesthetics.emphasis }}
+    $emphasis: {{.}};    
+{{ else }}
+    $emphasis: darken($primary, 10%);
+{{ end }}
+
+
+{{ with .Site.Params.aesthetics.inverse }}
+    $inverse: {{.}};    
+{{ else }}
+    $inverse: invert($primary);
 {{ end }}
 

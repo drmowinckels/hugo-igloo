@@ -1,10 +1,10 @@
-<div class="uk-container uk-container-small">
-    <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column">
+<div class="card-container uk-container uk-container-small">
+    <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column js-filter">
         {{- range . }}
-            <div class="card uk-margin-bottom"
+            <div class="card-post uk-margin-bottom"
                 data-tags="{{ range .Params.tags }}{{ . | urlize}} {{ end }}">
                 {{ if isset .Params "image" }}
-                    <div class="image image-shape">
+                    <div class="image image-shape uk-position-z-index">
                         <div class="border {{ .Site.Params.aesthetics.thumbShape }}">
                             <div class="shape {{ .Site.Params.aesthetics.thumbShape }}" 
                                 {{ $image := .Resources.Get .Params.image }}
@@ -14,13 +14,15 @@
                         </div> 
                     </div>
                 {{ end }}
-                <div class="content uk-container uk-container-small uk-align-right uk-margin uk-box-shadow-large uk-box-shadow-hover-xlarge">
+                <div class="content uk-align-right uk-padding uk-box-shadow-large">
                     <a href="{{ .RelPermalink}}" style="text-decoration: none;">
-                        <h1 class="uk-heading-divider">{{ .Title }}</h1>
+                        <h1 class="uk-heading-line uk-text-right">
+                            <span>{{ .Title }}</span>
+                        </h1>
                         <div class="uk-grid">
                             {{ if isset .Params "date" }}
                                 <div class="uk-width-1-4 uk-text-right">
-                                    <h5>{{ .Date.Format "Jan 02, 2006" }}</h5>
+                                        {{ .Date.Format "Jan 02, 2006" }}
                                 </div>
                             {{ end }}
                             <div class="uk-width-expand">

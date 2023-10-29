@@ -21,17 +21,28 @@
  }
 }
 
+@mixin hook-article-meta() {
+  margin-bottom: 60px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: .1rem;
+}
+
+@mixin hook-card-secondary(){
+  color: lighten($primary, 90%);
+}
+
+@mixin hook-button(){
+  font-family: $base-heading-font-family;
+  font-size: 1.2rem;
+}
+
 
 // 4. Import UIkit.
 @import "uikit/src/scss/uikit.scss";
 
 $size: 300px;  // size
 $margin: 4px;  // margin
-
-
-h1, h2, h3, h4, h5 {
-  scroll-margin-top: -20px;
-}
 
 .image-shape {
   width: $size;
@@ -86,7 +97,28 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-.card {  
+.card-image {
+  border: 1px solid red;
+
+  .content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+
+    h1 {
+      margin: 30px;
+    }
+  }
+
+
+  @media (max-width: $breakpoint-medium) {
+
+  }
+}
+
+.card-post {  
   height: 650px;
 
   .image {
@@ -100,21 +132,17 @@ h1, h2, h3, h4, h5 {
     bottom: 330px;
     min-height: 600px;
 
-    h1 {
-      margin: 30px;
+    h1, p {
+      color: $global-color;
     }
-    p {
-      margin-bottom: 20px;
-      margin-right: 20px;
-    }
-    
     h5 {
-      margin-left: 30px;
+      color: $global-emphasis-color;
     }
   }
 
   @media (max-width: $breakpoint-medium) {
-    height: unset;;
+    height: unset;
+
     .image {
       top: 0;
       left: 50%;
@@ -122,7 +150,7 @@ h1, h2, h3, h4, h5 {
     }
 
     .content {
-      width: 100%;
+      width: unset;
       top: -160px;
 
       h1 {
@@ -141,22 +169,16 @@ h1, h2, h3, h4, h5 {
     font-size : 12rem;
     font-weight : 800;
     text-transform : uppercase;
-    color : desaturate(darken($primary, 15%), 10%);
+    color: darken($primary, 15%);
   }
   @media (max-width: $breakpoint-small) {
     h1 {
       font-size : 7rem;
-      margin-top: calc(7rem * 0.33);
+      margin-top: calc(7rem * 0.7);
     }
   }
 }
 
-.dropd{
-  color: lighten($global-color, 30%)!important;
-  &:hover{
-    color: lighten($global-color, 10%)!important;
-  }
-}
 
 .section {
   width: 100vw;
@@ -170,7 +192,6 @@ h1, h2, h3, h4, h5 {
   .banner{
     margin-bottom: -30px;;
   }
-  
 }
 
 .home{
@@ -182,13 +203,13 @@ h1, h2, h3, h4, h5 {
     font-weight : 600;
     letter-spacing: .5rem;
     text-transform : none;
-    color : lighten(desaturate($primary, 25%), 20%);
+    color: lighten($primary, 8%);
   }
   h2 {
     font-size : 2rem;
     font-weight : 400;
     letter-spacing: .3rem;
-    color : lighten(desaturate($primary, 25%), 20%);
+    color: lighten($primary, 8%);
   }
   @media (max-width: $breakpoint-medium) {
 
@@ -214,12 +235,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .tags {
-  background-color: $secondary;
-  color: lighten($secondary, 60%);
+
   &:hover{
-    background-color: lighten($secondary, 10%);
-    color: lighten($secondary, 90%);
     text-decoration: none;
+    color: invert($global-color);
   }
   .counter{
     top: -8px;

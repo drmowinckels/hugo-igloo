@@ -1,0 +1,21 @@
+<a href="{{ .RelPermalink}}" style="text-decoration: none;">
+    <div class="uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+        <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+            {{ $image := .Resources.Get .Params.image }}
+            {{ $image := $image.Resize "x660" }}
+            <img src="{{ $image.Permalink }}" alt="" uk-cover>
+            <canvas height="360"></canvas>
+        </div>
+        <div>
+            <div class="uk-card-body">
+                <h3 class="uk-card-title uk-heading-bullet">{{ .Params.author }}</h3>
+                <p>{{ .Summary  | safeHTML }}</p>
+            </div>
+            <div class="uk-card-footer uk-text-right">
+                {{ with .Params.social_media }}
+                    <a href="#" class="uk-button uk-button-text">Read more</a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</a>

@@ -1,27 +1,24 @@
 {{ define "main" }}
-    <div class=" uk-section uk-padding-remove-vertical uk-margin-bottom">
-        <div class="section banner">
-            <div class="uk-container uk-margin-left-large">
-                <h1>About me</h1>
-            </div>
+    {{ range .Site.Sections }}
+        <div class=" uk-section uk-margin-bottom">
+            {{ if ne .Type "about" }}
+                <div class="section banner">
+                    <div class="uk-container uk-margin-left-large">
+                        <a href="{{ .Permalink }}">
+                            <h1>{{ .Title }}</h1>
+                        </a>
+                    </div>
+                </div>
+            {{ end}}
+            {{ if or (eq .Type "blog" ) (eq .Type "post" ) }}
+                {{ partial "cards/post-li.html" ( where site.RegularPages "Section" "blog" | first 1 ) }}
+            {{ else if eq .Type "about" }}
+                {{ partial "cards/image-li.html" . }}
+            {{ else }}
+                <div class="uk-container uk-container-small">
+                    {{ .Summary }}
+                </div>
+            {{ end }}
         </div>
-        <div class="uk-container uk-container-small">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-    </div>
-    <div class="uk-section uk-padding-remove-vertical uk-margin-bottom">
-        <div class="section banner">
-            <div class="uk-container uk-margin-left-large">
-                <h1>Projects</h1>
-            </div>
-        </div>
-    </div>
-    <div class="uk-section uk-padding-remove-vertical uk-margin-bottom">
-        <div class="section banner">
-            <div class="uk-container uk-margin-left-large">
-                <h1>Blog</h1> 
-            </div>
-        </div>
-        {{ partial "cards/li.html" ( where site.RegularPages "Section" "blog" | first 1 ) }}
-    </div>
+    {{ end }}
 {{ end }}

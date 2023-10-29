@@ -31,13 +31,16 @@ canonifyurls            = true   # Turns relative urls into absolutet]
     dateFormat     = "Jan 2, 2006"
 
     [params.aesthetics]
-        # icicle, lollipop, mint,
+        # icicle, mint,
         # moss, paper, plum, poppy,
-        # violet, water
-        design = "icicle"
+        # violet, water 
+        design = "icicle"  
         # Or set your own custom colours
-        #primary = "#ff3355"
-        #secondary = "#000"
+         # primary = "#b38e65"
+         # secondary = "#00ff00"
+         # emphasis = "#ff00ff"
+         # muted = "#00ffff"
+
         # Include custom css files placed under assets/css/
         customCSS      = [] 
 
