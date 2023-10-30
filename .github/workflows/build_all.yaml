@@ -37,10 +37,11 @@ jobs:
             echo $theme
             cat exampleSite/hugo.toml | sed -e "s/icicle/$theme/g" > exampleSite/hugo_$theme.toml
             cd exampleSite && \
-            hugo \
+              hugo \
                 --config hugo_$theme.toml \
                 --themesDir ../.. \
-                --baseURL ${{ env.gh-pages }}/themes/$theme 
+                --baseURL ${{ env.gh-pages }}/themes/$theme
+            cd -
         done
 
     # Build main website
