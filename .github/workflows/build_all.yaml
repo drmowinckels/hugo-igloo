@@ -77,6 +77,13 @@ jobs:
       with:
         hugo-version: '0.117.0'
         extended: true
+    - name: Extract GitHub Pages link
+      run: |
+        repo="${{ github.repository }}"
+        owner=$(echo $repo | sed -n 's/^\(.*\)\/.*/\1/p')
+        repo_name=$(echo $repo | sed -n 's/.*\/\([^/]*\)$/\1/p')
+        github_pages_link="https://$owner.github.io/$repo_name/"
+        echo "gh-pages=$github_pages_link" >> $GITHUB_ENV
 
     # Build main website
     - name: Build Hugo site
