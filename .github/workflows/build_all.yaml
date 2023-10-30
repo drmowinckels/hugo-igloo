@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Build Hugo site with a specific color palette
+    name: Build color
 
     # create a matrix from the color data file
     strategy:
@@ -48,14 +48,13 @@ jobs:
         github_pages_link="https://$owner.github.io/$repo_name/"
         echo "gh-pages=$github_pages_link" >> $GITHUB_ENV
   
-        - name: Build Hugo
-        run: |
-          # use ${{ matrix.color }} to replace color in config
-          hugo \
-              --config hugo_${{ matrix.color }}.toml \
-              --themesDir ../.. \
-              --destination public/theme/${key} \
-              --baseURL ${{ env.gh-pages }}
+    - name: Build Hugo
+      run: |
+        hugo \
+            --config hugo_${{ matrix.color }}.toml \
+            --themesDir ../.. \
+            --destination public/theme/${key} \
+            --baseURL ${{ env.gh-pages }}
 
       # Zip and upload each color-specific build to job artifacts
     - name: Archive production artifacts
