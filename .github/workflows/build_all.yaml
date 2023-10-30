@@ -17,7 +17,6 @@ jobs:
           color: 
             - ash   
             - barbie 
-            - icicle 
             - dune   
             - mint   
             - moss   
@@ -55,7 +54,6 @@ jobs:
           hugo \
             --config hugo_${{ matrix.color }}.toml \
             --themesDir ../.. \
-            --destination public/theme/${{ matrix.color }} \
             --baseURL ${{ env.gh-pages }}
 
       # Zip and upload each color-specific build to job artifacts
@@ -63,7 +61,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: ${{ matrix.color }}-website
-        path: ./public/theme/${{ matrix.color }}
+        path: exampleSite/public
 
   deploy:
     needs: build
