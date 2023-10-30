@@ -50,7 +50,7 @@ jobs:
   
     - name: Build Hugo
       run: |
-        cat hugo.toml | sed -e s/icicle/${{ matrix.color }}/g > ${workdir}/hugo_${{ matrix.color }}.toml
+        cat exampleSite/hugo.toml | sed -e s/icicle/${{ matrix.color }}/g > exampleSite/hugo_${{ matrix.color }}.toml
         cd exampleSite && \
           hugo \
             --config hugo_${{ matrix.color }}.toml \
