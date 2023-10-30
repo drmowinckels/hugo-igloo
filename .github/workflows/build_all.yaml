@@ -8,26 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Build color
-
-    # create a matrix from the color data file
-    strategy:
-        fail-fast: false
-        matrix:
-          color: 
-            - ash   
-            - barbie 
-            - dune   
-            - mint   
-            - moss   
-            - paper  
-            - plum   
-            - poppy  
-            - pumpkin
-            - teal   
-            - violet 
-            - vlad   
-            - water  
+    name: Build
 
     steps:
     - name: Checkout code
@@ -49,41 +30,18 @@ jobs:
   
     - name: Build Hugo
       run: |
-        cat exampleSite/hugo.toml | sed -e s/icicle/${{ matrix.color }}/g > exampleSite/hugo_${{ matrix.color }}.toml
-        cd exampleSite && \
-          hugo \
-            --config hugo_${{ matrix.color }}.toml \
-            --themesDir ../.. \
-            --baseURL ${{ env.gh-pages }}
-
-      # Zip and upload each color-specific build to job artifacts
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: ${{ matrix.color }}
-        path: exampleSite/public
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Set up Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: '0.117.0'
-        extended: true
-
-    - name: Extract GitHub Pages link
-      run: |
-        repo="${{ github.repository }}"
-        owner=$(echo $repo | sed -n 's/^\(.*\)\/.*/\1/p')
-        repo_name=$(echo $repo | sed -n 's/.*\/\([^/]*\)$/\1/p')
-        github_pages_link="https://$owner.github.io/$repo_name/"
-        echo "gh-pages=$github_pages_link" >> $GITHUB_ENV
+        # Build theme examples
+        themes=(ash  barbiedune mint moss paper plum poppy pumpkin teal violet vlad water)
+        echo $themes
+        for theme in $themes ; do
+            echo $theme
+            cat exampleSite/hugo.toml | sed -e "s/icicle/$theme/g" > exampleSite/hugo_$theme.toml
+            cd exampleSite && \
+            hugo \
+                --config hugo_$theme.toml \
+                --themesDir ../.. \
+                --baseURL ${{ env.gh-pages }}/themes/$theme 
+        done
 
     # Build main website
     - name: Build Hugo site
@@ -92,20 +50,6 @@ jobs:
         hugo \
           --themesDir ../.. \
           --baseURL ${{ env.gh-pages }}
-
-    - name: Download all workflow run artifacts
-      uses: actions/download-artifact@v3
-
-    - name: Prepare/Collect all websites
-      run: |
-        wrkdir=exampleSite/public/themes/${name}
-        mkdir -p $wrkdir
-        for theme in $(find . -name "*.zip"); do
-            echo "$theme"
-            name=$(basename "$theme" .zip)
-            mkdir -p "$wrkdir"
-            unzip $theme -d "$wrkdir/$name"
-        done
 
     - name: Deploy production 🚀
       uses: JamesIves/github-pages-deploy-action@v4
