@@ -26,7 +26,7 @@ canonifyurls            = true   # Turns relative urls into absolutet]
   category = "categories"
 
 [params]
-    subtitle       = "a frozen experience"
+    subtitle       = "an icicle experience"
     showRSSButton  = false                   # Show rss button in navigation
     dateFormat     = "Jan 2, 2006"
 
@@ -35,6 +35,7 @@ canonifyurls            = true   # Turns relative urls into absolutet]
         # moss, paper, plum, poppy,
         # violet, water 
         design = "icicle"  
+
         # Or set your own custom colours
          # primary = "#b38e65"
          # secondary = "#00ff00"

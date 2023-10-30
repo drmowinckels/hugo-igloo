@@ -1,3 +1,4 @@
 .hugo-build.lock
 resources
 public
+hugo_*toml
