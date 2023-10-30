@@ -77,10 +77,11 @@ jobs:
     - name: Prepare/Collect all websites
       run: |
         mkdir -p exampleSite/public/themes/
-        for theme in ${{ matrix.color }}; do
-            wrkdir=exampleSite/public/themes/${theme}
+        for theme in $(find themes -name "*.zip"); do
+            name=$(basename "$theme" .zip)
+            wrkdir=exampleSite/public/themes/${name}
             mkdir -p ${wrkdir}
-            find themes -name "*.zip" -exec unzip '{}' -d ${wrkdir} \
+            unzip ${theme} -d ${wrkdir}
         done
 
     - name: Set up Hugo
