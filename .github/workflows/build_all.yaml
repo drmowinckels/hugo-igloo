@@ -12,10 +12,23 @@ jobs:
 
     # create a matrix from the color data file
     strategy:
-      matrix:
-        color:
-        # use jq and yq to convert the YAML to a JSON array of key-value objects
-        - name: $(cat data/colors.yaml | yq e -j | jq -r "to_entries[] | .key"), value: $(cat data/colors.yaml | yq e -j | jq -r "to_entries[] | .value")
+        fail-fast: false
+        matrix:
+          color: 
+            - ash   
+            - barbie 
+            - icicle 
+            - dune   
+            - mint   
+            - moss   
+            - paper  
+            - plum   
+            - poppy  
+            - pumpkin
+            - teal   
+            - violet 
+            - vlad   
+            - water  
 
     steps:
     - name: Checkout code
