@@ -3,7 +3,7 @@ name: Hugo Build
 on:
   push:
     branches:
-      - main  # Change this to your main branch name
+      - other  # Change this to your main branch name
 
 jobs:
   build:
