@@ -71,19 +71,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Download all workflow run artifacts
-      uses: actions/download-artifact@v3
-
-    - name: Prepare/Collect all websites
-      run: |
-        mkdir -p ./exampleSite/public/themes/
-        for theme in $(find . -name "*.zip"); do
-            name=$(basename "$theme" .zip)
-            wrkdir=exampleSite/public/themes/${name}
-            mkdir -p ${wrkdir}
-            unzip ${theme} -d ${wrkdir}
-        done
-
     - name: Set up Hugo
       uses: peaceiris/actions-hugo@v2
       with:
@@ -106,7 +93,21 @@ jobs:
           --themesDir ../.. \
           --baseURL ${{ env.gh-pages }}
 
-    - name: Deploy production
+    - name: Download all workflow run artifacts
+      uses: actions/download-artifact@v3
+
+    - name: Prepare/Collect all websites
+      run: |
+        wrkdir=exampleSite/public/themes/${name}
+        mkdir -p $wrkdir
+        for theme in $(find . -name "*.zip"); do
+            echo "$theme"
+            name=$(basename "$theme" .zip)
+            mkdir -p "$wrkdir"
+            unzip $theme -d "$wrkdir/$name"
+        done
+
+    - name: Deploy production 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
