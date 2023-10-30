@@ -73,7 +73,7 @@ jobs:
     - name: Extract artifacts
       run: |
         mkdir -p themes 
-        find themes -name "*.zip" -exec unzip '{}' -d themes
+        find themes -name "*.zip" -exec unzip '{}' -d themes \;
     
     # Here we'll move all of the zipped folders into the target directory
     - name: Prepare/Collect all websites
