@@ -50,10 +50,11 @@ jobs:
   
     - name: Build Hugo
       run: |
+        cd exampleSite && \
         hugo \
             --config hugo_${{ matrix.color }}.toml \
             --themesDir ../.. \
-            --destination public/theme/${key} \
+            --destination public/theme/${{ matrix.color }} \
             --baseURL ${{ env.gh-pages }}
 
       # Zip and upload each color-specific build to job artifacts
