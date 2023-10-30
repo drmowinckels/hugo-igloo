@@ -76,7 +76,7 @@ jobs:
 
     - name: Prepare/Collect all websites
       run: |
-        mkdir -p exampleSite/public/themes/
+        mkdir -p ./exampleSite/public/themes/
         for theme in $(find . -name "*.zip"); do
             name=$(basename "$theme" .zip)
             wrkdir=exampleSite/public/themes/${name}
@@ -110,4 +110,4 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        folder: exampleSite/public
+        folder: ./exampleSite/public
