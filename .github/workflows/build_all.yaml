@@ -31,9 +31,9 @@ jobs:
     - name: Build Hugo
       run: |
         # Build theme examples
-        themes=(ash  barbiedune mint moss paper plum poppy pumpkin teal violet vlad water)
+        themes=("ash" "barbie" "dune" "mint" "moss" "paper" "plum" "poppy" "pumpkin" "teal" "violet" "vlad" "water")
         echo $themes
-        for theme in $themes ; do
+        for theme in ${themes[@]} ; do
             echo $theme
             cat exampleSite/hugo.toml | sed -e "s/icicle/$theme/g" > exampleSite/hugo_$theme.toml
             cd exampleSite && \
