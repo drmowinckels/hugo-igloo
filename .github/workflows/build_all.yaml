@@ -67,6 +67,17 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+    - name: Download all workflow run artifacts
+      uses: actions/download-artifact@v2
+  
+    - name: Extract artifacts
+      run: find . -name "*.zip" | xargs -n 1 unzip
+    
+    # Here we'll move all of the zipped folders into the target directory
+    - name: Prepare/Collect all websites
+      run: |
+        ls
+
     - name: Checkout code
       uses: actions/checkout@v3
   
@@ -91,17 +102,7 @@ jobs:
           --themesDir ../.. \
           --baseURL ${{ env.gh-pages }}
 
-    - name: Download all workflow run artifacts
-      uses: actions/download-artifact@v2
 
-    - name: Extract artifacts
-      run: find . -name "*.zip" | xargs -n 1 unzip
-    
-    # Here we'll move all of the zipped folders into the target directory
-    - name: Prepare/Collect all websites
-      run: |
-        mkdir -p public/themes/
-        mv ${{ matrix.color }}-website public/themes/${{ matrix.color }}
 
     - name: Deploy production
       uses: JamesIves/github-pages-deploy-action@v4
