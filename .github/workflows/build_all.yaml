@@ -57,7 +57,7 @@ jobs:
             hugo \
                 --config hugo_${{ matrix.color.name }}.toml \
                 --themesDir ../.. \
-                --destination ./exampleSite/public/theme/${key} \
+                --destination public/theme/${key} \
                 --baseURL ${{ env.gh-pages }}/theme/${{ matrix.color.name }}
 
     - name: Deploy production
