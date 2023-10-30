@@ -74,18 +74,11 @@ jobs:
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v3
 
-    - name: Move downloaded artifacts to themes directory
-      run: mv ${{github.workspace}}/* ./themes
-  
-    - name: Extract artifacts
-      run: |
-        find themes -name "*.zip" -exec unzip '{}' -d themes \;
-  
     - name: Prepare/Collect all websites
       run: |
         mkdir -p exampleSite/public/themes/
         for theme in ${{ matrix.color }}; do
-        wrkdir=exampleSite/public/themes/${theme}
+            wrkdir=exampleSite/public/themes/${theme}
             mkdir -p ${wrkdir}
             find themes -name "*.zip" -exec unzip '{}' -d ${wrkdir} \
         done
