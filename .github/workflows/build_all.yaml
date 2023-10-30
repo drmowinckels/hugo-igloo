@@ -48,21 +48,51 @@ jobs:
         github_pages_link="https://$owner.github.io/$repo_name/"
         echo "gh-pages=$github_pages_link" >> $GITHUB_ENV
   
+        - name: Build Hugo
+        run: |
+          # use ${{ matrix.color }} to replace color in config
+          hugo \
+              --config hugo_${{ matrix.color }}.toml \
+              --themesDir ../.. \
+              --destination public/theme/${key} \
+              --baseURL ${{ env.gh-pages }}
+
+      # Zip and upload each color-specific build to job artifacts
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ matrix.color }}-website
+        path: ./public/theme/${{ matrix.color }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    # Build main website
     - name: Build Hugo site
       run: |
-        # modify the config file with the current color in matrix
-        cat exampleSite/hugo.toml | sed -e s/icicle/${{ matrix.color.name }}/g > exampleSite/hugo_${{ matrix.color.name }}.toml
-        # Build Hugo site
         cd exampleSite && \
-            hugo \
-                --config hugo_${{ matrix.color.name }}.toml \
-                --themesDir ../.. \
-                --destination public/theme/${key} \
-                --baseURL ${{ env.gh-pages }}/theme/${{ matrix.color.name }}
+        hugo \
+          --themesDir ../.. \
+          --baseURL ${{ env.gh-pages }}
+
+    - name: Download all workflow run artifacts
+      uses: actions/download-artifact@v2
+
+    - name: Extract artifacts
+      run: find . -name "*.zip" | xargs -n 1 unzip
+    
+    # Here we'll move all of the zipped folders into the target directory
+    - name: Prepare/Collect all websites
+      run: |
+        mkdir -p public/themes/
+        mv ${{ matrix.color }}-website public/themes/${{ matrix.color }}
 
     - name: Deploy production
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        folder: ./exampleSite/public
-        target-folder: ${{ matrix.color.name }} #deploy to sub-folder
+        folder: ./public
