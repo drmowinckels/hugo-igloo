@@ -67,26 +67,33 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: Download all workflow run artifacts
-      uses: actions/download-artifact@v3
-  
-    - name: Extract artifacts
-      run: |
-        mkdir -p themes 
-        find themes -name "*.zip" -exec unzip '{}' -d themes \;
-    
-    # Here we'll move all of the zipped folders into the target directory
-    - name: Prepare/Collect all websites
-      run: |
-        ls
-        mkdir -p exampleSite/public/themes/
-        for theme in $(ls themes/); do
-            mv ${theme} exampleSite/public/themes/${{ matrix.color }}
-        done
 
     - name: Checkout code
       uses: actions/checkout@v3
+
+    - name: Download all workflow run artifacts
+      uses: actions/download-artifact@v3
+
+    - name: Move downloaded artifacts to themes directory
+      run: mv ${{github.workspace}}/* ./themes
   
+    - name: Extract artifacts
+      run: |
+        find themes -name "*.zip" -exec unzip '{}' -d themes \;
+  
+    - name: Extract artifacts
+      run: |
+;
+    
+    - name: Prepare/Collect all websites
+      run: |
+        mkdir -p exampleSite/public/themes/
+        for theme in ${{ matrix.color }}; do
+        wrkdir=exampleSite/public/themes/${theme}
+            mkdir -p ${wrkdir}
+            find themes -name "*.zip" -exec unzip '{}' -d ${wrkdir} \
+        done
+
     - name: Set up Hugo
       uses: peaceiris/actions-hugo@v2
       with:
