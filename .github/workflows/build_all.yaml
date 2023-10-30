@@ -58,7 +58,7 @@ jobs:
 
       # Zip and upload each color-specific build to job artifacts
     - name: Archive production artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: ${{ matrix.color }}
         path: exampleSite/public
@@ -68,16 +68,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Download all workflow run artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
   
     - name: Extract artifacts
-      run: find . -name "*.zip" | xargs -n 1 unzip
+      run: |
+        mkdir -p themes 
+        find themes -name "*.zip" -exec unzip '{}' -d themes
     
     # Here we'll move all of the zipped folders into the target directory
     - name: Prepare/Collect all websites
       run: |
+        ls
         mkdir -p exampleSite/public/themes/
-        for theme in $(ls); do
+        for theme in $(ls themes/); do
             mv ${theme} exampleSite/public/themes/${{ matrix.color }}
         done
 
