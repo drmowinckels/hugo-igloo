@@ -1,7 +1,7 @@
 {{ define "main" }}
-    {{ range .Site.Sections }}
-        <div class=" uk-section uk-margin-bottom">
-            {{ if ne .Type "about" }}
+    {{ range $section := .Site.Sections.ByWeight }}
+        {{ if isset .Params "home" }}
+            <div class=" uk-section uk-margin-bottom">
                 <div class="section banner">
                     <div class="uk-container uk-margin-left-large">
                         <a href="{{ .Permalink }}">
@@ -9,16 +9,20 @@
                         </a>
                     </div>
                 </div>
-            {{ end}}
-            {{ if or (eq .Type "blog" ) (eq .Type "post" ) }}
-                {{ partial "cards/post-li.html" ( where site.RegularPages "Section" "blog" | first 1 ) }}
-            {{ else if eq .Type "about" }}
-                {{ partial "cards/image-li.html" . }}
-            {{ else }}
-                <div class="uk-container uk-container-small">
-                    {{ .Summary }}
-                </div>
-            {{ end }}
-        </div>
+                {{ if eq .Params.home "list" }}
+                    {{ partial "cards/post-li.html" ( .Pages | first 1 ) }}
+                    <div class="uk-text-right uk-margin-small-top">
+                        <a href="{{ .Permalink }}" class="uk-button uk-button-primary">View {{ .Title }}</a>
+                    </div>                {{ else if eq .Params.home "thumbnail" }}
+                    {{ partial "cards/image-li.html" . }}
+                {{ else if eq .Params.home "slider" }}
+                    {{ partial "slider.html" . }}
+                {{ else }}
+                    <div class="uk-container uk-container-small">
+                        {{ .Summary }}
+                    </div>
+                {{ end }}
+            </div>
+        {{ end }}
     {{ end }}
 {{ end }}

@@ -5,6 +5,7 @@
         {{ partial "head/og.html" . }}
         {{ partial "head/css.html" . }}
         {{ partial "head/favico.html" . }}
+        {{- block "head" . }}{{- end }}
     </head>
     <body>
         {{ partial "header/banner.html" .}}

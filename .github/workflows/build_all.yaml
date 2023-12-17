@@ -27,8 +27,17 @@ jobs:
         repo_name=$(echo $repo | sed -n 's/.*\/\([^/]*\)$/\1/p')
         github_pages_link="https://$owner.github.io/$repo_name/"
         echo "gh-pages=$github_pages_link" >> $GITHUB_ENV
-  
-    - name: Build Hugo
+
+        
+    # Build main website
+    - name: Build Hugo site
+      run: |
+        cd exampleSite && \
+        hugo \
+          --themesDir ../.. \
+          --baseURL ${{ env.gh-pages }}
+
+    - name: Build color themes
       run: |
         # Build theme examples
         themes=("ash" "barbie" "dune" "mint" "moss" "paper" "plum" "poppy" "pumpkin" "teal" "violet" "vlad" "water")
@@ -44,13 +53,6 @@ jobs:
             cd -
         done
 
-    # Build main website
-    - name: Build Hugo site
-      run: |
-        cd exampleSite && \
-        hugo \
-          --themesDir ../.. \
-          --baseURL ${{ env.gh-pages }}
 
     - name: Deploy production 🚀
       uses: JamesIves/github-pages-deploy-action@v4
