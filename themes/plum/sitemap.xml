@@ -4,10 +4,12 @@
   <url>
     <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/about/</loc>
   </url><url>
-    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/categories/blog/</loc>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/blog/</loc>
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/blog/</loc>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/categories/blog/</loc>
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/blog/post2/</loc>
@@ -34,6 +36,32 @@
     <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/tags/penguin/</loc>
     <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/</loc>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/ash/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/barbie/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/dune/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/icicle/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/mint/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/moss/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/paper/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/plum/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/poppy/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/pumpkin/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/teal/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/violet/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/vlad/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/plum/projects/water/</loc>
   </url>
 </urlset>

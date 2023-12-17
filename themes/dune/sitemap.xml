@@ -4,10 +4,12 @@
   <url>
     <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/about/</loc>
   </url><url>
-    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/categories/blog/</loc>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/blog/</loc>
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/blog/</loc>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/categories/blog/</loc>
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/blog/post2/</loc>
@@ -34,6 +36,32 @@
     <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/tags/penguin/</loc>
     <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/</loc>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/ash/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/barbie/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/dune/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/icicle/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/mint/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/moss/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/paper/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/plum/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/poppy/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/pumpkin/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/teal/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/violet/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/vlad/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/dune/projects/water/</loc>
   </url>
 </urlset>

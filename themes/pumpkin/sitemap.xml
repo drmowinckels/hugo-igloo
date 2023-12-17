@@ -4,10 +4,12 @@
   <url>
     <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/about/</loc>
   </url><url>
-    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/categories/blog/</loc>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/blog/</loc>
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/blog/</loc>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/categories/blog/</loc>
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/blog/post2/</loc>
@@ -34,6 +36,32 @@
     <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/tags/penguin/</loc>
     <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/</loc>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/ash/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/barbie/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/dune/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/icicle/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/mint/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/moss/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/paper/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/plum/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/poppy/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/pumpkin/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/teal/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/violet/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/vlad/</loc>
+  </url><url>
+    <loc>https://drmowinckels.github.io/hugo-igloo//themes/pumpkin/projects/water/</loc>
   </url>
 </urlset>
