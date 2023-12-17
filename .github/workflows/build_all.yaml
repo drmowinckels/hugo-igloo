@@ -25,10 +25,9 @@ jobs:
         repo="${{ github.repository }}"
         owner=$(echo $repo | sed -n 's/^\(.*\)\/.*/\1/p')
         repo_name=$(echo $repo | sed -n 's/.*\/\([^/]*\)$/\1/p')
-        github_pages_link="https://$owner.github.io/$repo_name/"
+        github_pages_link="https://drmowinckels.io/hugo-igloo/"
         echo "gh-pages=$github_pages_link" >> $GITHUB_ENV
 
-        
     # Build main website
     - name: Build Hugo site
       run: |

@@ -13,14 +13,11 @@
                     {{ partial "cards/post-li.html" ( .Pages | first 1 ) }}
                     <div class="uk-text-right uk-margin-small-top">
                         <a href="{{ .Permalink }}" class="uk-button uk-button-primary">View {{ .Title }}</a>
-                    </div>                {{ else if eq .Params.home "thumbnail" }}
+                    </div>                
+                {{ else if eq .Params.home "thumbnail" }}
                     {{ partial "cards/image-li.html" . }}
                 {{ else if eq .Params.home "slider" }}
                     {{ partial "slider.html" . }}
-                {{ else }}
-                    <div class="uk-container uk-container-small">
-                        {{ .Summary }}
-                    </div>
                 {{ end }}
             </div>
         {{ end }}
