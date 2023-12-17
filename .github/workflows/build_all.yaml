@@ -41,7 +41,7 @@ jobs:
         # Build theme examples
         themes=("ash" "barbie" "dune" "mint" "moss" "paper" "plum" "poppy" "pumpkin" "teal" "violet" "vlad" "water")
         for theme in ${themes[@]} ; do
-            echo $theme
+            echo ++--- $theme ---++
             cat exampleSite/hugo.toml | sed -e "s/icicle/$theme/g" > exampleSite/hugo_$theme.toml
             cd exampleSite && \
               hugo \
