@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Igloo</title>
-    <link>https://drmowinckels.github.io/hugo-igloo//themes/ash/categories/</link>
+    <link>https://drmowinckels.io/hugo-igloo//themes/ash/categories/</link>
     <description>Recent content in Categories on Igloo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://drmowinckels.github.io/hugo-igloo//themes/ash/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://drmowinckels.io/hugo-igloo//themes/ash/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>blog</title>
-      <link>https://drmowinckels.github.io/hugo-igloo//themes/ash/categories/blog/</link>
+      <link>https://drmowinckels.io/hugo-igloo//themes/ash/categories/blog/</link>
       <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://drmowinckels.github.io/hugo-igloo//themes/ash/categories/blog/</guid>
+      <guid>https://drmowinckels.io/hugo-igloo//themes/ash/categories/blog/</guid>
       <description></description>
     </item>
     
