@@ -52,8 +52,9 @@
 
 
 
-    <meta property="og:image" content="https://drmowinckels.io/images/theme.png" />
-    <meta name="twitter:image" content="https://drmowinckels.io/images/theme.png">
+    
+    <meta property="og:image" content="https://drmowinckels.io/hugo-igloo/themes/moss/projects/paper/penguin.png" />
+    <meta name="twitter:image" content="https://drmowinckels.io/hugo-igloo/themes/moss/projects/paper/penguin.png">
 
 
 
@@ -240,64 +241,87 @@
 
 
 <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-    <nav class="uk-navbar-container ">
+    <nav class="uk-navbar-container">
         <div uk-navbar>
-            <div class="uk-navbar-center">
-                
+            
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-item uk-logo" href="https://drmowinckels.io/hugo-igloo//themes/moss">
+                        <img src="https://drmowinckels.io/hugo-igloo//themes/moss/images/theme.png" width="40">
+                    </a>
+                </div>
+            
+            <div class="uk-navbar-right uk-visible@s">
+                <ul class="uk-navbar-nav">
                     
-                        <div class="uk-navbar-center-left">
-                            <ul class="uk-navbar-nav">
-                    
-                    
-                    <li>
-                        <a href="https://drmowinckels.io/hugo-igloo//themes/moss/about">
-                            About
-                            
-                        </a>
-                        
-                    </li>
-                    
-                            </ul>
-                        </div>
-                    
-                
-                    
-                    
-                        
-                            <a class="uk-navbar-item uk-logo" href="https://drmowinckels.io/hugo-igloo//themes/moss">
-                                <img src="https://drmowinckels.io/hugo-igloo//themes/moss/images/theme.png" width="40">
+                        <li>
+                            <a href="https://drmowinckels.io/hugo-igloo//themes/moss/about">
+                                About
+                                
                             </a>
-                        
-                        <div class="uk-navbar-center-right">
-                            <ul class="uk-navbar-nav"> 
-                    
-                    <li>
-                        <a href="https://drmowinckels.io/hugo-igloo//themes/moss/blog">
-                            Blog
                             
-                        </a>
-                        
-                    </li>
+                        </li>
                     
-                
-                    
-                    
-                    <li>
-                        <a href="https://drmowinckels.io/hugo-igloo//themes/moss/projects">
-                            Projects
+                        <li>
+                            <a href="https://drmowinckels.io/hugo-igloo//themes/moss/blog">
+                                Blog
+                                
+                            </a>
                             
-                        </a>
-                        
-                    </li>
+                        </li>
                     
-                            </ul>
-                        </div>
+                        <li>
+                            <a href="https://drmowinckels.io/hugo-igloo//themes/moss/projects">
+                                Projects
+                                
+                            </a>
+                            
+                        </li>
                     
-                
+                </ul>
+            </div>
+            <div class="uk-navbar-right uk-hidden@s">
+                <a class="uk-navbar-toggle" href="#offcanvas" uk-toggle>
+                    <span class="uk-navbar-toggle-icon" uk-icon="menu"></span>
+                </a>
             </div>
         </div>
     </nav>
 </div>
+
+
+<div id="offcanvas" uk-offcanvas="mode: push; overlay: true">
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <ul class="uk-nav uk-nav-default">
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/moss/about">
+                        About
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/moss/blog">
+                        Blog
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/moss/projects">
+                        Projects
+                        
+                    </a>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
 
         <div id="content" class="uk-container uk-container-small uk-margin-large-top">
     <article class="uk-article">

@@ -248,64 +248,87 @@
 
 
 <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-    <nav class="uk-navbar-container ">
+    <nav class="uk-navbar-container">
         <div uk-navbar>
-            <div class="uk-navbar-center">
-                
+            
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-item uk-logo" href="https://drmowinckels.io/hugo-igloo//themes/pumpkin">
+                        <img src="https://drmowinckels.io/hugo-igloo//themes/pumpkin/images/theme.png" width="40">
+                    </a>
+                </div>
+            
+            <div class="uk-navbar-right uk-visible@s">
+                <ul class="uk-navbar-nav">
                     
-                        <div class="uk-navbar-center-left">
-                            <ul class="uk-navbar-nav">
-                    
-                    
-                    <li>
-                        <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/about">
-                            About
-                            
-                        </a>
-                        
-                    </li>
-                    
-                            </ul>
-                        </div>
-                    
-                
-                    
-                    
-                        
-                            <a class="uk-navbar-item uk-logo" href="https://drmowinckels.io/hugo-igloo//themes/pumpkin">
-                                <img src="https://drmowinckels.io/hugo-igloo//themes/pumpkin/images/theme.png" width="40">
+                        <li>
+                            <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/about">
+                                About
+                                
                             </a>
-                        
-                        <div class="uk-navbar-center-right">
-                            <ul class="uk-navbar-nav"> 
-                    
-                    <li>
-                        <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/blog">
-                            Blog
                             
-                        </a>
-                        
-                    </li>
+                        </li>
                     
-                
-                    
-                    
-                    <li>
-                        <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects">
-                            Projects
+                        <li>
+                            <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/blog">
+                                Blog
+                                
+                            </a>
                             
-                        </a>
-                        
-                    </li>
+                        </li>
                     
-                            </ul>
-                        </div>
+                        <li>
+                            <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects">
+                                Projects
+                                
+                            </a>
+                            
+                        </li>
                     
-                
+                </ul>
+            </div>
+            <div class="uk-navbar-right uk-hidden@s">
+                <a class="uk-navbar-toggle" href="#offcanvas" uk-toggle>
+                    <span class="uk-navbar-toggle-icon" uk-icon="menu"></span>
+                </a>
             </div>
         </div>
     </nav>
 </div>
+
+
+<div id="offcanvas" uk-offcanvas="mode: push; overlay: true">
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <ul class="uk-nav uk-nav-default">
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/about">
+                        About
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/blog">
+                        Blog
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects">
+                        Projects
+                        
+                    </a>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
 
         <div id="content" class="uk-container uk-container-small uk-margin-large-top">
     
@@ -321,11 +344,13 @@
                 
                     
 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/about/" style="text-decoration: none;">
-    <div class="uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+    <div class="uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid
+    
+    >
         <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
             
             
-            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/about/penguin_huc37cc62d1cf2e15d3a32210d32a1ebd1_173811_0x660_resize_box_3.png" alt="" uk-cover>
+            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/about/penguin_hua6b5ea278d609c19842e3e556d15deb0_74555_0x660_resize_box_3.png" alt="" uk-cover>
             <canvas height="360"></canvas>
         </div>
         <div>
@@ -333,9 +358,14 @@
                 <h3 class="uk-card-title uk-heading-bullet">Hugo Igloo</h3>
                 <p>I&rsquo;m the frozen theme for your website needs!</p>
             </div>
+            
             <div class="uk-card-footer uk-text-right">
-                
-            </div>
+                    
+                        <a href="https://github.com/drmowinckels" target="_blank" class="uk-icon-button" uk-icon="github" 
+                             aria-label="GitHub" ></a>
+                    
+                </div>
+            
         </div>
     </div>
 </a>
@@ -412,9 +442,13 @@
         
             <li>
                 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects/ash/" style="text-decoration: none;">
-                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #B2BEB5; height: 400px;">
+                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #B2BEB5d4; height: 400px;">
                         
-                        <div class="uk-position-center uk-panel">
+                            
+                            
+                            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/projects/ash/penguin_hua6b5ea278d609c19842e3e556d15deb0_71785_0x400_resize_box_3.png" width="400" height="400" alt="">
+                        
+                        <div class="uk-position-bottom uk-padding-small uk-panel">
                             <h1>Igloo ash</h1>
                         </div>
                     </div>
@@ -423,9 +457,13 @@
         
             <li>
                 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects/barbie/" style="text-decoration: none;">
-                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #D65076; height: 400px;">
+                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #D65076d4; height: 400px;">
                         
-                        <div class="uk-position-center uk-panel">
+                            
+                            
+                            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/projects/barbie/penguin_hua6b5ea278d609c19842e3e556d15deb0_74940_0x400_resize_box_3.png" width="400" height="400" alt="">
+                        
+                        <div class="uk-position-bottom uk-padding-small uk-panel">
                             <h1>Igloo barbie</h1>
                         </div>
                     </div>
@@ -434,9 +472,13 @@
         
             <li>
                 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects/dune/" style="text-decoration: none;">
-                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #b38e65; height: 400px;">
+                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #b38e65d4; height: 400px;">
                         
-                        <div class="uk-position-center uk-panel">
+                            
+                            
+                            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/projects/dune/penguin_hua6b5ea278d609c19842e3e556d15deb0_75524_0x400_resize_box_3.png" width="400" height="400" alt="">
+                        
+                        <div class="uk-position-bottom uk-padding-small uk-panel">
                             <h1>Igloo dune</h1>
                         </div>
                     </div>
@@ -445,9 +487,13 @@
         
             <li>
                 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects/icicle/" style="text-decoration: none;">
-                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #0c8bac; height: 400px;">
+                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #0c8bacd4; height: 400px;">
                         
-                        <div class="uk-position-center uk-panel">
+                            
+                            
+                            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/projects/icicle/penguin_hua6b5ea278d609c19842e3e556d15deb0_76380_0x400_resize_box_3.png" width="400" height="400" alt="">
+                        
+                        <div class="uk-position-bottom uk-padding-small uk-panel">
                             <h1>Igloo icicle</h1>
                         </div>
                     </div>
@@ -456,9 +502,13 @@
         
             <li>
                 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects/mint/" style="text-decoration: none;">
-                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #3EB489; height: 400px;">
+                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #3EB489d4; height: 400px;">
                         
-                        <div class="uk-position-center uk-panel">
+                            
+                            
+                            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/projects/mint/penguin_hua6b5ea278d609c19842e3e556d15deb0_75980_0x400_resize_box_3.png" width="400" height="400" alt="">
+                        
+                        <div class="uk-position-bottom uk-padding-small uk-panel">
                             <h1>Igloo mint</h1>
                         </div>
                     </div>
@@ -467,9 +517,13 @@
         
             <li>
                 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects/moss/" style="text-decoration: none;">
-                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #8A9A5B; height: 400px;">
+                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #8A9A5Bd4; height: 400px;">
                         
-                        <div class="uk-position-center uk-panel">
+                            
+                            
+                            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/projects/moss/penguin_hua6b5ea278d609c19842e3e556d15deb0_76058_0x400_resize_box_3.png" width="400" height="400" alt="">
+                        
+                        <div class="uk-position-bottom uk-padding-small uk-panel">
                             <h1>Igloo moss</h1>
                         </div>
                     </div>
@@ -478,9 +532,13 @@
         
             <li>
                 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects/paper/" style="text-decoration: none;">
-                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #626262; height: 400px;">
+                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #626262d4; height: 400px;">
                         
-                        <div class="uk-position-center uk-panel">
+                            
+                            
+                            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/projects/paper/penguin_hua6b5ea278d609c19842e3e556d15deb0_73731_0x400_resize_box_3.png" width="400" height="400" alt="">
+                        
+                        <div class="uk-position-bottom uk-padding-small uk-panel">
                             <h1>Igloo paper</h1>
                         </div>
                     </div>
@@ -489,9 +547,13 @@
         
             <li>
                 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects/plum/" style="text-decoration: none;">
-                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #9b3c6c; height: 400px;">
+                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #9b3c6cd4; height: 400px;">
                         
-                        <div class="uk-position-center uk-panel">
+                            
+                            
+                            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/projects/plum/penguin_hua6b5ea278d609c19842e3e556d15deb0_76639_0x400_resize_box_3.png" width="400" height="400" alt="">
+                        
+                        <div class="uk-position-bottom uk-padding-small uk-panel">
                             <h1>Igloo plum</h1>
                         </div>
                     </div>
@@ -500,9 +562,13 @@
         
             <li>
                 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects/poppy/" style="text-decoration: none;">
-                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #aa372f; height: 400px;">
+                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #aa372fd4; height: 400px;">
                         
-                        <div class="uk-position-center uk-panel">
+                            
+                            
+                            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/projects/poppy/penguin_hua6b5ea278d609c19842e3e556d15deb0_76850_0x400_resize_box_3.png" width="400" height="400" alt="">
+                        
+                        <div class="uk-position-bottom uk-padding-small uk-panel">
                             <h1>Igloo poppy</h1>
                         </div>
                     </div>
@@ -511,9 +577,13 @@
         
             <li>
                 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects/pumpkin/" style="text-decoration: none;">
-                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #FF9B49; height: 400px;">
+                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #FF9B49d4; height: 400px;">
                         
-                        <div class="uk-position-center uk-panel">
+                            
+                            
+                            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/projects/pumpkin/penguin_hua6b5ea278d609c19842e3e556d15deb0_74555_0x400_resize_box_3.png" width="400" height="400" alt="">
+                        
+                        <div class="uk-position-bottom uk-padding-small uk-panel">
                             <h1>Igloo pumpkin</h1>
                         </div>
                     </div>
@@ -522,9 +592,13 @@
         
             <li>
                 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects/teal/" style="text-decoration: none;">
-                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #63B7B7; height: 400px;">
+                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #63B7B7d4; height: 400px;">
                         
-                        <div class="uk-position-center uk-panel">
+                            
+                            
+                            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/projects/teal/penguin_hua6b5ea278d609c19842e3e556d15deb0_72982_0x400_resize_box_3.png" width="400" height="400" alt="">
+                        
+                        <div class="uk-position-bottom uk-padding-small uk-panel">
                             <h1>Igloo teal</h1>
                         </div>
                     </div>
@@ -533,9 +607,13 @@
         
             <li>
                 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects/violet/" style="text-decoration: none;">
-                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #B565A7; height: 400px;">
+                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #B565A7d4; height: 400px;">
                         
-                        <div class="uk-position-center uk-panel">
+                            
+                            
+                            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/projects/violet/penguin_hua6b5ea278d609c19842e3e556d15deb0_75034_0x400_resize_box_3.png" width="400" height="400" alt="">
+                        
+                        <div class="uk-position-bottom uk-padding-small uk-panel">
                             <h1>Igloo violet</h1>
                         </div>
                     </div>
@@ -544,9 +622,13 @@
         
             <li>
                 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects/vlad/" style="text-decoration: none;">
-                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #993232; height: 400px;">
+                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #993232d4; height: 400px;">
                         
-                        <div class="uk-position-center uk-panel">
+                            
+                            
+                            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/projects/vlad/penguin_hua6b5ea278d609c19842e3e556d15deb0_76114_0x400_resize_box_3.png" width="400" height="400" alt="">
+                        
+                        <div class="uk-position-bottom uk-padding-small uk-panel">
                             <h1>Igloo vlad</h1>
                         </div>
                     </div>
@@ -555,9 +637,13 @@
         
             <li>
                 <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/projects/water/" style="text-decoration: none;">
-                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #3F77A2; height: 400px;">
+                    <div class="uk-card uk-card-default uk-card-body" style="background-color: #3F77A2d4; height: 400px;">
                         
-                        <div class="uk-position-center uk-panel">
+                            
+                            
+                            <img src="https://drmowinckels.io/hugo-igloo/themes/pumpkin/projects/water/penguin_hua6b5ea278d609c19842e3e556d15deb0_76079_0x400_resize_box_3.png" width="400" height="400" alt="">
+                        
+                        <div class="uk-position-bottom uk-padding-small uk-panel">
                             <h1>Igloo water</h1>
                         </div>
                     </div>
