@@ -15,7 +15,7 @@
                         <a href="{{ .Permalink }}" class="uk-button uk-button-primary">View {{ .Title }}</a>
                     </div>                
                 {{ else if eq .Params.home "thumbnail" }}
-                    {{ partial "cards/image-li.html" . }}
+                    {{ partial "cards/image-single.html" . }}
                 {{ else if eq .Params.home "slider" }}
                     {{ partial "slider.html" . }}
                 {{ end }}

@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <div class="uk-markdown">
+        {{ .Content }}
+    </div>
+
+    <div class="card-container uk-container uk-container-small">
+        <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column js-filter">
+            {{- range .Pages }}
+                {{ partial "cards/image-single.html" . }}
+            {{- end }}
+        </div>
+    </div>
+{{ end }}

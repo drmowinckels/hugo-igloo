@@ -1,49 +1,72 @@
-{{ $menuLen :=  len .Site.Menus.main }}
+{{ $menuLen := len .Site.Menus.main }}
 {{ $menuSplit := div $menuLen 2 }}
-{{ $menuLen :=  sub $menuLen 1 }}
+{{ $menuLen := sub $menuLen 1 }}
 <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-    <nav class="uk-navbar-container ">
+    <nav class="uk-navbar-container">
         <div uk-navbar>
-            <div class="uk-navbar-center">
-                {{ range $i, $el := .Site.Menus.main  }}
-                    {{ if  eq $i 0 }}
-                        <div class="uk-navbar-center-left">
-                            <ul class="uk-navbar-nav">
-                    {{ end }}
-                    {{ if eq $i $menuSplit }}
-                        {{ with $.Site.Params.aesthetics.logo }}
-                            <a class="uk-navbar-item uk-logo" href="{{$.Site.BaseURL }}">
-                                <img src="{{ .}}" width="40">
+            {{ with $.Site.Params.aesthetics.logo }}
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-item uk-logo" href="{{$.Site.BaseURL}}">
+                        <img src="{{.}}" width="40">
+                    </a>
+                </div>
+            {{ end }}
+            <div class="uk-navbar-right uk-visible@s">
+                <ul class="uk-navbar-nav">
+                    {{ range $i, $el := .Site.Menus.main }}
+                        <li>
+                            <a href="{{ $el.URL | relLangURL }}">
+                                {{ $el.Name }}
+                                {{ if $el.HasChildren }}
+                                    <span uk-icon="chevron-down"></span>
+                                {{ end }}
                             </a>
-                        {{ end }}
-                        <div class="uk-navbar-center-right">
-                            <ul class="uk-navbar-nav"> 
-                    {{ end }}
-                    <li>
-                        <a href="{{ $el.URL | relLangURL }}">
-                            {{ $el.Name }}
                             {{ if $el.HasChildren }}
-                            <span uk-icon="chevron-down"></span>
+                                <div class="uk-navbar-dropdown">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        {{ range $el.Children }}
+                                            <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+                                        {{ end }}
+                                    </ul>
+                                </div>                            
                             {{ end }}
-                        </a>
-                        {{ if $el.HasChildren }}
-                            <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    {{ range $el.Children }}
-                                        <li><a href="{{ .URL | relLangURL }}">
-                                            {{ .Name }}
-                                        </a></li>
-                                    {{ end }}
-                                </ul>
-                            </div>                            
-                        {{ end }}
-                    </li>
-                    {{ if or (eq $i (sub $menuSplit 1)) (eq $i $menuLen ) }}
-                            </ul>
-                        </div>
+                        </li>
                     {{ end }}
-                {{ end }}
+                </ul>
+            </div>
+            <div class="uk-navbar-right uk-hidden@s">
+                <a class="uk-navbar-toggle" href="#offcanvas" uk-toggle>
+                    <span class="uk-navbar-toggle-icon" uk-icon="menu"></span>
+                </a>
             </div>
         </div>
     </nav>
+</div>
+
+<!-- Hidden Offcanvas Navigation for small screens -->
+<div id="offcanvas" uk-offcanvas="mode: push; overlay: true">
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <ul class="uk-nav uk-nav-default">
+            {{ range .Site.Menus.main }}
+                <li>
+                    <a href="{{ .URL | relLangURL }}">
+                        {{ .Name }}
+                        {{ if .HasChildren }}
+                            <span uk-icon="chevron-down"></span>
+                        {{ end }}
+                    </a>
+                    {{ if .HasChildren }}
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                {{ range .Children }}
+                                    <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                    {{ end }}
+                </li>
+            {{ end }}
+        </ul>
+    </div>
 </div>
