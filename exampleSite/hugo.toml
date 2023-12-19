@@ -32,8 +32,8 @@ canonifyurls            = true   # Turns relative urls into absolutet]
    url     = "projects"
    weight  = 4
 [[menu.main]]
-   name    = "Talks"
-   url     = "talks"
+   name    = "Timeline"
+   url     = "timeline"
    weight  = 5
 
 

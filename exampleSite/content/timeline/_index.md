@@ -1,7 +1,7 @@
 ---
 title: Talks
 type: timeline
-data: talks.json
+data: timeline.json
 weight: 3
 ---
 
