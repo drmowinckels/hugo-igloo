@@ -15,8 +15,8 @@
 
   .uk-navbar-nav {
     a {
-     font-weight: 400;
-     font-size: 1.25rem;
+     font-weight: 300;
+     font-size: .9rem;
     }
  }
 }
@@ -166,16 +166,14 @@ $margin: 4px;  // margin
   overflow: hidden;
 
   h1 {
-    font-size : 12rem;
+    font-size : 7rem;
     font-weight : 800;
     text-transform : uppercase;
     color: darken($primary, 15%);
+    margin-left: 20px;
+    margin-top: 30px !important;
   }
   @media (max-width: $breakpoint-small) {
-    h1 {
-      font-size : 7rem;
-      margin-top: calc(7rem * 0.7);
-    }
   }
 }
 
@@ -187,11 +185,7 @@ $margin: 4px;  // margin
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  height: 200px !important;
-
-  .banner{
-    margin-bottom: -30px;;
-  }
+  height: 120px !important;
 }
 
 .home{
@@ -261,9 +255,217 @@ $margin: 4px;  // margin
 /* Styles for screens between 992px and 1200px (large screens) */
 @media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
   /* Your styles for large screens go here */
+  .banner h1 {
+    margin-top: 0px;
+  }
 }
 
 /* Styles for screens larger than 1200px (extra-large screens) */
 @media (min-width: $breakpoint-large) {
   /* Your styles for extra-large screens go here */
+}
+
+.timeline {
+
+  position: relative;
+
+  &::before {
+    content: '';
+    background: $primary;
+    width: 5px;
+    height: 95%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-item {
+  width: 100%;
+  margin-bottom: 70px;
+
+  &:nth-child(even) {
+
+    .timeline-content {
+      float: right;
+      padding: 40px 30px 10px 30px;
+
+      .date {
+        right: auto;
+        left: 0;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        width: 0;
+        height: 0;
+        top: 30px;
+        left: -15px;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent $emphasis transparent transparent;
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 10px 30px;
+  border-radius: 4px;
+  background: $emphasis;
+
+  p{
+    color: $muted;
+  }
+  h2 {
+    color: lighten($muted, 10%);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: 30px;
+    right: -15px;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent $emphasis;
+  }
+
+  a {
+    background: $primary;
+    color: $global-muted-background;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 2px;
+  
+    &:hover, &:active, &:focus {
+      background: darken($primary, 10%);
+      text-decoration: none;
+    }
+  
+  }
+}
+
+.timeline-img {
+  width: 30px;
+  height: 30px;
+  background: $primary;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-top: 25px;
+  margin-left: -15px;
+}
+
+.timeline-card {
+  padding: 0 !important;
+  color: $muted;
+
+  p {
+    padding: 0 20px;
+  }
+
+  a {
+    margin-left: 20px;
+  }
+}
+
+.timeline-item {
+  .timeline-img-header {
+      background-size: cover;
+    }
+}
+
+.timeline-img-header {
+
+  height: 200px;
+  position: relative;
+  margin-bottom: 20px;
+
+  h2 {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+  }
+}
+
+blockquote {
+  margin-top: 30px;
+  color: $global-link-color;
+  border-left-color: $primary;
+  padding: 0 20px;
+}
+
+.date {
+  background: $global-inverse-background;
+  display: inline-block;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+
+  .timeline {
+
+    &::before {
+      left: 50px;
+    }
+
+    .timeline-img {
+      left: 50px;
+    }
+
+    .timeline-content {
+      max-width: 100%;
+      width: auto;
+      margin-left: 70px;
+    }
+
+    .timeline-item {
+
+      &:nth-child(even) {
+
+        .timeline-content {
+          float: none;
+
+        }
+      }
+
+      &:nth-child(odd) {
+
+        .timeline-content {
+          
+          &::after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            width: 0;
+            height: 0;
+            top: 30px;
+            left: -15px;
+            border-width: 10px 15px 10px 0;
+            border-color: transparent $emphasis transparent transparent;
+          }
+        }
+
+      }
+    }
+  }
 }

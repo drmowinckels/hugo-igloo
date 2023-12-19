@@ -9,6 +9,11 @@ social_media: # see icons in https://getuikit.com/docs/icon
     - icon: "github"
       link:  https://github.com/drmowinckels
       text: GitHub
+    - icon: 
 ---
 
-More text about me here.
+This theme is made for all those who want some fun geometrical elements in their page, but still have a feature rich site. 
+
+The theme comes with 8 pre-defined colour schemas, and 5 different shapes for image previews of posts. In addition, custom colour schemas can be created either through the `hugo.toml` or by defining your own custom scss for colours and fonts.
+
+

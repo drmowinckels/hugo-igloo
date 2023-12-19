@@ -14,6 +14,16 @@ canonifyurls            = true   # Turns relative urls into absolutet]
    url     = "about"
    weight  = 1
 [[menu.main]]
+   name    = "About sub1"
+   url     = "#"
+   weight  = 1
+   parent  = "About"
+[[menu.main]]
+   name    = "About sub2"
+   url     = "#"
+   weight  = 2
+   parent  = "About"
+[[menu.main]]
    name    = "Blog"
    url     = "blog"
    weight  = 2
@@ -21,6 +31,10 @@ canonifyurls            = true   # Turns relative urls into absolutet]
    name    = "Projects"
    url     = "projects"
    weight  = 4
+[[menu.main]]
+   name    = "Talks"
+   url     = "talks"
+   weight  = 5
 
 
 # We only use tag as a taxonomies
@@ -35,9 +49,10 @@ canonifyurls            = true   # Turns relative urls into absolutet]
     dateFormat     = "Jan 2, 2006"
 
     [params.aesthetics]
-        # icicle, mint,
-        # moss, paper, plum, poppy,
-        # violet, water 
+        # icicle, mint, barbie,
+        # dune, vlad, poppy,
+        # moss, paper, plum, 
+        # violet, water
         design = "icicle"  
 
         # Or set your own custom colours

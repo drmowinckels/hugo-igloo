@@ -5,7 +5,7 @@ $base-body-font-family: 'Karla', sans-serif !default;
 $base-heading-font-family: 'Cormorant Garamond', serif !default;
 $base-code-font-family: 'Space Mono', monospace !default;
 $navbar-nav-item-font-family: $base-heading-font-family !default;
-$global-font-size: 20px !default;
+$global-font-size: 16px !default;
 
 $global-background: lighten($primary, 70%) !default;
 $global-primary-background: $primary !default;
@@ -18,5 +18,5 @@ $global-link-color: $inverse !default;
 $global-link-hover-color: darken($global-link-color, 10%) !default;
 
 $navbar-nav-item-color: darken($global-color, 20%) !default;
-$navbar-nav-item-font-size: 1.3rem;
+$navbar-nav-item-font-size: 1.1rem;
 
