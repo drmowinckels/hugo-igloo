@@ -48,6 +48,10 @@ canonifyurls            = true   # Turns relative urls into absolutet]
     showRSSButton  = false                   # Show rss button in navigation
     dateFormat     = "Jan 2, 2006"
 
+    [params.footerSection]
+        title = "Footer Title"
+        content = "This is the content for the custom footer section."
+
     [params.aesthetics]
         # icicle, mint, barbie,
         # dune, vlad, poppy,

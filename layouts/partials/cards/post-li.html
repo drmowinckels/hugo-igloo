@@ -1,7 +1,7 @@
 <div class="card-container uk-container uk-container-small">
     <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column js-filter">
         {{- range . }}
-            <div class="card-post uk-margin-bottom"
+            <div class="card-post"
                 data-tags="{{ range .Params.tags }}{{ . | urlize}} {{ end }}">
                 {{ if isset .Params "image" }}
                     <div class="image image-shape uk-position-z-index">

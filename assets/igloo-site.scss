@@ -73,28 +73,28 @@ $margin: 4px;  // margin
       height: calc(#{$size2} * 1.1547) !important;
     }
   }
+}
 
-  .bevel {
-    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
-    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
-  }
+.bevel {
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
 
-  .rabbet{
-    -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-  }
+.rabbet{
+  -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+}
 
-  .hexagon {
-    -webkit-clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-    margin-bottom: calc(#{$margin} - #{$size} * 0.2885);
-    height: calc(#{$size} * 1.1547) !important;
-  }
+.hexagon {
+  -webkit-clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  margin-bottom: calc(#{$margin} - #{$size} * 0.2885);
+  height: calc(#{$size} * 1.1547) !important;
+}
 
-  .octagon {
-    -webkit-clip-path: polygon(29.29% 0%, 70.71% 0%, 100% 29.29%, 100% 70.71%, 70.71% 100%, 29.29% 100%, 0% 70.71%, 0% 29.29%);
-    clip-path: polygon(29.29% 0%, 70.71% 0%, 100% 29.29%, 100% 70.71%, 70.71% 100%, 29.29% 100%, 0% 70.71%, 0% 29.29%);
-  }
+.octagon {
+  -webkit-clip-path: polygon(29.29% 0%, 70.71% 0%, 100% 29.29%, 100% 70.71%, 70.71% 100%, 29.29% 100%, 0% 70.71%, 0% 29.29%);
+  clip-path: polygon(29.29% 0%, 70.71% 0%, 100% 29.29%, 100% 70.71%, 70.71% 100%, 29.29% 100%, 0% 70.71%, 0% 29.29%);
 }
 
 .card-image {
@@ -119,18 +119,20 @@ $margin: 4px;  // margin
 }
 
 .card-post {  
-  height: 650px;
+  min-height: 500px;
+  max-height: 600px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 
   .image {
     position: relative;
-    top: 250px;
+    top: 100px;
   }
 
   .content{
-    position:relative;
+    position: relative;
     width: 75%;
     bottom: 330px;
-    min-height: 600px;
 
     h1, p {
       color: $global-color;
@@ -141,7 +143,8 @@ $margin: 4px;  // margin
   }
 
   @media (max-width: $breakpoint-medium) {
-    height: unset;
+    min-height: unset;
+    max-height: unset;
 
     .image {
       top: 0;
@@ -217,13 +220,24 @@ $margin: 4px;  // margin
 }
 
 .footer {
+  position: relative;
+
+  color: desaturate(lighten($emphasis, 20%), 40%);
   height: 50vh !important;
-  h1 {
-    margin-top: calc(50vh * 0.7) !important;
+  
+  h3{
+    margin-top: 20px;
+    color: desaturate(lighten($emphasis, 20%), 40%);
   }
-  @media (max-width: $breakpoint-small) {
+
+  .footer-title{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden !important;
+
     h1 {
-      margin-top: calc(7rem * -0.33) !important;
+      margin-bottom: -40px;
     }
   }
 }
@@ -346,7 +360,6 @@ $margin: 4px;  // margin
     color: $global-muted-background;
     padding: 8px 20px;
     text-transform: uppercase;
-    font-size: 14px;
     margin-bottom: 20px;
     margin-top: 10px;
     display: inline-block;
