@@ -11,13 +11,26 @@
             <div class="timeline-content js--fadeInLeft">
               {{ with .date }}<div class="date">{{ . }}</div>{{ end }}
               {{ with .image }}
-                {{ $image := resources.GetRemote . }}
+                {{ $isRemote := strings.HasPrefix . "http" }}
+                {{ $img := newScratch }}
+
+                {{ if $isRemote }}
+                  {{ $img.Set "image" (resources.GetRemote .) }}
+                {{ else }}
+                  {{ $localImagePath := printf "**%s"  . }}
+                  {{ $localImage := $.Page.Resources.GetMatch $localImagePath }}
+                  {{ $img.Set "image" $localImage }}
+                {{ end }}
+
+                {{ $image := $img.Get "image" }}
                 {{ $image := $image.Process "fit 400x400" }}
-                <div class="timeline-img-header" 
-                     style="background: url('{{ $image.RelPermalink }}') 
-                                        center no-repeat;"
-                ></div>
-              {{ end}}
+                {{ $image := $image.RelPermalink}}
+                {{ with $image }}
+                  <div class="timeline-img-header" 
+                      style="background: url('{{ $image }}') center no-repeat;"
+                  ></div>
+                {{ end }}
+              {{ end }}
               <h2>{{ .title }}</h2>
               {{ with .summary }}<p>{{ . }}</p>{{ end }}
               {{ with .url }}<a class="bnt-more" href="{{ . }}">More</a>{{ end }}
