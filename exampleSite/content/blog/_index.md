@@ -1,7 +1,9 @@
 ---
 title: Blog
 weight: 2
-home: list
+type: grid
 summary: I'm the frozen theme for your website needs!
+home: list
+n_posts: 1
 ---
 

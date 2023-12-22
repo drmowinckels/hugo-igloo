@@ -14,27 +14,26 @@ canonifyurls            = true   # Turns relative urls into absolutet]
    url     = "about"
    weight  = 1
 [[menu.main]]
-   name    = "About sub1"
-   url     = "#"
-   weight  = 1
-   parent  = "About"
-[[menu.main]]
-   name    = "About sub2"
-   url     = "#"
-   weight  = 2
-   parent  = "About"
-[[menu.main]]
    name    = "Blog"
    url     = "blog"
    weight  = 2
 [[menu.main]]
-   name    = "Projects"
-   url     = "projects"
+   name    = "Slider"
+   url     = "#slider"
    weight  = 4
+[[menu.main]]
+   name    = "Sections"
+   weight  = 5
 [[menu.main]]
    name    = "Timeline"
    url     = "timeline"
-   weight  = 5
+   weight  = 1
+   parent  = "Sections"
+[[menu.main]]
+   name    = "Grid"
+   url     = "grid"
+   weight  = 2
+   parent  = "Sections"
 
 
 # We only use tag as a taxonomies
@@ -53,6 +52,13 @@ canonifyurls            = true   # Turns relative urls into absolutet]
         content = "This is the content for the custom footer section."
 
     [params.aesthetics]
+        favicon        = "favicon.png"      # Path to favicon file from the assets/ directory
+        logo           = "/images/theme.png"
+
+        # All possible themes can
+        # be found at: https://highlightjs.org/examples
+        highightStyle  = "foundation"
+
         # icicle, mint, barbie,
         # dune, vlad, poppy,
         # moss, paper, plum, 
@@ -60,19 +66,17 @@ canonifyurls            = true   # Turns relative urls into absolutet]
         design = "icicle"  
 
         # Or set your own custom colours
-         # primary = "#b38e65"
-         # secondary = "#00ff00"
-         # emphasis = "#ff00ff"
-         # muted = "#00ffff"
+        # primary = "#b38e65"
+        # secondary = "#00ff00"
+        # emphasis = "#ff00ff"
+        # muted = "#00ffff"
 
         # Include custom css files placed under assets/css/
         customCSS      = [] 
 
         # square, rabbet, bevel
-        # hexagon, octagon,
-        thumbShape     = "hexagon"
-        favicon        = "favicon.png"      # Path to favicon file from the assets/ directory
-        logo           = "/images/theme.png"
+        # hexagon, octagon, circle
+        thumbShape     = "square"
 
     [params.analytics]
     [params.analytics.plausible]
