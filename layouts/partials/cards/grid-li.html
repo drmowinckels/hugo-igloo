@@ -5,7 +5,7 @@
                 {{ $image := .Resources.Get .Params.image }}
                 {{ $image := $image.Resize "x400" }}
                 {{ $image := $image.Fill "230x230 Center" }}
-                style="background-image: url({{ $image.RelPermalink }});"
+                style="background-image: url({{ $image.Permalink }});"
             {{ end }}
         >
         <a href="{{ .Permalink }}" >
