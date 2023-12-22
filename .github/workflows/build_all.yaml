@@ -43,7 +43,7 @@ jobs:
         for theme in ${themes[@]} ; do
             echo ++--- $theme ---++
             cat exampleSite/hugo.toml | sed -e "s/icicle/$theme/g" > exampleSite/hugo_$theme.toml
-            cp exampleSite/content/projects/$theme/penguin.png exampleSite/content/about/
+            cp exampleSite/content/slider/$theme/penguin.png exampleSite/content/about/
             cd exampleSite && \
               hugo \
                 --config hugo_$theme.toml \
