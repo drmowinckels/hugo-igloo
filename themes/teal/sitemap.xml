@@ -7,7 +7,10 @@
     <loc>https://drmowinckels.io/hugo-igloo//themes/teal/blog/</loc>
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/grid/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/</loc>
   </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/teal/timeline/</loc>
   </url><url>
@@ -15,6 +18,45 @@
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/teal/blog/post2/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/blog/post4/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/blog/post5/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/blog/post6/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/blog/post7/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/blog/post8/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/blog/post9/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/grid/post2/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/grid/post4/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/grid/post5/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/grid/post6/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/grid/post7/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/grid/post8/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/grid/post9/</loc>
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/teal/categories/</loc>
@@ -35,35 +77,62 @@
     <loc>https://drmowinckels.io/hugo-igloo//themes/teal/blog/post3/</loc>
     <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/blog/post3_2/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/blog/post3_3/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/blog/post3_4/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/blog/post3_5/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/grid/post3/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/grid/post3_2/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/grid/post3_3/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/grid/post3_4/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/grid/post3_5/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/teal/tags/penguin/</loc>
     <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/ash/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/ash/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/barbie/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/barbie/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/dune/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/dune/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/icicle/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/icicle/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/mint/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/mint/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/moss/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/moss/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/paper/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/paper/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/plum/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/plum/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/poppy/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/poppy/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/pumpkin/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/pumpkin/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/teal/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/teal/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/violet/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/violet/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/vlad/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/vlad/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/projects/water/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/teal/slider/water/</loc>
   </url>
 </urlset>

@@ -7,7 +7,10 @@
     <loc>https://drmowinckels.io/hugo-igloo//themes/dune/blog/</loc>
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/grid/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/</loc>
   </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/dune/timeline/</loc>
   </url><url>
@@ -15,6 +18,45 @@
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/dune/blog/post2/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/blog/post4/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/blog/post5/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/blog/post6/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/blog/post7/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/blog/post8/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/blog/post9/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/grid/post2/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/grid/post4/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/grid/post5/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/grid/post6/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/grid/post7/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/grid/post8/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/grid/post9/</loc>
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/dune/categories/</loc>
@@ -35,35 +77,62 @@
     <loc>https://drmowinckels.io/hugo-igloo//themes/dune/blog/post3/</loc>
     <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/blog/post3_2/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/blog/post3_3/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/blog/post3_4/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/blog/post3_5/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/grid/post3/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/grid/post3_2/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/grid/post3_3/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/grid/post3_4/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/grid/post3_5/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/dune/tags/penguin/</loc>
     <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/ash/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/ash/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/barbie/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/barbie/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/dune/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/dune/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/icicle/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/icicle/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/mint/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/mint/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/moss/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/moss/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/paper/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/paper/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/plum/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/plum/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/poppy/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/poppy/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/pumpkin/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/pumpkin/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/teal/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/teal/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/violet/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/violet/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/vlad/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/vlad/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/projects/water/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/dune/slider/water/</loc>
   </url>
 </urlset>

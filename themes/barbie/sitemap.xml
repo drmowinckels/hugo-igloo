@@ -7,7 +7,10 @@
     <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/blog/</loc>
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/grid/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/</loc>
   </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/timeline/</loc>
   </url><url>
@@ -15,6 +18,45 @@
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/blog/post2/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/blog/post4/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/blog/post5/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/blog/post6/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/blog/post7/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/blog/post8/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/blog/post9/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/grid/post2/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/grid/post4/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/grid/post5/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/grid/post6/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/grid/post7/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/grid/post8/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/grid/post9/</loc>
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/categories/</loc>
@@ -35,35 +77,62 @@
     <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/blog/post3/</loc>
     <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/blog/post3_2/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/blog/post3_3/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/blog/post3_4/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/blog/post3_5/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/grid/post3/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/grid/post3_2/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/grid/post3_3/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/grid/post3_4/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/grid/post3_5/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/tags/penguin/</loc>
     <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/ash/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/ash/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/barbie/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/barbie/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/dune/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/dune/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/icicle/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/icicle/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/mint/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/mint/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/moss/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/moss/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/paper/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/paper/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/plum/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/plum/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/poppy/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/poppy/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/pumpkin/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/pumpkin/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/teal/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/teal/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/violet/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/violet/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/vlad/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/vlad/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/projects/water/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/barbie/slider/water/</loc>
   </url>
 </urlset>

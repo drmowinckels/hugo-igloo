@@ -7,7 +7,10 @@
     <loc>https://drmowinckels.io/hugo-igloo//themes/moss/blog/</loc>
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/grid/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/</loc>
   </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/moss/timeline/</loc>
   </url><url>
@@ -15,6 +18,45 @@
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/moss/blog/post2/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/blog/post4/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/blog/post5/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/blog/post6/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/blog/post7/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/blog/post8/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/blog/post9/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/grid/post2/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/grid/post4/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/grid/post5/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/grid/post6/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/grid/post7/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/grid/post8/</loc>
+    <lastmod>2023-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/grid/post9/</loc>
     <lastmod>2023-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/moss/categories/</loc>
@@ -35,35 +77,62 @@
     <loc>https://drmowinckels.io/hugo-igloo//themes/moss/blog/post3/</loc>
     <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/blog/post3_2/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/blog/post3_3/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/blog/post3_4/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/blog/post3_5/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/grid/post3/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/grid/post3_2/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/grid/post3_3/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/grid/post3_4/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/grid/post3_5/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://drmowinckels.io/hugo-igloo//themes/moss/tags/penguin/</loc>
     <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/ash/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/ash/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/barbie/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/barbie/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/dune/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/dune/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/icicle/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/icicle/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/mint/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/mint/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/moss/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/moss/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/paper/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/paper/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/plum/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/plum/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/poppy/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/poppy/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/pumpkin/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/pumpkin/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/teal/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/teal/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/violet/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/violet/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/vlad/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/vlad/</loc>
   </url><url>
-    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/projects/water/</loc>
+    <loc>https://drmowinckels.io/hugo-igloo//themes/moss/slider/water/</loc>
   </url>
 </urlset>

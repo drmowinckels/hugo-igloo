@@ -29,8 +29,6 @@
 
 
 
-
-
 <meta name="generator" content="Hugo 0.120.4">
 
 
@@ -72,8 +70,8 @@
  
 
 
-    <link rel="stylesheet" href="https://drmowinckels.io/hugo-igloo//themes/mint/bundle.min.8cfc1f2573ed642cecedb4d8de8482bcd6ac8cd8781ebdd4383f1a3d6b51db21.css" 
-    integrity="sha256-jPwfJXPtZCzs7bTY3oSCvNasjNh4Hr3UOD8aPWtR2yE=" 
+    <link rel="stylesheet" href="https://drmowinckels.io/hugo-igloo//themes/mint/bundle.min.abbef66dfa5d2b03275634d72c4a665cdb503ed7cfa5cced2242273cc1df592e.css" 
+    integrity="sha256-q772bfpdKwMnVjTXLEpmXNtQPtfPpcztIkInPMHfWS4=" 
     crossorigin="anonymous">
 
 
@@ -81,7 +79,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/foundation.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 
@@ -235,7 +233,7 @@
         
 <div class="banner ">
     
-        <div class="uk-container uk-container-small">
+        <div class="uk-container uk-container-small banner-top">
             <h1>blog</h1>
         </div>
     
@@ -258,23 +256,7 @@
                         <a href="https://drmowinckels.io/hugo-igloo//themes/mint/about">
                             About
                             
-                            <span uk-icon="chevron-down"></span>
-                            
                         </a>
-                        
-                            <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    
-                                        <li><a href="https://drmowinckels.io/hugo-igloo//themes/mint/#">
-                                            About sub1
-                                        </a></li>
-                                    
-                                        <li><a href="https://drmowinckels.io/hugo-igloo//themes/mint/#">
-                                            About sub2
-                                        </a></li>
-                                    
-                                </ul>
-                            </div>                            
                         
                     </li>
                     
@@ -304,8 +286,8 @@
                             <ul class="uk-navbar-nav"> 
                     
                     <li>
-                        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/projects">
-                            Projects
+                        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/#slider">
+                            Slider
                             
                         </a>
                         
@@ -315,10 +297,26 @@
                     
                     
                     <li>
-                        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/timeline">
-                            Timeline
+                        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/">
+                            Sections
+                            
+                            <span uk-icon="chevron-down"></span>
                             
                         </a>
+                        
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    
+                                        <li><a href="https://drmowinckels.io/hugo-igloo//themes/mint/timeline">
+                                            Timeline
+                                        </a></li>
+                                    
+                                        <li><a href="https://drmowinckels.io/hugo-igloo//themes/mint/grid">
+                                            Grid
+                                        </a></li>
+                                    
+                                </ul>
+                            </div>                            
                         
                     </li>
                     
@@ -333,113 +331,264 @@
 
 
         <div id="content" class="uk-container uk-container-small uk-margin-large-top">
-    <div class="uk-markdown">
-        
-    </div>
-
     <div class="uk-container" uk-filter="target: .js-filter; duration: 650">
-    
         
+            
+            
+                <ul class="uk-subnav uk-subnav-pill" uk-margin>
+                    <li>
+                        <a href="#">Filter tag <span uk-icon="icon: triangle-down"></span></a>
+                        <div uk-dropdown="mode: click;">
+                            <ul class="uk-nav uk-dropdown-nav uk-dropdown-scrollable">
+                                <li class="uk-active" uk-filter-control><a href="#">All</a></li>
+                                
+                                    <li uk-filter-control="filter: [data-tags*='hugo']">
+                                        <a  class="dropd" href="#">
+                                            Hugo
+                                        </a>
+                                    </li>
+                                
+                                    <li uk-filter-control="filter: [data-tags*='igloo']">
+                                        <a  class="dropd" href="#">
+                                            Igloo
+                                        </a>
+                                    </li>
+                                
+                                    <li uk-filter-control="filter: [data-tags*='penguin']">
+                                        <a  class="dropd" href="#">
+                                            Penguin
+                                        </a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            
         
-            <ul class="uk-subnav uk-subnav-pill" uk-margin>
-                <li>
-                    <a href="#">Filter tag <span uk-icon="icon: triangle-down"></span></a>
-                    <div uk-dropdown="mode: click;">
-                        <ul class="uk-nav uk-dropdown-nav uk-dropdown-scrollable">
-                            <li class="uk-active" uk-filter-control><a href="#">All</a></li>
-                            
-                                <li uk-filter-control="filter: [data-tags*='hugo']">
-                                    <a  class="dropd" href="#">
-                                        Hugo
-                                    </a>
-                                </li>
-                            
-                                <li uk-filter-control="filter: [data-tags*='igloo']">
-                                    <a  class="dropd" href="#">
-                                        Igloo
-                                    </a>
-                                </li>
-                            
-                                <li uk-filter-control="filter: [data-tags*='penguin']">
-                                    <a  class="dropd" href="#">
-                                        Penguin
-                                    </a>
-                                </li>
-                            
-                        </ul>
-                    </div>
-                </li>
+        <div class="list-grid">
+            <ul class="list-container list-container-square js-filter">
+              
+    <li class="list-item square"
+            data-tags="igloo hugo "
+            
+                
+                
+                
+                style="background-image: url(/blog/post2/image_hue0f597c44b9770aa3646e02cac1be6b9_3137646_1216422a4ff849558acfb612e0ddc9c2.jpg);"
+            
+        >
+        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/blog/post2/" >
+            <div class="list-overlay list-overlay-square">
+                <div class="list-item-content ">
+                    <h2>California halibut</h2>
+                    <p>Oct 3, 2023</p>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li class="list-item square"
+            data-tags="igloo hugo "
+            
+                
+                
+                
+                style="background-image: url(/blog/post4/image_hue0f597c44b9770aa3646e02cac1be6b9_3137646_1216422a4ff849558acfb612e0ddc9c2.jpg);"
+            
+        >
+        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/blog/post4/" >
+            <div class="list-overlay list-overlay-square">
+                <div class="list-item-content ">
+                    <h2>California halibut</h2>
+                    <p>Oct 3, 2023</p>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li class="list-item square"
+            data-tags="igloo hugo "
+            
+                
+                
+                
+                style="background-image: url(/blog/post5/image_hue0f597c44b9770aa3646e02cac1be6b9_3137646_1216422a4ff849558acfb612e0ddc9c2.jpg);"
+            
+        >
+        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/blog/post5/" >
+            <div class="list-overlay list-overlay-square">
+                <div class="list-item-content ">
+                    <h2>California halibut</h2>
+                    <p>Oct 3, 2023</p>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li class="list-item square"
+            data-tags="igloo hugo "
+            
+                
+                
+                
+                style="background-image: url(/blog/post6/image_hue0f597c44b9770aa3646e02cac1be6b9_3137646_1216422a4ff849558acfb612e0ddc9c2.jpg);"
+            
+        >
+        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/blog/post6/" >
+            <div class="list-overlay list-overlay-square">
+                <div class="list-item-content ">
+                    <h2>California halibut</h2>
+                    <p>Oct 3, 2023</p>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li class="list-item square"
+            data-tags="igloo hugo "
+            
+                
+                
+                
+                style="background-image: url(/blog/post7/image_hue0f597c44b9770aa3646e02cac1be6b9_3137646_1216422a4ff849558acfb612e0ddc9c2.jpg);"
+            
+        >
+        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/blog/post7/" >
+            <div class="list-overlay list-overlay-square">
+                <div class="list-item-content ">
+                    <h2>California halibut</h2>
+                    <p>Oct 3, 2023</p>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li class="list-item square"
+            data-tags="igloo hugo "
+            
+                
+                
+                
+                style="background-image: url(/blog/post8/image_hue0f597c44b9770aa3646e02cac1be6b9_3137646_1216422a4ff849558acfb612e0ddc9c2.jpg);"
+            
+        >
+        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/blog/post8/" >
+            <div class="list-overlay list-overlay-square">
+                <div class="list-item-content ">
+                    <h2>California halibut</h2>
+                    <p>Oct 3, 2023</p>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li class="list-item square"
+            data-tags="igloo hugo "
+            
+                
+                
+                
+                style="background-image: url(/blog/post9/image_hue0f597c44b9770aa3646e02cac1be6b9_3137646_1216422a4ff849558acfb612e0ddc9c2.jpg);"
+            
+        >
+        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/blog/post9/" >
+            <div class="list-overlay list-overlay-square">
+                <div class="list-item-content ">
+                    <h2>California halibut</h2>
+                    <p>Oct 3, 2023</p>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li class="list-item square"
+            data-tags="igloo penguin "
+            
+                
+                
+                
+                style="background-image: url(/blog/post3/image_hu0116ba734df40639bac94ce4a6eabb3b_606166_94b71eddc66755271c8ff5d7907d7697.jpg);"
+            
+        >
+        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/blog/post3/" >
+            <div class="list-overlay list-overlay-square">
+                <div class="list-item-content ">
+                    <h2>Cow shark. Brook trout.</h2>
+                    <p>Aug 25, 2023</p>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li class="list-item square"
+            data-tags="igloo penguin "
+            
+                
+                
+                
+                style="background-image: url(/blog/post3_2/image_hu0116ba734df40639bac94ce4a6eabb3b_606166_94b71eddc66755271c8ff5d7907d7697.jpg);"
+            
+        >
+        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/blog/post3_2/" >
+            <div class="list-overlay list-overlay-square">
+                <div class="list-item-content ">
+                    <h2>Cow shark. Brook trout.</h2>
+                    <p>Aug 25, 2023</p>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li class="list-item square"
+            data-tags="igloo penguin "
+            
+                
+                
+                
+                style="background-image: url(/blog/post3_3/image_hu0116ba734df40639bac94ce4a6eabb3b_606166_94b71eddc66755271c8ff5d7907d7697.jpg);"
+            
+        >
+        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/blog/post3_3/" >
+            <div class="list-overlay list-overlay-square">
+                <div class="list-item-content ">
+                    <h2>Cow shark. Brook trout.</h2>
+                    <p>Aug 25, 2023</p>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li class="list-item square"
+            data-tags="igloo penguin "
+            
+                
+                
+                
+                style="background-image: url(/blog/post3_4/image_hu0116ba734df40639bac94ce4a6eabb3b_606166_94b71eddc66755271c8ff5d7907d7697.jpg);"
+            
+        >
+        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/blog/post3_4/" >
+            <div class="list-overlay list-overlay-square">
+                <div class="list-item-content ">
+                    <h2>Cow shark. Brook trout.</h2>
+                    <p>Aug 25, 2023</p>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li class="list-item square"
+            data-tags="igloo penguin "
+            
+                
+                
+                
+                style="background-image: url(/blog/post3_5/image_hu0116ba734df40639bac94ce4a6eabb3b_606166_94b71eddc66755271c8ff5d7907d7697.jpg);"
+            
+        >
+        <a href="https://drmowinckels.io/hugo-igloo//themes/mint/blog/post3_5/" >
+            <div class="list-overlay list-overlay-square">
+                <div class="list-item-content ">
+                    <h2>Cow shark. Brook trout.</h2>
+                    <p>Aug 25, 2023</p>
+                </div>
+            </div>
+        </a>
+    </li>
+
             </ul>
-        
-    
-    <div class="card-container uk-container uk-container-small">
-    <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column js-filter">
-            <div class="card-post"
-                data-tags="igloo hugo ">
-                
-                    <div class="image image-shape uk-position-z-index">
-                        <div class="border hexagon">
-                            <div class="shape hexagon" 
-                                
-                                
-                                style="background-image: url(https://drmowinckels.io/hugo-igloo/themes/mint/blog/post2/image_hue0f597c44b9770aa3646e02cac1be6b9_3137646_0x360_resize_q75_box.jpg);">
-                            </div> 
-                        </div> 
-                    </div>
-                
-                <div class="content uk-align-right uk-padding uk-box-shadow-large">
-                    <a href="https://drmowinckels.io/hugo-igloo//themes/mint/blog/post2/" style="text-decoration: none;">
-                        <h1 class="uk-heading-line uk-text-right">
-                            <span>California halibut</span>
-                        </h1>
-                        <div class="uk-grid">
-                            
-                                <div class="uk-width-1-4 uk-text-right">
-                                        Oct 03, 2023
-                                </div>
-                            
-                            <div class="uk-width-expand">
-                                <p>Yellow weaver slender snipe eel sea catfish, California halibut: squawfish. Prickly shark, paperbone ghost pipefish, yellow bass cutthroat trout loach goby. Burrowing goby handfish. Dhufish Peter&rsquo;s elephantnose fish flying characin ilisha Japanese eel ruffe crappie atka mackerel sabertooth fish! Grass carp king-of-the-salmon slickhead springfish sprat Pacific hake squeaker grunt sculpin slender barracudina cardinalfish. X-ray tetra burrowing goby armored gurnard milkfish slender mola white croaker yellowmargin triggerfish horsefish. Modoc sucker warty angler bala shark zebra tilapia labyrinth fish.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="card-post"
-                data-tags="igloo penguin ">
-                
-                    <div class="image image-shape uk-position-z-index">
-                        <div class="border hexagon">
-                            <div class="shape hexagon" 
-                                
-                                
-                                style="background-image: url(https://drmowinckels.io/hugo-igloo/themes/mint/blog/post3/image_hu0116ba734df40639bac94ce4a6eabb3b_606166_0x360_resize_q75_box.jpg);">
-                            </div> 
-                        </div> 
-                    </div>
-                
-                <div class="content uk-align-right uk-padding uk-box-shadow-large">
-                    <a href="https://drmowinckels.io/hugo-igloo//themes/mint/blog/post3/" style="text-decoration: none;">
-                        <h1 class="uk-heading-line uk-text-right">
-                            <span>Cow shark. Brook trout.</span>
-                        </h1>
-                        <div class="uk-grid">
-                            
-                                <div class="uk-width-1-4 uk-text-right">
-                                        Aug 25, 2023
-                                </div>
-                            
-                            <div class="uk-width-expand">
-                                <p>Sand diver golden shiner sawfish frilled shark manefish sailfin silverside creek chub píntano sand tiger bigeye squaretail morid cod. Flier; collared carpetshark flagfish, &ldquo;anemonefish Rainbowfish turkeyfish longfin smelt sixgill ray glass knifefish chain pickerel sole prickleback threadtail sailfin silverside?&rdquo; Yellow-edged moray Atlantic trout squaretail mud catfish. Yellowbelly tail catfish blue eye speckled trout ghost flathead. Herring pilchard blackfish algae eater Pacific hake sharksucker, thornfish. Luminous hake&ndash;gar, danio sockeye salmon; whiff, mosquitofish Canthigaster rostrata, sardine, salmon shark dartfish dogfish shark.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+        </div>
     </div>
-</div>
-</div>
-    
 
         </div><div class="section uk-section uk-padding-remove-vertical uk-margin">
     <div class="banner footer">
