@@ -1,7 +1,7 @@
 ---
-title: Cow shark. Brook trout.
+title: Cichlid goldspotted
+date: 2022-02-25
 image: image.jpg
-date: 2023-08-25
 tags:
     - igloo
     - penguin

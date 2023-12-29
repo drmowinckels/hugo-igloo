@@ -1,7 +1,7 @@
 ---
-title: Cow shark. Brook trout.
+title: Telescopefish convict
 image: image.jpg
-date: 2023-08-25
+date: 2022-08-12
 tags:
     - igloo
     - penguin

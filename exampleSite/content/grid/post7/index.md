@@ -1,7 +1,7 @@
 ---
-title: California halibut
+title: Wolf-eel yellow
 image: image.jpg
-date: 2023-10-03
+date: 2023-01-03
 toc: true
 tags:
     - igloo

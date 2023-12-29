@@ -1,7 +1,7 @@
 ---
-title: California halibut
-image: image.jpg
-date: 2023-10-03
+title: Mackerel ghost fish
+image: https://images.rawpixel.com/image_600/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4NTQyMjMyLWltYWdlLWt3dnhtNXk5LmpwZw.jpg
+date: 2022-10-03
 toc: true
 tags:
     - igloo

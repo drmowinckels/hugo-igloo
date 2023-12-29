@@ -9,7 +9,8 @@ social_media: # see icons in https://getuikit.com/docs/icon
     - icon: "github"
       link:  https://github.com/drmowinckels
       text: GitHub
-    - icon: 
+    - link  : "https://www.linkedin.com/in/drmowinckels/"
+      icon  : "linkedin"
 ---
 
 This theme is made for all those who want some fun geometrical elements in their page, but still have a feature rich site. 

@@ -1,7 +1,7 @@
 ---
-title: California halibut
-image: image.jpg
-date: 2023-10-03
+title: Hamlet bramble 
+date: 2022-10-03
+image: image.jpeg
 toc: true
 tags:
     - igloo

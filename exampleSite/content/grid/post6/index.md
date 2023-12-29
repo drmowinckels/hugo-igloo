@@ -1,7 +1,7 @@
 ---
-title: California halibut
+title: Eel scythe
 image: image.jpg
-date: 2023-10-03
+date: 2023-12-03
 toc: true
 tags:
     - igloo

@@ -7,16 +7,16 @@ $base-code-font-family: 'Space Mono', monospace !default;
 $navbar-nav-item-font-family: $base-heading-font-family !default;
 $global-font-size: 16px !default;
 
-$global-background: lighten($primary, 70%) !default;
+$global-background: lighten($primary, 74%) !default;
 $global-primary-background: $primary !default;
 $global-secondary-background: $emphasis !default;
-$global-muted-background: $muted !default;
+$global-muted-background: lighten($muted, 10%) !default;
 $global-inverse-background: $inverse !default;
 
-$global-color: darken($primary, 20%) !default;
+$global-color: darken($primary, 10%) !default;
 $global-link-color: $inverse !default;
 $global-link-hover-color: darken($global-link-color, 10%) !default;
 
-$navbar-nav-item-color: darken($global-color, 20%) !default;
+$navbar-nav-item-color: darken($global-color, 10%) !default;
 $navbar-nav-item-font-size: 1.1rem;
 

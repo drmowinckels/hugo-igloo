@@ -3,6 +3,8 @@ title: Talks
 type: timeline
 data: timeline.json
 weight: 3
+home: timeline
+n_posts: 3
 ---
 
 This is a timeline section, and is created with a json file that contains key information to create the cards. Keys in the json should be

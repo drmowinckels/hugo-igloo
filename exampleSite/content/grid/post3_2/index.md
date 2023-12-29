@@ -1,7 +1,7 @@
 ---
-title: Cow shark. Brook trout.
+title: Mexican blind cavefish
 image: image.jpg
-date: 2023-08-25
+date: 2022-08-25
 tags:
     - igloo
     - penguin
