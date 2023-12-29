@@ -1,0 +1,22 @@
+{{ $data := newScratch }}
+{{ $data.Set "content" .Pages }}
+{{ if isset .Params "data" }}
+    {{ $tmp := (.Resources.GetMatch (printf "**%s" .Params.data)) }}
+    {{ $data.Set "content" ($tmp.Content | transform.Unmarshal ) }}
+{{ end }}
+{{ $form := .Site.Params.dateFormat | default "Jan 02, 2006" }}
+{{ $defimg := .Site.Params.aesthetics.logo }}
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
+
+    <ul class="uk-slider-items uk-grid" >
+        {{ range ($data.Get "content") | first (.Params.n_posts | default 5 ) }}
+            <li class="uk-width-3-4" >
+                {{ partial "timeline/li.html" . }}
+            </li>
+        {{ end }}
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
+
+</div>

@@ -1,97 +1,66 @@
 {{ define "main" }}
-  <article class="uk-article">
+  <article class="uk-article uk-margin-bottom">
     {{ .Content }}
   </article>
   <section class="timeline">
     <div class="container">
     {{ with .Resources.GetMatch (printf "**%s" .Params.data) }}
       {{ range (.Content | transform.Unmarshal ) }}
-        <div class="timeline-item">
-            <div class="timeline-img"></div>
-            <div class="timeline-content js--fadeInLeft">
-              {{ with .date }}<div class="date">{{ . }}</div>{{ end }}
-              {{ with .image }}
-                {{ $isRemote := strings.HasPrefix . "http" }}
-                {{ $img := newScratch }}
-
-                {{ if $isRemote }}
-                  {{ $img.Set "image" (resources.GetRemote .) }}
-                {{ else }}
-                  {{ $localImagePath := printf "**%s"  . }}
-                  {{ $localImage := $.Page.Resources.GetMatch $localImagePath }}
-                  {{ $img.Set "image" $localImage }}
-                {{ end }}
-
-                {{ $image := $img.Get "image" }}
-                {{ $image := $image.Process "fit 400x400" }}
-                {{ $image := $image.RelPermalink}}
-                {{ with $image }}
-                  <div class="timeline-img-header" 
-                      style="background: url('{{ $image }}') center no-repeat;"
-                  ></div>
-                {{ end }}
-              {{ end }}
-              <h2>{{ .title }}</h2>
-              {{ with .summary }}<p>{{ . }}</p>{{ end }}
-              {{ with .url }}<a class="bnt-more" href="{{ . }}">More</a>{{ end }}
-            </div>
-        </div> 
+        {{ partial "timeline/li.html" . }}}
       {{ end }}
     {{ end }} 
   </div>
 </section>
 
 <script>
-    $(function(){
+  $(function(){
 
-        window.sr = ScrollReveal();
-      
-        if ($(window).width() < 768) {
-      
-          if ($('.timeline-content').hasClass('js--fadeInLeft')) {
-            $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
-          }
-      
-          sr.reveal('.js--fadeInRight', {
-            origin: 'right',
-            distance: '300px',
-            easing: 'ease-in-out',
-            duration: 800,
-          });
-      
-        } else {
-          
-          sr.reveal('.js--fadeInLeft', {
-            origin: 'left',
-            distance: '300px',
-            easing: 'ease-in-out',
-            duration: 800,
-          });
-      
-          sr.reveal('.js--fadeInRight', {
-            origin: 'right',
-            distance: '300px',
-            easing: 'ease-in-out',
-            duration: 800,
-          });
-      
-        }
-        
-        sr.reveal('.js--fadeInLeft', {
-            origin: 'left',
-            distance: '300px',
-            easing: 'ease-in-out',
-            duration: 800,
-          });
-      
-          sr.reveal('.js--fadeInRight', {
-            origin: 'right',
-            distance: '300px',
-            easing: 'ease-in-out',
-            duration: 800,
-          });
-      
-      
+    window.sr = ScrollReveal();
+  
+    if ($(window).width() < 768) {
+  
+      if ($('.timeline-content').hasClass('js--fadeInLeft')) {
+        $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
+      }
+  
+      sr.reveal('.js--fadeInRight', {
+        origin: 'right',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
       });
+  
+    } else {
+      
+      sr.reveal('.js--fadeInLeft', {
+        origin: 'left',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
+      });
+  
+      sr.reveal('.js--fadeInRight', {
+        origin: 'right',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
+      });
+  
+    }
+    
+    sr.reveal('.js--fadeInLeft', {
+        origin: 'left',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
+      });
+  
+      sr.reveal('.js--fadeInRight', {
+        origin: 'right',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
+      });
+  });
 </script>
 {{ end }}

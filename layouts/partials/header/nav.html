@@ -12,8 +12,9 @@
                     {{ end }}
                     {{ if eq $i $menuSplit }}
                         {{ with $.Site.Params.aesthetics.logo }}
-                            <a class="uk-navbar-item uk-logo" href="{{$.Site.BaseURL }}">
-                                <img src="{{ .}}" width="40">
+                            {{- $logo := resources.Get . }}
+                            <a class="uk-navbar-item uk-logo" href="{{ $.Site.BaseURL }}">
+                                <img src="{{ $logo.RelPermalink }}" width="40">
                             </a> 
                         {{ end }}
                         <div class="uk-navbar-center-right">

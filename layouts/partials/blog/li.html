@@ -1,0 +1,30 @@
+{{ $dt := newScratch }}
+<div class="card-post"
+    data-tags="{{ range .Params.tags }}{{ . | urlize}} {{ end }}">
+    {{ $image := (partial "funcs/get_image.html" .) }}
+    <div class="image image-shape uk-position-z-index">
+        <div class="border {{ .Site.Params.aesthetics.thumbShape }}">
+            <div class="shape {{ .Site.Params.aesthetics.thumbShape }}" 
+                {{ $image := $image.Fill "250x289 Center" }}
+                style="background-image: url({{ $image.RelPermalink }});">
+            </div> 
+        </div> 
+    </div>
+    <div class="content uk-align-right uk-padding uk-box-shadow-large">
+        <a href="{{ .RelPermalink}}" style="text-decoration: none;">
+            <h1 class="uk-heading-line uk-text-right">
+                <span>{{ .Title  | markdownify | safeHTML }}</span>
+            </h1>
+            <div class="uk-grid">
+                {{ if isset .Params "date" }}
+                    <div class="uk-width-1-4 uk-text-right">
+                            {{ .Date.Format "Jan 02, 2006" }}
+                    </div>
+                {{ end }}
+                <div class="uk-width-expand">
+                    <p>{{ .Summary | markdownify | safeHTML  }}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

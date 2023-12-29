@@ -1,10 +1,8 @@
 <!-- CSS -->  
-{{ $site := resources.Get "igloo-site.scss" }}
-{{ $theme := resources.Get "igloo-theme.scss" }}
-
 {{ $colors := resources.Get "igloo-colors.scss" }}
 {{ $colors := $colors | resources.ExecuteAsTemplate "colors.scss" . }}
-
+{{ $site := resources.Get "igloo-site.scss" }}
+{{ $theme := resources.Get "igloo-theme.scss" }}
 {{ $scss := slice $colors $theme $site | resources.Concat "bundle.scss" }} 
 
 {{ with $scss | toCSS | minify | fingerprint }}

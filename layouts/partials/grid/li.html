@@ -3,15 +3,14 @@
             data-tags="{{ range .Params.tags }}{{ . | urlize}} {{ end }}"
             {{ if isset .Params "image" }}
                 {{ $image := .Resources.Get .Params.image }}
-                {{ $image := $image.Resize "x400" }}
-                {{ $image := $image.Fill "230x230 Center" }}
+                {{ $image := $image.Fill "250x289 Center" }}
                 style="background-image: url({{ $image.Permalink }});"
             {{ end }}
         >
         <a href="{{ .Permalink }}" >
             <div class="list-overlay list-overlay-{{ .Site.Params.aesthetics.thumbShape }}">
                 <div class="list-item-content ">
-                    <h2>{{ .Title }}</h2>
+                    <h2>{{ .Title | markdownify | safeHTML  }}</h2>
                     <p>{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}</p>
                 </div>
             </div>

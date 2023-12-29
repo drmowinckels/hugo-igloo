@@ -1,4 +1,16 @@
+{{- define "banner" }}
+    <div class="banner {{ if .IsHome}} uk-flex home" uk-parallax="bgy: -200 {{ end }}">
+        <div class="uk-container uk-container-small banner-top">
+            <h1>404</h1>
+        </div>
+    </div>
+{{- end }}
+
 {{ define "main" }}
-    <h1>{{ i18n "404_title" }}</h1>
-    <p>{{ i18n "404_description" }}</p>
+    <div class="uk-flex uk-flex-center uk-height-viewport uk-text-center">
+        <div>
+            <h1>{{ i18n "404_title" }}</h1>
+            <p>{{ i18n "404_description" }}</p>
+        </div>
+    </div>
 {{ end }}

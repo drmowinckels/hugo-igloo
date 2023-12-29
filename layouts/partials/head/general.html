@@ -6,7 +6,7 @@
 />
 
 <!-- Title -->
-<title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ site.Title }}</title>
+<title>{{ if not .IsHome }}{{ .Title  | markdownify | safeHTML }} - {{ end }}{{ site.Title }}</title>
 
 <!-- Meta -->
 <meta name="hugo-igloo" />
@@ -14,13 +14,13 @@
 {{ $site_author := or site.Author.name site.Params.name site.Title }}
 <!---->
 {{ if eq .Kind "page" }}
-  <meta name="description" content="{{ .Summary }}" />
+  <meta name="description" content="{{ .Summary  | markdownify | safeHTML  }}" />
   <meta name="author" content="{{ or .Params.author $site_author }}" />
 {{ else }}
   <!---->
   <meta
     name="description"
-    content="{{ $.Site.Params.subtitle | default (print `A personal blog`) }}"
+    content="{{ ($.Site.Params.subtitle | default (print `A personal blog`)) | markdownify | safeHTML  }}"
   />
   <meta name="author" content="{{ $site_author }}" />
 {{ end }}
@@ -39,6 +39,6 @@
   rel="{{ .Rel }}"
   type="{{ .MediaType.Type }}"
   href="{{ .Permalink }}"
-  title="{{ site.Title }}"
+  title="{{ site.Title  | markdownify | safeHTML }}"
 />
 {{ end }}

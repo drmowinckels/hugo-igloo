@@ -8,7 +8,9 @@
         {{- block "head" . }}{{- end }}
     </head>
     <body>
-        {{ partial "header/banner.html" .}}
+        {{- block "banner" . }}
+            {{ partial "header/banner.html" .}}
+        {{- end }}
         {{ partial "header/nav.html" .}}
 
         <div id="content" class="uk-container uk-container-small uk-margin-large-top">

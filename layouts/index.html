@@ -1,27 +1,16 @@
 {{ define "main" }}
     {{ range $section := .Site.Sections.ByWeight }}
-        {{ if isset .Params "home" }}
+        {{ if (.Params.home | default false) }}
             <div class=" uk-section uk-margin-bottom" id="{{.Title | urlize }}">
                 <div class="section banner">
                     <div class="uk-container uk-margin-left-large">
-                        <a href="{{ .Permalink }}">
-                            <h1>{{ .Title }}</h1>
+                        <a href="{{ .RelPermalink }}">
+                            <h1>{{ .Title  | markdownify | safeHTML }}</h1>
                         </a>
                     </div>
                 </div>
-                {{ if eq .Params.home "list" }}
-                    {{ partial "cards/post-li.html" ( .Pages | first .Params.n_posts ) }}           
-                {{ else if eq .Params.home "thumbnail" }}
-                    {{ partial "cards/image-single.html" . }}
-                {{ else if eq .Params.home "slider" }}
-                    {{ partial "slider.html" . }}
-                {{ else if eq .Params.home "grid" }}
-                    <div class="list-grid">
-                        <ul class="list-container list-container-{{ .Site.Params.aesthetics.thumbShape }} js-filter">
-                        {{ partial "cards/grid-li.html" ( .Pages | first .Params.n_posts ) }}
-                        </ul>
-                    </div>
-                {{ end }}
+                {{ $part := printf "home/%s.html" .Type }}
+                {{ partial $part . }}
             </div>
         {{ end }}
     {{ end }}

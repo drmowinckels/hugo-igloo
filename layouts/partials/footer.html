@@ -1,5 +1,5 @@
 <div class="section uk-section uk-padding-remove-vertical uk-margin">
-    <div class="banner footer">
+    <div class="banner footer" height="{{ .Site.Params.footerSection.height }}">
         <div class="uk-container">
             <div class="uk-grid" uk-grid>
                 <div class="uk-width-1-2@m">
@@ -40,7 +40,7 @@
             </div>
           </div>
           <div class="footer-title uk-text-right">
-            <h1>{{ .Site.Title }}</h1>
+            <h1>{{ .Site.Title  | markdownify | safeHTML }}</h1>
         </div>
     </div>
 </div>

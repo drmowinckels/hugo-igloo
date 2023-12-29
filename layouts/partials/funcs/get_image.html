@@ -1,0 +1,27 @@
+{{ $img := newScratch }}
+
+{{ $img.Set "image" $.Site.Params.aesthetics.logo }}
+{{ $img.Set "func" "assets" }}
+
+{{ with .Resources.ByType "image" }}
+  {{ $img.Set "image" (index . 0) }}
+  {{ $img.Set "func" "local" }}
+{{ end }}
+{{ with .Params.image }}
+  {{ $img.Set "image" . }}
+  {{ $img.Set "func" "local" }}
+{{ end }}
+
+{{ $image := $img.Get "image" }}
+{{ $isRemote := strings.HasPrefix $image "http" }}
+
+{{ if $isRemote }}
+  {{ $img.Set "img" (resources.GetRemote $image) }}
+{{ else if eq ($img.Get "func") "assets" }}
+  {{ $img.Set "img" (resources.Get $image) }}
+{{ else if eq ($img.Get "func") "local" }}
+  {{ $localImagePath := printf "**%s"  $image }}
+  {{ $img.Set "img" (.Resources.GetMatch $localImagePath) }}
+{{ end }}
+
+{{ return ($img.Get "img") }}

@@ -1,7 +1,9 @@
 {{ define "main" }}
     <article class="uk-article">
-        <h1 class="uk-article-title">{{ .Title }}</h1>
-
+        <h1 class="uk-article-title">{{ .Title  | markdownify | safeHTML }}</h1>
+        {{ with .Params.subtitle }}<h3 class="uk-heading-line">
+            <span>{{. | markdownify | safeHTML }}</span></h3>
+        {{ end }}
         <div class="uk-border-top uk-article-meta uk-flex uk-flex-center uk-flex-between">
             <h3 class="uk-margin-top-small">
                 {{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}
@@ -41,6 +43,10 @@
         </div>
         {{ .Content }}
     </article>
+
+    {{ partial "pagination.html" . }}     
     <!-- End post content -->
-    {{ partial "comments.html" . }}
+    {{ if .Params.comments | default true }}
+        {{ partial "comments.html" . }}
+    {{ end }}
 {{ end }}

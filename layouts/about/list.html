@@ -1,16 +1,3 @@
 {{ define "main" }}
-    <div class="uk-grid uk-flex-middle" uk-grid>
-      <!-- Image Section -->
-      <div class="uk-width-1-4@s">
-        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="uk-border-rounded">
-      </div>
-
-      <!-- Content Section -->
-      <div class="uk-width-3-4@s">
-        <article class="uk-article">
-          <h1 class="uk-article-title">{{ .Title }}</h1>
-          {{ .Content }}
-        </article>
-      </div>
-    </div>
+  {{ partial "card.html" . }}
 {{ end }}

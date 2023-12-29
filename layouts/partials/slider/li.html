@@ -1,0 +1,28 @@
+
+<a href="{{ .RelPermalink}}" style="text-decoration: none;">
+    <div class="uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-2@s uk-margin uk-flex uk-flex-center uk-flex-middle" uk-grid
+    {{ with .Params.color }}style="background-color: {{.}};" {{ end }}
+    >
+        <div class="uk-flex-last@s uk-card-media-right uk-cover-container ">
+            {{ $image := .Resources.Get .Params.image }}
+            {{ $image := $image.Resize "x660" }}
+            <img src="{{ $image.Permalink }}" alt="" uk-cover>
+            <canvas height="330"></canvas>
+        </div>
+        <div>
+            <div class="uk-card-body">
+                <h3 class="uk-card-title uk-heading-bullet">
+                    {{ (.Params.author | default .Params.Title)  | markdownify | safeHTML  }}
+                </h3>
+                <p>{{ .Summary  | markdownify | safeHTML  }}</p>
+            </div>
+            {{ with .Params.social_media }}
+                <div class="uk-card-footer uk-text-right">
+                    {{ range . }}
+                        {{ partial "social-media.html" . }}
+                    {{ end }}
+                </div>  
+            {{ end }}
+        </div>
+    </div>
+</a>

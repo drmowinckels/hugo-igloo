@@ -1,0 +1,12 @@
+<a href="{{ .link }}" 
+    target="_blank" 
+    class="uk-icon-button" 
+    {{ with .text }} aria-label="{{ . }}" {{end}}
+    {{ if isset . "icon_pack" }}
+        >
+        <i class="{{.icon_pack}} fa-{{.icon}}"></i>
+    {{ else }}
+        uk-icon="{{ .icon }}" 
+        >
+    {{end}}
+</a>
