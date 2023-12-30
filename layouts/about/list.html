@@ -1,3 +1,66 @@
 {{ define "main" }}
-  {{ partial "card.html" . }}
+    <article class="uk-article">
+        <div class="uk-grid uk-flex-top" uk-grid>
+            <!-- Image Section -->
+            <div class="uk-width-1-4@s">
+              {{ $image := (partial "funcs/get_image.html" .) }}
+              <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" class="uk-border-rounded">
+              {{ with .Params.social_media }}
+                  <div class="uk-text-right">
+                      {{ range . }}
+                          {{ partial "social-media.html" . }}
+                      {{ end }}
+                  </div>  
+              {{ end }}
+            </div>
+
+        <div class="uk-width-3-4@s">   
+        <h1 class="uk-article-title">{{ .Title  | markdownify | safeHTML }}</h1>
+        {{ with .Params.subtitle | default .Params.summary }}
+          <h3 class="uk-heading-line">
+            <span>{{. | markdownify | safeHTML }}</span>
+          </h3>
+        {{ end }}
+        <div class="uk-border-top uk-article-meta uk-flex uk-flex-center uk-flex-between">
+            {{ if and (gt .WordCount 400 ) (.Params.toc) }}
+            <button class="uk-button uk-button-default uk-margin-small-right uk-position-z-index"
+                uk-sticky="offset: 90; show-on-up: true; animation: uk-animation-slide-top"
+                type="button" uk-toggle="target: #offcanvas-reveal">
+                    Table of Content
+                </button>
+            {{ end }}
+
+            {{ with .GetTerms "tags" }}
+                <div class="uk-flex uk-flex-wrap uk-flex-right">
+                    {{ range . }} 
+                        {{ $url := .RelPermalink }}
+                        {{ $lastFolder := last 2 (split $url "/") }}
+                        {{ $lastFolder := index $lastFolder 0 }}
+                        {{ $sect := index .Site.Taxonomies .Section }}
+                        {{ $tag := slice (index $sect $lastFolder ) }}
+                        <div class="uk-card uk-margin-left uk-margin-bottom">
+                            <a href="{{ .RelPermalink }}" class="uk-label uk-label-secondary tags" >
+                                {{ .LinkTitle }}
+                            </a>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </div>
+        <div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true">
+            <div class="uk-offcanvas-bar">
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <h3>Table of Content</h3>
+                {{ .TableOfContents }}
+            </div>
+        </div>
+        {{ .Content }}
+    </article>
+
+    {{ partial "pagination.html" . }}     
+    <!-- End post content -->
+    {{ if .Params.comments | default true }}
+        {{ partial "comments.html" . }}
+    {{ end }}
 {{ end }}

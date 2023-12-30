@@ -1,11 +1,9 @@
 {{- range . }} 
     <li class="list-item {{ .Site.Params.aesthetics.thumbShape }}"
             data-tags="{{ range .Params.tags }}{{ . | urlize}} {{ end }}"
-            {{ if isset .Params "image" }}
-                {{ $image := .Resources.Get .Params.image }}
-                {{ $image := $image.Fill "250x289 Center" }}
-                style="background-image: url({{ $image.Permalink }});"
-            {{ end }}
+            {{ $image := (partial "funcs/get_image.html" .) }}
+            {{ $image := $image.Fill "250x289 Center" }}
+            style="background-image: url({{ $image.Permalink }});"
         >
         <a href="{{ .Permalink }}" >
             <div class="list-overlay list-overlay-{{ .Site.Params.aesthetics.thumbShape }}">

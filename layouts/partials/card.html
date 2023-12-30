@@ -2,7 +2,8 @@
     <div class="uk-grid uk-flex-top" uk-grid>
         <!-- Image Section -->
         <div class="uk-width-1-4@s">
-          <img src="{{ .Params.image }}" alt="{{ .Title }}" class="uk-border-rounded">
+          {{ $image := (partial "funcs/get_image.html" .) }}
+          <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" class="uk-border-rounded">
           {{ with .Params.social_media }}
               <div class="uk-text-right">
                   {{ range . }}

@@ -1,5 +1,20 @@
 {{ define "main" }}
     <article class="uk-article">
+        <div class="uk-grid uk-flex-top" uk-grid>
+            <!-- Image Section -->
+            {{ $img := (partial "funcs/get_image.html" .) }}
+            <div class="uk-width-1-4@s">
+              <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}" class="uk-border-rounded">
+              {{ with .Params.social_media }}
+                  <div class="uk-text-right">
+                      {{ range . }}
+                          {{ partial "social-media.html" . }}
+                      {{ end }}
+                  </div>  
+              {{ end }}
+            </div>
+
+        <div class="uk-width-3-4@s">   
         <h1 class="uk-article-title">{{ .Title  | markdownify | safeHTML }}</h1>
         {{ with .Params.subtitle }}<h3 class="uk-heading-line">
             <span>{{. | markdownify | safeHTML }}</span></h3>
@@ -33,7 +48,7 @@
                 </div>
             {{ end }}
         </div>
-
+    </div>
         <div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true">
             <div class="uk-offcanvas-bar">
                 <button class="uk-offcanvas-close" type="button" uk-close></button>

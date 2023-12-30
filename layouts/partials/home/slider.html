@@ -9,8 +9,8 @@
                     <div class="uk-card uk-card-default uk-card-body" 
                         style="background-color: {{ .Params.color | default "white" }}; 
                                height: {{ $h_sli }}px;">
-                        {{if isset .Params "image" }}
-                            {{ $image := .Resources.Get .Params.image }}
+                        {{ $image := (partial "funcs/get_image.html" .) }}
+                        {{ with $image }}
                             {{ $image := $image.Resize (printf "x%s" $h_img ) }}
                             <img src="{{ $image.Permalink }}"
                                  width="{{$h_img}}px" 
