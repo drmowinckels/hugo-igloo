@@ -1,9 +1,9 @@
 ---
-title: Talks
+title: Timeline
 type: timeline
 data: timeline.json
 weight: 3
-home: timeline
+home: true
 n_posts: 3
 ---
 

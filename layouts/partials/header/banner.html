@@ -12,7 +12,7 @@
         </div>
     {{ else }}
         <div class="uk-container uk-container-small banner-top">
-            <h1>{{ .Section }}</h1>
+            <h1>{{ .Section | default .Page.Title }}</h1>
         </div>
     {{ end }}
 </div>

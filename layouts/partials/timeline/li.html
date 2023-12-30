@@ -14,8 +14,8 @@
         {{ if $isRemote }}
           {{ $img.Set "image" (resources.GetRemote .image) }}
         {{ else }}
-        {{ $imgs := printf "%s%s" $.Section (.image | relURL) }}
-        <p>Image: {{ $imgs }}</p>
+        {{ $imgs := printf "**%s" .image }}
+        <p>{{.Resources.ByType "image"}}</p>
         {{ $localImage := .Resources.GetMatch $imgs }}
           {{ if $localImage }}
               <p>Local Image Found: {{ $localImage.Name }}</p>

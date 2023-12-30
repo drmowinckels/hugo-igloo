@@ -6,7 +6,7 @@
     <div class="container">
     {{ with .Resources.GetMatch (printf "**%s" .Params.data) }}
       {{ range (.Content | transform.Unmarshal ) }}
-        {{ partial "timeline/li.html" . }}}
+        {{ partial "timeline/li.html" . }}
       {{ end }}
     {{ end }} 
   </div>
