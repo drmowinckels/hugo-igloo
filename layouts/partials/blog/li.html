@@ -1,4 +1,3 @@
-{{ $dt := newScratch }}
 <div class="card-post"
     data-tags="{{ range .Params.tags }}{{ . | urlize}} {{ end }}">
     {{ $image := (partial "funcs/get_image.html" .) }}
@@ -16,9 +15,9 @@
                 <span>{{ .Title  | markdownify | safeHTML }}</span>
             </h1>
             <div class="uk-grid">
-                {{ if isset .Params "date" }}
+                {{ if ne .Params.Date "" }}
                     <div class="uk-width-1-4 uk-text-right">
-                            {{ .Date.Format "Jan 02, 2006" }}
+                        {{ .Date.Format "Jan 02, 2006" }}
                     </div>
                 {{ end }}
                 <div class="uk-width-expand">
