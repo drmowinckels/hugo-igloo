@@ -17,7 +17,7 @@
         <div class="uk-width-3-4@s">   
         <h1 class="uk-article-title">{{ .Title  | markdownify | safeHTML }}</h1>
         {{ with .Params.subtitle | default .Params.summary }}
-          <h3 class="uk-heading-line">
+          <h3 class="uk-text-lead">
             <span>{{. | markdownify | safeHTML }}</span>
           </h3>
         {{ end }}
@@ -55,7 +55,9 @@
                 {{ .TableOfContents }}
             </div>
         </div>
-        {{ .Content }}
+        <div>
+            {{ .Content }}
+        </div>
     </article>
 
     {{ partial "pagination.html" . }}     

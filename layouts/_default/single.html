@@ -56,7 +56,12 @@
                 {{ .TableOfContents }}
             </div>
         </div>
-        {{ .Content }}
+        {{ with .Params.summary }}
+            <p class="uk-text-lead">{{ .| markdownify | safeHTML }}</p>
+        {{ end }}
+        <div>
+            {{ .Content }}
+        </div>
     </article>
 
     {{ partial "pagination.html" . }}     

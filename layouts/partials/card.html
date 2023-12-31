@@ -17,7 +17,12 @@
         <div class="uk-width-3-4@s">
             <h1 class="uk-article-title">{{ .Title  | markdownify | safeHTML }}</h1>
             {{ with .Params.subtitle }}<h3 class="uk-heading-line"><span>{{.}}</span></h3>{{ end }}
-            {{ .Content }}
+            {{ with .Params.summary }}
+                <p class="uk-text-lead">{{ .| markdownify | safeHTML }}</p>
+            {{ end }}
+            <div>
+                {{ .Content }}
+            </div>
         </div>
       </div>
 </article>
