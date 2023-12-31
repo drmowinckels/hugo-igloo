@@ -1,5 +1,15 @@
 
-@import "igloo-theme.scss";
+$global-background: lighten($primary, 74%);
+$global-primary-background: $primary;
+$global-secondary-background: $emphasis;
+$global-muted-background: lighten($muted, 10%);
+
+$global-color: darken($primary, 10%);
+$global-link-color: $inverse;
+$global-link-hover-color: darken($global-link-color, 10%);
+
+$navbar-nav-item-color: darken($global-color, 10%);
+$navbar-nav-item-font-size: 1.1rem;
 
 // 2. Import default variables and available mixins.
 @import "uikit/src/scss/variables.scss";
@@ -533,7 +543,7 @@ blockquote {
 }
 
 .date {
-  background: $global-inverse-background;
+  background: $inverse;
   display: inline-block;
   padding: 10px;
   position: absolute;

@@ -1,10 +1,15 @@
+{{ $css := newScratch }}
 <!-- CSS -->  
 {{ $colors := resources.Get "igloo-colors.scss" }}
 {{ $colors := $colors | resources.ExecuteAsTemplate "colors.scss" . }}
-{{ $site := resources.Get "igloo-site.scss" }}
-{{ $theme := resources.Get "igloo-theme.scss" }}
-{{ $scss := slice $colors $theme $site | resources.Concat "bundle.scss" }} 
+{{ $css.Set "bundle" (slice $colors) }}
 
+{{ range $.Site.Params.aesthetics.customSass }}
+    {{ $css.Add "bundle"  (resources.Get . | slice) }}
+{{ end }}
+
+{{ $css.Add "bundle"  (resources.Get "igloo-site.scss" | slice) }}
+{{ $scss := $css.Get "bundle" | resources.Concat "bundle.scss" }} 
 {{ with $scss | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" 
     integrity="{{ .Data.Integrity }}" 
