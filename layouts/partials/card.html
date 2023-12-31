@@ -24,5 +24,8 @@
                 {{ .Content }}
             </div>
         </div>
+        {{ if isset .Params "citation" | default false }}
+            {{ partial "citation.html" . }}
+        {{ end}}
       </div>
 </article>

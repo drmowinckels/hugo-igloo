@@ -1,0 +1,31 @@
+<div class="uk-margin">
+    <button  class="uk-button uk-button-default" uk-toggle="target: #citation; animation: uk-animation-fade" type="button">
+        Cite
+    </button>
+    <div id="citation" hidden>
+        <div uk-grid class="uk-child-width-1-2@s">
+            <div>
+                For attribution, please cite this work as
+                <div class="uk-card uk-card-default uk-card-body">
+                    {{ with .Params.author }}{{ . }} {{ end }}
+                        ({{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006")}}) 
+                        {{ .Params.title }}. 
+                        Retrieved from {{ .Permalink }}
+                </div>
+            </div>
+            <div>
+                <b>BibTeX citation</b>
+                <div class="uk-card uk-card-default uk-card-body">
+                    @misc{ <br>
+                        {{ printf "%s-%s" (.Date.Format "2006") (.Title | urlize) }},<br>
+                        &emsp;author =  "{{ .Params.author | default .Site.Title }}",<br>
+                        &emsp;title = "{{ .Title }}",<br>
+                        &emsp;url = "{{ .Permalink }}",<br>
+                        &emsp;year = {{ .Date.Format "2006" }},<br>
+                        &emsp;updated = "{{ .Lastmod.Format .Site.Params.dateFormat }}"<br>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

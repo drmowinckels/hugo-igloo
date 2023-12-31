@@ -63,7 +63,9 @@
             {{ .Content }}
         </div>
     </article>
-
+    {{ if isset .Params "citation" | default true }}
+        {{ partial "citation.html" . }}
+    {{ end}}
     {{ partial "pagination.html" . }}     
     <!-- End post content -->
     {{ if .Params.comments | default true }}
