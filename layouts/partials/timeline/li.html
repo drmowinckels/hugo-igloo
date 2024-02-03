@@ -35,7 +35,7 @@
       {{ with .summary }}<p>{{ . | markdownify | safeHTML  }}</p>{{ end }}
       <div class="uk-flex uk-flex-between uk-flex-middle ">
         {{ if .url }}
-          <a class="bnt-more" href="{{ .url }}">
+          <a class="btn-more" href="{{ .url }}">
             {{ .button | default "More" }}
           </a>
         {{ end }}
