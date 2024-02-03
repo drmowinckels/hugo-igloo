@@ -404,8 +404,7 @@ html {
     width: 5px;
     height: 95%;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 120px;
   }
 
   .timeline-content {
@@ -414,64 +413,39 @@ html {
 }
 
 .timeline-item {
-  width: 100%;
+  width: 90%;
   margin-bottom: 70px;
 
-  &:nth-child(even) {
 
-    .timeline-content {
-      float: right;
-      padding: 40px 30px 10px 30px;
+  .timeline-content {
+    max-width: 100%;
+    width: auto;
+    margin-left: 150px;
+    position: relative;
+    padding: 10px 30px;
+    border-radius: 4px;
+    background: $emphasis;
+    height: 100%;
 
-      .date {
-        right: auto;
-        left: 0;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        border-style: solid;
-        width: 0;
-        height: 0;
-        top: 30px;
-        left: -15px;
-        border-width: 10px 15px 10px 0;
-        border-color: transparent $emphasis transparent transparent;
-      }
+    &::after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      width: 0;
+      height: 0;
+      top: 30px;
+      left: -15px;
+      border-width: 10px 15px 10px 0;
+      border-color: transparent $emphasis transparent transparent;
     }
   }
-
-  &::after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-}
-
-.timeline-content {
-  position: relative;
-  padding: 10px 30px;
-  border-radius: 4px;
-  background: $emphasis;
-  height: 100%;
 
   p{
     color: $muted;
   }
+
   h2 {
     color: lighten($muted, 10%);
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    border-style: solid;
-    width: 0;
-    height: 0;
-    top: 30px;
-    right: -15px;
-    border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent $emphasis;
   }
 
   a {
@@ -498,7 +472,7 @@ html {
   background: $primary;
   border-radius: 50%;
   position: absolute;
-  left: 50%;
+  left: 122.5px;
   margin-top: 25px;
   margin-left: -15px;
 }
@@ -543,61 +517,11 @@ blockquote {
 }
 
 .date {
-  background: $inverse;
   display: inline-block;
+  width: 70px;
   padding: 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-}
-
-@media screen and (max-width: 768px) {
-
-  .timeline {
-
-    &::before {
-      left: 50px;
-    }
-
-    .timeline-img {
-      left: 50px;
-    }
-
-    .timeline-content {
-      max-width: 100%;
-      width: auto;
-      margin-left: 70px;
-    }
-
-    .timeline-item {
-
-      &:nth-child(even) {
-
-        .timeline-content {
-          float: none;
-
-        }
-      }
-
-      &:nth-child(odd) {
-
-        .timeline-content {
-          
-          &::after {
-            content: '';
-            position: absolute;
-            border-style: solid;
-            width: 0;
-            height: 0;
-            top: 30px;
-            left: -15px;
-            border-width: 10px 15px 10px 0;
-            border-color: transparent $emphasis transparent transparent;
-          }
-        }
-
-      }
-    }
-  }
+  position: relative;
+  top: 80px;
+  left: 10px;
+  text-wrap: wrap;
 }

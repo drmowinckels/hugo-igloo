@@ -1,13 +1,13 @@
 <div class="timeline-item">
+  {{ $form := .Site.Params.dateFormat | default "Jan 02, 2006" }}
+  {{ with .date }}
+    {{ $date := . }}
+    <div class="date">
+      {{ dateFormat $form . }}
+    </div>
+  {{ end }}
     <div class="timeline-img"></div>
     <div class="timeline-content js--fadeInLeft">
-      {{ $form := .Site.Params.dateFormat | default "Jan 02, 2006" }}
-      {{ with .date }}
-        {{ $date := . }}
-        <div class="date">
-          {{ dateFormat $form . }}
-        </div>
-      {{ end }}
         {{ $isRemote := strings.HasPrefix .image "http" }}
         {{ $img := newScratch }}
 
