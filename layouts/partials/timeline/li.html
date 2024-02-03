@@ -1,51 +1,57 @@
-<div class="timeline-item">
-  {{ $form := .Site.Params.dateFormat | default "Jan 02, 2006" }}
-  {{ with .date }}
-    {{ $date := . }}
-    <div class="date">
-      {{ dateFormat $form . }}
-    </div>
-  {{ end }}
-    <div class="timeline-img"></div>
-    <div class="timeline-content js--fadeInLeft">
-        {{ $isRemote := strings.HasPrefix .image "http" }}
-        {{ $img := newScratch }}
+{{ $form := .Site.Params.dateFormat | default "Jan 02, 2006" }}
+{{ with .date }}
+  {{ $date := . }}
+  <div class="timeline-date">
+    {{ dateFormat $form . }}
+  </div>
+{{ end }}
+  <div class="timeline-dot"></div>
+  <div class="timeline-content ">
+      {{ $isRemote := strings.HasPrefix .image "http" }}
+      {{ $img := newScratch }}
 
-        {{ if $isRemote }}
-          {{ $img.Set "image" (resources.GetRemote .image) }}
+      {{ if $isRemote }}
+        {{ $img.Set "image" (resources.GetRemote .image) }}
+      {{ else }}
+      {{ $imgs := printf "**%s" .image }}
+      <p>{{.Resources.ByType "image"}}</p>
+      {{ $localImage := .Resources.GetMatch $imgs }}
+        {{ if $localImage }}
+            <p>Local Image Found: {{ $localImage.Name }}</p>
+            {{ $img.Set "image" $localImage }}
         {{ else }}
-        {{ $imgs := printf "**%s" .image }}
-        <p>{{.Resources.ByType "image"}}</p>
-        {{ $localImage := .Resources.GetMatch $imgs }}
-          {{ if $localImage }}
-              <p>Local Image Found: {{ $localImage.Name }}</p>
-              {{ $img.Set "image" $localImage }}
-          {{ else }}
-              <p>No Local Image Found</p>
+            <p>No Local Image Found</p>
+        {{ end }}
+      {{ end }}
+      {{ $image := $img.Get "image" }}
+      {{ $image := $image.Process "fit 400x400" }}
+      {{ with $image }}
+        <div class="timeline-img" 
+            style="background: url('{{ .Permalink }}') center no-repeat;"
+        ></div>
+      {{ end }}
+    <h2>{{ .title | markdownify | safeHTML }}</h2>
+    {{ with .summary }}<p>{{ . | markdownify | safeHTML  }}</p>{{ end }}
+    <div class="uk-flex uk-flex-between uk-flex-middle ">
+      {{ if .url }}
+        <a class="btn-more" href="{{ .url }}">
+          {{ .button | default "More" }}
+        </a>
+      {{ end }}
+    
+      {{ with .tags }}
+        <span class="uk-text-right">
+          {{ range . }}
+           {{ $tag := lower . | urlize }}
+            {{ with $.Site.Taxonomies.tags.Get $tag }}
+              <a href="{{ $.Site.BaseURL }}tags/{{ . }}" class="uk-label timeline-tags">
+                {{ .Name }}
+              </a>
+            {{ else }}
+                <div class="uk-label timeline-tags">{{ $tag }}</div>
+            {{ end }}
           {{ end }}
-        {{ end }}
-        {{ $image := $img.Get "image" }}
-        {{ $image := $image.Process "fit 400x400" }}
-        {{ with $image }}
-          <div class="timeline-img-header" 
-              style="background: url('{{ .Permalink }}') center no-repeat;"
-          ></div>
-        {{ end }}
-      <h2>{{ .title | markdownify | safeHTML }}</h2>
-      {{ with .summary }}<p>{{ . | markdownify | safeHTML  }}</p>{{ end }}
-      <div class="uk-flex uk-flex-between uk-flex-middle ">
-        {{ if .url }}
-          <a class="btn-more" href="{{ .url }}">
-            {{ .button | default "More" }}
-          </a>
-        {{ end }}
-      
-        {{ with .tags }}
-          <span class="uk-text-right">
-            {{ delimit . ", " }}
-          </span>
-        {{ end }}
-      </div>
-      
+        </span>
+      {{ end }}
     </div>
-</div> 
+  </div>

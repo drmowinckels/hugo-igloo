@@ -53,6 +53,10 @@ $navbar-nav-item-font-size: 1.1rem;
   }
 }
 
+@mixin hook-slidenav(){
+  color: $primary !important;
+}
+
 // 4. Import UIkit.
 @import "uikit/src/scss/uikit.scss";
 
@@ -394,7 +398,8 @@ html {
   /* Your styles for extra-large screens go here */
 }
 
-.timeline {
+
+.timeline-vertical {
   position: relative;
 
   &::before {
@@ -411,8 +416,34 @@ html {
   }
 }
 
+
 .timeline-item {
-  width: 90%;
+  .timeline-img {
+    background-size: cover;
+  }
+
+  .timeline-img {
+
+    height: 200px;
+    position: relative;
+    margin-bottom: 20px;
+  
+    h2 {
+      position: absolute;
+      bottom: 5px;
+      left: 20px;
+    }
+  }
+
+  .timeline-date {
+    display: inline-block;
+    width: 70px;
+    padding: 10px;
+    position: relative;
+    top: 80px;
+    left: 10px;
+    text-wrap: wrap;
+  }
 
   .timeline-content {
     max-width: 100%;
@@ -430,14 +461,14 @@ html {
       border-style: solid;
       width: 0;
       height: 0;
-      top: 30px;
-      left: -15px;
-      border-width: 10px 15px 10px 0;
-      border-color: transparent $emphasis transparent transparent;
+    }
+
+    .timeline-tags {
+      font-size: 1rem;
     }
   }
 
-  p{
+  p {
     color: $muted;
   }
 
@@ -461,50 +492,95 @@ html {
     }
   
   }
-}
 
-.timeline-img {
-  width: 30px;
-  height: 30px;
-  background: $primary;
-  border-radius: 50%;
-  position: absolute;
-  left: 122.5px;
-  margin-top: 25px;
-  margin-left: -15px;
-}
-
-.timeline-card {
-  padding: 0 !important;
-  color: $muted;
-
-  p {
-    padding: 0 20px;
-  }
-
-  a {
-    margin-left: 20px;
-  }
-}
-
-.timeline-item {
-  .timeline-img-header {
-      background-size: cover;
-    }
-}
-
-.timeline-img-header {
-
-  height: 200px;
-  position: relative;
-  margin-bottom: 20px;
-
-  h2 {
+  .timeline-dot {
+    width: 30px;
+    height: 30px;
+    background: $primary;
+    border-radius: 50%;
     position: absolute;
-    bottom: 5px;
-    left: 20px;
+  }
+
+  .timeline-card {
+    padding: 0 !important;
+    color: $muted;
+  
+    p {
+      padding: 0 20px;
+    }
+  
+    a {
+      margin-left: 20px;
+    }
   }
 }
+
+
+.timeline-item-vertical {
+  width: 90%;
+
+  .timeline-content {
+    &::after {
+      top: 30px;
+      left: -15px;
+      border-width: 10px 15px 10px 0;
+      border-color: transparent $emphasis transparent transparent;
+    }
+  }
+
+  .timeline-dot {
+    left: 122.5px;
+    margin-top: 25px;
+    margin-left: -15px;
+  }
+}
+
+.timeline-horizontal {
+  &::before {
+    content: '';
+    background: $primary;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 40px;
+  }
+
+  .timeline-content {
+    width: 80%;
+  }
+}
+
+.timeline-item-horizontal {
+  position: relative;
+  top: 50px;
+  height: 100%;
+  
+  .timeline-dot {
+    left: 165px;
+    top: -22px;
+  }
+
+  .timeline-content {
+    top: -10px;
+
+    &::after {
+      content: '';
+      top: -15px;
+      left: 20px;
+      border-width: 0 10px 15px 10px;
+      border-color: transparent  transparent $emphasis transparent;
+    }
+  }
+
+  .timeline-date {
+    top: -37px;
+    color: $primary;
+    left: 220px;
+    padding: unset;
+    width: 200px;
+  }
+}
+
 
 blockquote {
   margin-top: 30px;
@@ -513,15 +589,6 @@ blockquote {
   padding: 0 20px;
 }
 
-.date {
-  display: inline-block;
-  width: 70px;
-  padding: 10px;
-  position: relative;
-  top: 80px;
-  left: 10px;
-  text-wrap: wrap;
-}
 
 .btn-more{
   background-color: $inverse !important;
