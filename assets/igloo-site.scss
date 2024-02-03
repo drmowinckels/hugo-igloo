@@ -462,10 +462,6 @@ html {
       width: 0;
       height: 0;
     }
-
-    .timeline-tags {
-      font-size: 1rem;
-    }
   }
 
   p {
@@ -515,6 +511,11 @@ html {
   }
 }
 
+.timeline-tags {
+  font-size: 1rem;
+  background-color: $global-primary-background !important;
+  color: lighten($primary, 50%) !important;
+}
 
 .timeline-item-vertical {
   width: 90%;
