@@ -395,14 +395,13 @@ html {
 }
 
 .timeline {
-
   position: relative;
 
   &::before {
     content: '';
     background: $primary;
     width: 5px;
-    height: 95%;
+    height: 98.7%;
     position: absolute;
     left: 120px;
   }
@@ -414,8 +413,6 @@ html {
 
 .timeline-item {
   width: 90%;
-  margin-bottom: 70px;
-
 
   .timeline-content {
     max-width: 100%;
