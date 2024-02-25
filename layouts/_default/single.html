@@ -10,11 +10,11 @@
                       {{ range . }}
                           {{ partial "social-media.html" . }}
                       {{ end }}
-                  </div>  
+                  </div>
               {{ end }}
             </div>
 
-        <div class="uk-width-3-4@s">   
+        <div class="uk-width-3-4@s">
         <h1 class="uk-article-title">{{ .Title  | markdownify | safeHTML }}</h1>
         {{ with .Params.subtitle }}<h3 class="uk-heading-line">
             <span>{{. | markdownify | safeHTML }}</span></h3>
@@ -33,7 +33,7 @@
 
             {{ with .GetTerms "tags" }}
                 <div class="uk-flex uk-flex-wrap uk-flex-right">
-                    {{ range . }} 
+                    {{ range . }}
                         {{ $url := .RelPermalink }}
                         {{ $lastFolder := last 2 (split $url "/") }}
                         {{ $lastFolder := index $lastFolder 0 }}
@@ -59,14 +59,14 @@
         {{ with .Params.summary }}
             <p class="uk-text-lead">{{ .| markdownify | safeHTML }}</p>
         {{ end }}
-        <div>
+        <div class="uk-markdown uk-width">
             {{ .Content }}
         </div>
     </article>
     {{ if isset .Params "citation" | default true }}
         {{ partial "citation.html" . }}
     {{ end}}
-    {{ partial "pagination.html" . }}     
+    {{ partial "pagination.html" . }}
     <!-- End post content -->
     {{ if .Params.comments | default true }}
         {{ partial "comments.html" . }}
