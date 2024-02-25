@@ -53,6 +53,10 @@ $navbar-nav-item-font-size: 1.1rem;
   }
 }
 
+@mixin hook-slidenav(){
+  color: $primary !important;
+}
+
 // 4. Import UIkit.
 @import "uikit/src/scss/uikit.scss";
 
@@ -394,18 +398,17 @@ html {
   /* Your styles for extra-large screens go here */
 }
 
-.timeline {
 
+.timeline-vertical {
   position: relative;
 
   &::before {
     content: '';
     background: $primary;
     width: 5px;
-    height: 95%;
+    height: 98.7%;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 120px;
   }
 
   .timeline-content {
@@ -413,65 +416,60 @@ html {
   }
 }
 
+
 .timeline-item {
-  width: 100%;
-  margin-bottom: 70px;
+  .timeline-img {
+    background-size: cover;
+  }
 
-  &:nth-child(even) {
+  .timeline-img {
 
-    .timeline-content {
-      float: right;
-      padding: 40px 30px 10px 30px;
-
-      .date {
-        right: auto;
-        left: 0;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        border-style: solid;
-        width: 0;
-        height: 0;
-        top: 30px;
-        left: -15px;
-        border-width: 10px 15px 10px 0;
-        border-color: transparent $emphasis transparent transparent;
-      }
+    height: 200px;
+    position: relative;
+    margin-bottom: 20px;
+  
+    h2 {
+      position: absolute;
+      bottom: 5px;
+      left: 20px;
     }
   }
 
-  &::after {
-    content: '';
-    display: block;
-    clear: both;
+  .timeline-date {
+    display: inline-block;
+    width: 70px;
+    padding: 10px;
+    position: relative;
+    top: 80px;
+    left: 10px;
+    text-wrap: wrap;
   }
-}
 
-.timeline-content {
-  position: relative;
-  padding: 10px 30px;
-  border-radius: 4px;
-  background: $emphasis;
-  height: 100%;
+  .timeline-content {
+    max-width: 100%;
+    width: auto;
+    margin-left: 150px;
+    position: relative;
+    padding: 10px 30px;
+    border-radius: 4px;
+    background: $emphasis;
+    height: 100%;
 
-  p{
+    &::after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  p {
     color: $muted;
   }
+
   h2 {
     color: lighten($muted, 10%);
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    border-style: solid;
-    width: 0;
-    height: 0;
-    top: 30px;
-    right: -15px;
-    border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent $emphasis;
   }
 
   a {
@@ -490,50 +488,100 @@ html {
     }
   
   }
-}
 
-.timeline-img {
-  width: 30px;
-  height: 30px;
-  background: $primary;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  margin-top: 25px;
-  margin-left: -15px;
-}
-
-.timeline-card {
-  padding: 0 !important;
-  color: $muted;
-
-  p {
-    padding: 0 20px;
-  }
-
-  a {
-    margin-left: 20px;
-  }
-}
-
-.timeline-item {
-  .timeline-img-header {
-      background-size: cover;
-    }
-}
-
-.timeline-img-header {
-
-  height: 200px;
-  position: relative;
-  margin-bottom: 20px;
-
-  h2 {
+  .timeline-dot {
+    width: 30px;
+    height: 30px;
+    background: $primary;
+    border-radius: 50%;
     position: absolute;
-    bottom: 5px;
-    left: 20px;
+  }
+
+  .timeline-card {
+    padding: 0 !important;
+    color: $muted;
+  
+    p {
+      padding: 0 20px;
+    }
+  
+    a {
+      margin-left: 20px;
+    }
   }
 }
+
+.timeline-tags {
+  font-size: 1rem;
+  background-color: $global-primary-background !important;
+  color: lighten($primary, 50%) !important;
+}
+
+.timeline-item-vertical {
+  width: 90%;
+
+  .timeline-content {
+    &::after {
+      top: 30px;
+      left: -15px;
+      border-width: 10px 15px 10px 0;
+      border-color: transparent $emphasis transparent transparent;
+    }
+  }
+
+  .timeline-dot {
+    left: 122.5px;
+    margin-top: 25px;
+    margin-left: -15px;
+  }
+}
+
+.timeline-horizontal {
+  &::before {
+    content: '';
+    background: $primary;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 40px;
+  }
+
+  .timeline-content {
+    width: 80%;
+  }
+}
+
+.timeline-item-horizontal {
+  position: relative;
+  top: 50px;
+  height: 100%;
+  
+  .timeline-dot {
+    left: 165px;
+    top: -22px;
+  }
+
+  .timeline-content {
+    top: -10px;
+
+    &::after {
+      content: '';
+      top: -15px;
+      left: 20px;
+      border-width: 0 10px 15px 10px;
+      border-color: transparent  transparent $emphasis transparent;
+    }
+  }
+
+  .timeline-date {
+    top: -37px;
+    color: $primary;
+    left: 220px;
+    padding: unset;
+    width: 200px;
+  }
+}
+
 
 blockquote {
   margin-top: 30px;
@@ -542,62 +590,7 @@ blockquote {
   padding: 0 20px;
 }
 
-.date {
-  background: $inverse;
-  display: inline-block;
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-}
 
-@media screen and (max-width: 768px) {
-
-  .timeline {
-
-    &::before {
-      left: 50px;
-    }
-
-    .timeline-img {
-      left: 50px;
-    }
-
-    .timeline-content {
-      max-width: 100%;
-      width: auto;
-      margin-left: 70px;
-    }
-
-    .timeline-item {
-
-      &:nth-child(even) {
-
-        .timeline-content {
-          float: none;
-
-        }
-      }
-
-      &:nth-child(odd) {
-
-        .timeline-content {
-          
-          &::after {
-            content: '';
-            position: absolute;
-            border-style: solid;
-            width: 0;
-            height: 0;
-            top: 30px;
-            left: -15px;
-            border-width: 10px 15px 10px 0;
-            border-color: transparent $emphasis transparent transparent;
-          }
-        }
-
-      }
-    }
-  }
+.btn-more{
+  background-color: $inverse !important;
 }
