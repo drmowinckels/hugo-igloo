@@ -9,10 +9,10 @@
                   {{ range . }}
                       {{ partial "social-media.html" . }}
                   {{ end }}
-              </div>  
+              </div>
           {{ end }}
         </div>
-  
+
         <!-- Content Section -->
         <div class="uk-width-3-4@s">
             <h1 class="uk-article-title">{{ .Title  | markdownify | safeHTML }}</h1>
@@ -20,7 +20,7 @@
             {{ with .Params.summary }}
                 <p class="uk-text-lead">{{ .| markdownify | safeHTML }}</p>
             {{ end }}
-            <div>
+            <div class="uk-markdown uk-width">
                 {{ .Content }}
             </div>
         </div>

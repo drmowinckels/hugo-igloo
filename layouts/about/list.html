@@ -10,11 +10,11 @@
                       {{ range . }}
                           {{ partial "social-media.html" . }}
                       {{ end }}
-                  </div>  
+                  </div>
               {{ end }}
             </div>
 
-        <div class="uk-width-3-4@s">   
+        <div class="uk-width-3-4@s">
         <h1 class="uk-article-title">{{ .Title  | markdownify | safeHTML }}</h1>
         {{ with .Params.subtitle | default .Params.summary }}
           <h3 class="uk-text-lead">
@@ -32,7 +32,7 @@
 
             {{ with .GetTerms "tags" }}
                 <div class="uk-flex uk-flex-wrap uk-flex-right">
-                    {{ range . }} 
+                    {{ range . }}
                         {{ $url := .RelPermalink }}
                         {{ $lastFolder := last 2 (split $url "/") }}
                         {{ $lastFolder := index $lastFolder 0 }}
@@ -55,12 +55,12 @@
                 {{ .TableOfContents }}
             </div>
         </div>
-        <div>
+       <div class="uk-markdown uk-width">
             {{ .Content }}
         </div>
     </article>
 
-    {{ partial "pagination.html" . }}     
+    {{ partial "pagination.html" . }}
     <!-- End post content -->
     {{ if .Params.comments | default true }}
         {{ partial "comments.html" . }}

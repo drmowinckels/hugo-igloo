@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <article class="uk-article uk-margin-bottom">
+  <article class="uk-article uk-margin-bottom uk-markdown">
     {{ .Content }}
   </article>
   <section class="timeline timeline-vertical">
@@ -8,7 +8,7 @@
       {{ range (.Content | transform.Unmarshal ) }}
         {{ partial "timeline/verti-li.html" . }}
       {{ end }}
-    {{ end }} 
+    {{ end }}
   </div>
 </section>
 
