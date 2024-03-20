@@ -73,8 +73,8 @@
 
  
 
-    <link rel="stylesheet" href="https://drmowinckels.io/hugo-igloo//themes/barbie/bundle.min.7eedcf699c756ee5739ac575dfee42306b10f85d75f49cc1d76c6245a24a34c8.css" 
-    integrity="sha256-fu3PaZx1buVzmsV13&#43;5CMGsQ&#43;F119JzB12xiRaJKNMg=" 
+    <link rel="stylesheet" href="https://drmowinckels.io/hugo-igloo//themes/barbie/bundle.min.1250ab50c50ed057f6a4043ae80891ea33bf97ce69fb63ee2f52dd3db87b0e6f.css" 
+    integrity="sha256-ElCrUMUO0Ff2pAQ66AiR6jO/l85p&#43;2PuL1LdPbh7Dm8=" 
     crossorigin="anonymous">
 
 
@@ -239,7 +239,7 @@
         <div class="uk-text-center uk-margin-auto  uk-margin-auto-vertical">
             <div class="uk-animation-toggle" tabindex="0">
                 <img class="uk-animation-stroke" src="https://drmowinckels.io/hugo-igloo/themes/barbie/theme.png" 
-                    width="350" height="340" alt="" uk-svg="stroke-animation: true">
+                    width="50%" height="50%" alt="" uk-svg="stroke-animation: true">
             </div>
             <h1>Igloo</h1>
             <h2>an barbie experience</h2>
@@ -250,9 +250,72 @@
         
 
 
-<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-    <nav class="uk-navbar-container ">
-        <div uk-navbar>
+
+<div id="smallnav" uk-offcanvas="flip: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav">
+            
+                <a class="uk-navbar-item uk-logo" href="https://drmowinckels.io/hugo-igloo//themes/barbie">
+                    <img src="https://drmowinckels.io/hugo-igloo//themes/barbie/theme.png" width="40">
+                </a> 
+            
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/barbie/about">
+                        About
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/barbie/blog">
+                        Blog
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/barbie/#slider">
+                        Slider
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/barbie/">
+                        Sections
+                        
+                            <span uk-icon="chevron-down"></span>
+                        
+                    </a>
+                    
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                
+                                    <li><a href="https://drmowinckels.io/hugo-igloo//themes/barbie/timeline">
+                                        Timeline
+                                    </a></li>
+                                
+                                    <li><a href="https://drmowinckels.io/hugo-igloo//themes/barbie/grid">
+                                        Grid
+                                    </a></li>
+                                
+                            </ul>
+                        </div>                            
+                    
+                </li>
+            
+        </ul>
+    </div>
+</div>
+<a class="uk-navbar-container uk-navbar-left uk-navbar-toggle uk-hidden@s" uk-toggle="target: #smallnav" uk-navbar-toggle-icon></a>
+
+<div class="uk-visible@s" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+    <nav class="uk-navbar-container">   
+        <div uk-navbar>     
             <div class="uk-navbar-center">
                 
                     

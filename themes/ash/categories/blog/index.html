@@ -73,8 +73,8 @@
 
  
 
-    <link rel="stylesheet" href="https://drmowinckels.io/hugo-igloo//themes/ash/bundle.min.69b6da732ff7b4b8c4736b14f37d8a9cb9e0203193b2ed23ebca3f24e13466bd.css" 
-    integrity="sha256-abbacy/3tLjEc2sU832KnLngIDGTsu0j68o/JOE0Zr0=" 
+    <link rel="stylesheet" href="https://drmowinckels.io/hugo-igloo//themes/ash/bundle.min.d8491cb602ef00248e5118321899319686b5761dcc80988d890361e28b649dba.css" 
+    integrity="sha256-2EkctgLvACSOURgyGJkxloa1dh3MgJiNiQNh4otknbo=" 
     crossorigin="anonymous">
 
 
@@ -245,9 +245,72 @@
         
 
 
-<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-    <nav class="uk-navbar-container ">
-        <div uk-navbar>
+
+<div id="smallnav" uk-offcanvas="flip: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav">
+            
+                <a class="uk-navbar-item uk-logo" href="https://drmowinckels.io/hugo-igloo//themes/ash">
+                    <img src="https://drmowinckels.io/hugo-igloo//themes/ash/theme.png" width="40">
+                </a> 
+            
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/ash/about">
+                        About
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/ash/blog">
+                        Blog
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/ash/#slider">
+                        Slider
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/ash/">
+                        Sections
+                        
+                            <span uk-icon="chevron-down"></span>
+                        
+                    </a>
+                    
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                
+                                    <li><a href="https://drmowinckels.io/hugo-igloo//themes/ash/timeline">
+                                        Timeline
+                                    </a></li>
+                                
+                                    <li><a href="https://drmowinckels.io/hugo-igloo//themes/ash/grid">
+                                        Grid
+                                    </a></li>
+                                
+                            </ul>
+                        </div>                            
+                    
+                </li>
+            
+        </ul>
+    </div>
+</div>
+<a class="uk-navbar-container uk-navbar-left uk-navbar-toggle uk-hidden@s" uk-toggle="target: #smallnav" uk-navbar-toggle-icon></a>
+
+<div class="uk-visible@s" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+    <nav class="uk-navbar-container">   
+        <div uk-navbar>     
             <div class="uk-navbar-center">
                 
                     

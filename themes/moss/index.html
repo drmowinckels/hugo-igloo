@@ -73,8 +73,8 @@
 
  
 
-    <link rel="stylesheet" href="https://drmowinckels.io/hugo-igloo//themes/moss/bundle.min.490000c7511438447e3c437875991c8102c86c17b078e7cca94d6e8cdd9b859b.css" 
-    integrity="sha256-SQAAx1EUOER&#43;PEN4dZkcgQLIbBeweOfMqU1ujN2bhZs=" 
+    <link rel="stylesheet" href="https://drmowinckels.io/hugo-igloo//themes/moss/bundle.min.c074c8a9d1b61866c84ad7cf7ffe93c1bf1cf4e85664be78bbc1ff7939dc47e6.css" 
+    integrity="sha256-wHTIqdG2GGbIStfPf/6Twb8c9OhWZL54u8H/eTncR&#43;Y=" 
     crossorigin="anonymous">
 
 
@@ -239,7 +239,7 @@
         <div class="uk-text-center uk-margin-auto  uk-margin-auto-vertical">
             <div class="uk-animation-toggle" tabindex="0">
                 <img class="uk-animation-stroke" src="https://drmowinckels.io/hugo-igloo/themes/moss/theme.png" 
-                    width="350" height="340" alt="" uk-svg="stroke-animation: true">
+                    width="50%" height="50%" alt="" uk-svg="stroke-animation: true">
             </div>
             <h1>Igloo</h1>
             <h2>an moss experience</h2>
@@ -250,9 +250,72 @@
         
 
 
-<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-    <nav class="uk-navbar-container ">
-        <div uk-navbar>
+
+<div id="smallnav" uk-offcanvas="flip: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav">
+            
+                <a class="uk-navbar-item uk-logo" href="https://drmowinckels.io/hugo-igloo//themes/moss">
+                    <img src="https://drmowinckels.io/hugo-igloo//themes/moss/theme.png" width="40">
+                </a> 
+            
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/moss/about">
+                        About
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/moss/blog">
+                        Blog
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/moss/#slider">
+                        Slider
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/moss/">
+                        Sections
+                        
+                            <span uk-icon="chevron-down"></span>
+                        
+                    </a>
+                    
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                
+                                    <li><a href="https://drmowinckels.io/hugo-igloo//themes/moss/timeline">
+                                        Timeline
+                                    </a></li>
+                                
+                                    <li><a href="https://drmowinckels.io/hugo-igloo//themes/moss/grid">
+                                        Grid
+                                    </a></li>
+                                
+                            </ul>
+                        </div>                            
+                    
+                </li>
+            
+        </ul>
+    </div>
+</div>
+<a class="uk-navbar-container uk-navbar-left uk-navbar-toggle uk-hidden@s" uk-toggle="target: #smallnav" uk-navbar-toggle-icon></a>
+
+<div class="uk-visible@s" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+    <nav class="uk-navbar-container">   
+        <div uk-navbar>     
             <div class="uk-navbar-center">
                 
                     

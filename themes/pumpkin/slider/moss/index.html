@@ -62,8 +62,8 @@
 
  
 
-    <link rel="stylesheet" href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/bundle.min.a9bfe26caeec911ec3ebe8591c5aec636d7a02eeba25fb764bba8daf476a8472.css" 
-    integrity="sha256-qb/ibK7skR7D6&#43;hZHFrsY216Au66Jft2S7qNr0dqhHI=" 
+    <link rel="stylesheet" href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/bundle.min.9609ae09aee2f3b096c1c8a92ef39725358f047da425209755e510d3c9ead472.css" 
+    integrity="sha256-lgmuCa7i87CWwcipLvOXJTWPBH2kJSCXVeUQ08nq1HI=" 
     crossorigin="anonymous">
 
 
@@ -236,9 +236,72 @@
         
 
 
-<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-    <nav class="uk-navbar-container ">
-        <div uk-navbar>
+
+<div id="smallnav" uk-offcanvas="flip: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav">
+            
+                <a class="uk-navbar-item uk-logo" href="https://drmowinckels.io/hugo-igloo//themes/pumpkin">
+                    <img src="https://drmowinckels.io/hugo-igloo//themes/pumpkin/theme.png" width="40">
+                </a> 
+            
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/about">
+                        About
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/blog">
+                        Blog
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/#slider">
+                        Slider
+                        
+                    </a>
+                    
+                </li>
+            
+                <li>
+                    <a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/">
+                        Sections
+                        
+                            <span uk-icon="chevron-down"></span>
+                        
+                    </a>
+                    
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                
+                                    <li><a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/timeline">
+                                        Timeline
+                                    </a></li>
+                                
+                                    <li><a href="https://drmowinckels.io/hugo-igloo//themes/pumpkin/grid">
+                                        Grid
+                                    </a></li>
+                                
+                            </ul>
+                        </div>                            
+                    
+                </li>
+            
+        </ul>
+    </div>
+</div>
+<a class="uk-navbar-container uk-navbar-left uk-navbar-toggle uk-hidden@s" uk-toggle="target: #smallnav" uk-navbar-toggle-icon></a>
+
+<div class="uk-visible@s" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+    <nav class="uk-navbar-container">   
+        <div uk-navbar>     
             <div class="uk-navbar-center">
                 
                     
