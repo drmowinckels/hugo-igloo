@@ -134,6 +134,13 @@ html {
   .circle {
     margin-bottom: calc(#{$margin} - #{$size} * 0.1);
   }
+
+  @media (max-width: 450px ){
+    .hexagon,
+    .circle {
+      margin-bottom: 5px;
+    }
+  }
 }
 
 .list-overlay-circle{
@@ -155,6 +162,9 @@ html {
     );
   }
   padding-bottom: calc(#{$margin} - #{$size} * 2);
+  @media (max-width: 450px ){
+    padding-bottom: 5px;
+  }
 }
 
 .list-overlay{
