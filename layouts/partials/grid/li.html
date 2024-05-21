@@ -9,7 +9,6 @@
             <div class="list-overlay list-overlay-{{ .Site.Params.aesthetics.thumbShape }}">
                 <div class="list-item-content ">
                     <h2>{{ .Title | markdownify | safeHTML  }}</h2>
-                    <p>{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}</p>
                 </div>
             </div>
         </a>

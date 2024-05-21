@@ -16,9 +16,9 @@
 {{ end }}
 {{ $url := printf "https://%s/@%s/%s/embed" $server $user $toot}}
 
-<iframe 
-    src="{{ $url }}" 
-    width="400" 
-    allowfullscreen="allowfullscreen" 
+<iframe
+    src="{{ $url }}"
+    width="400"
+    allowfullscreen="allowfullscreen"
     sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
 ></iframe>
