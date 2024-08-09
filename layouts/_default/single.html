@@ -63,12 +63,19 @@
             {{ .Content }}
         </div>
     </article>
-    {{ if isset .Params "citation" | default true }}
+
+    {{- $currentSection := .Section -}}
+    {{- $section := .Site.GetPage "section" $currentSection -}}
+
+    {{- if $section -}}
+    {{- if $section.Params.citation | default true -}}
         {{ partial "citation.html" . }}
-    {{ end}}
+    {{- end -}}
+    {{- end -}}
+
     {{ partial "pagination.html" . }}
     <!-- End post content -->
-    {{ if .Params.comments | default true }}
+    {{ if $section.Params.comments | default true }}
         {{ partial "comments.html" . }}
     {{ end }}
 {{ end }}

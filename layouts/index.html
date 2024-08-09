@@ -1,14 +1,10 @@
 {{ define "main" }}
     {{ range $section := .Site.Sections.ByWeight }}
         {{ if (.Params.home | default false) }}
-            <div class=" uk-section uk-margin-bottom" id="{{.Title | urlize }}">
-                <div class="section banner">
-                    <div class="uk-container uk-margin-left-large">
-                        <a href="{{ .RelPermalink }}">
-                            <h1>{{ .Title  | markdownify | safeHTML }}</h1>
-                        </a>
-                    </div>
-                </div>
+            <div class="uk-section" id="{{.Title | urlize }}">
+                {{ if ( .Params.home_title | default true ) }}
+                    {{ partial "home/banner.html" . }}
+                {{ end }}
                 {{ $part := printf "home/%s.html" .Type }}
                 {{ partial $part . }}
             </div>

@@ -1,9 +1,9 @@
 
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="{{ site.BaseURL }}">
-<meta property="og:type" content="website">
-<meta property="og:title" content="{{ if not .IsHome }}{{ .Title  | markdownify | safeHTML }} - {{ end }}{{ site.Title | markdownify | safeHTML  }}">
-<meta property="og:description" content="{{ if not .IsHome }}{{.Summary | markdownify | safeHTML }}{{else}}{{ site.Params.subtitle  | markdownify | safeHTML }}{{end}}">
+<!-- General Meta Tags -->
+<meta prefix="og: http://ogp.me/ns#" property="og:url" content="{{ site.BaseURL }}">
+<meta prefix="og: http://ogp.me/ns#" property="og:type" content="website">
+<meta prefix="og: http://ogp.me/ns#" property="og:title" content="{{ if not .IsHome }}{{ .Title  | markdownify | safeHTML }} - {{ end }}{{ site.Title | markdownify | safeHTML  }}">
+<meta prefix="og: http://ogp.me/ns#" property="og:description" content="{{ if not .IsHome }}{{.Summary | markdownify | safeHTML }}{{else}}{{ site.Params.subtitle  | markdownify | safeHTML }}{{end}}">
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
@@ -13,7 +13,7 @@
 
 {{ $img := (partial "funcs/get_image.html" .) }}
 {{ with $img }}
-    <meta property="og:image" content="{{ .RelPermalink | absURL }}" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:image" content="{{ .RelPermalink | absURL }}" />
     <meta name="twitter:image" content="{{ .RelPermalink | absURL }}">
 {{ end }}
 

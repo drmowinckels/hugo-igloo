@@ -1,27 +1,29 @@
 <div class="uk-margin">
     <button  class="uk-button uk-button-default" uk-toggle="target: #citation; animation: uk-animation-fade" type="button">
-        Cite
+        Cite me!
     </button>
     <div id="citation" hidden class="uk-margin">
         <div uk-grid class="uk-child-width-1-2@s">
             <div>
                 For attribution, please cite this work as
-                <div class="uk-card uk-card-default uk-card-body">
+                <div class="uk-card uk-card-default uk-card-bod uk-text-breaky">
                     {{ with .Params.author }}{{ . }} {{ end }}
-                        ({{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006")}}) 
-                        {{ .Params.title }}. 
-                        Retrieved from {{ .Permalink }}
+                    ({{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006")}}) 
+                    {{ .Params.title }}. 
+                    Retrieved from {{ .Permalink }}.
+                    {{ with .Params.doi }} DOI: {{ printf "https://www.doi.org/%s" . }}{{ end }}
                 </div>
             </div>
             <div>
                 <b>BibTeX citation</b>
-                <div class="uk-card uk-card-default uk-card-body">
+                <div class="uk-card uk-card-default uk-card-body uk-text-break">
                     @misc{ <br>
                         {{ printf "%s-%s" (.Date.Format "2006") (.Title | urlize) }},<br>
                         &emsp;author =  "{{ .Params.author | default .Site.Title }}",<br>
                         &emsp;title = "{{ .Title }}",<br>
                         &emsp;url = "{{ .Permalink }}",<br>
                         &emsp;year = {{ .Date.Format "2006" }},<br>
+                        {{ with .Params.doi }} &emsp;doi = "{{ printf "https://www.doi.org/%s" . }}",<br> {{ end }}
                         &emsp;updated = "{{ .Lastmod.Format .Site.Params.dateFormat }}"<br>
                     }
                 </div>
