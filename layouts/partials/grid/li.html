@@ -1,10 +1,17 @@
-{{- range . }} 
+
+{{- $section := .Site.GetPage "section" .section -}}
+{{ $overlay := newScratch }}
+{{ $overlay.Set "overlay" ($section.overlay | default true) }}
+<p>here</p>
+
+{{- range .pages }} 
     <li class="list-item {{ .Site.Params.aesthetics.thumbShape }}"
             data-tags="{{ range .Params.tags }}{{ . | urlize}} {{ end }}"
             {{ $image := (partial "funcs/get_image.html" .) }}
             {{ $image := $image.Fill "250x289 Center" }}
             style="background-image: url({{ $image.Permalink }});"
         >
+        {{ if eq ($overlay.Get "overlay") "true" }}
         <a href="{{ .Permalink }}" >
             <div class="list-overlay list-overlay-{{ .Site.Params.aesthetics.thumbShape }}">
                 <div class="list-item-content ">
@@ -12,5 +19,6 @@
                 </div>
             </div>
         </a>
+        {{ end }}
     </li>
 {{- end }}

@@ -1,5 +1,5 @@
 <div class="list-grid">
     <ul class="list-container list-container-{{ .Site.Params.aesthetics.thumbShape }}">
-        {{ partial "grid/li.html" ( .Pages | first (.Params.n_posts | default 3 ) ) }}
+        {{ partial "grid/li.html" (dict "pages" ( .Pages | first (.Params.n_posts | default 3 ) ) "section" .Section )}}
     </ul>
 </div>

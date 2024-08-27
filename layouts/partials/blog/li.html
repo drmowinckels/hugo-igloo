@@ -1,3 +1,4 @@
+
 <div class="card-post"
     data-tags="{{ range .Params.tags }}{{ . | urlize}} {{ end }}">
     {{ $image := (partial "funcs/get_image.html" .) }}
