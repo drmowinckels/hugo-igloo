@@ -71,6 +71,10 @@
     {{- if $section.Params.citation | default true -}}
         {{ partial "citation.html" . }}
     {{- end -}}
+
+    {{- if $section.Params.related | default false -}}
+        {{ partial "carousel.html" .}}
+    {{- end -}}
     {{- end -}}
 
     {{ partial "pagination.html" . }}
