@@ -6,7 +6,7 @@
   </div>
 {{ end }}
   <div class="timeline-dot"></div>
-  <div class="timeline-content ">
+  <div class="timeline-content">
       {{ $isRemote := strings.HasPrefix .image "http" }}
       {{ $img := newScratch }}
 
@@ -29,7 +29,9 @@
         ></div>
       {{ end }}
     <h2>{{ .title | markdownify | safeHTML }}</h2>
-    {{ with .summary }}<p>{{ . | markdownify | safeHTML  }}</p>{{ end }}
+    {{ with .summary }}
+      <p>{{ . | markdownify | safeHTML  }}</p>
+    {{ end }}
     <div class="uk-flex uk-flex-between uk-flex-middle ">
       {{ if .url }}
         <a class="btn-more" href="{{ .url }}">

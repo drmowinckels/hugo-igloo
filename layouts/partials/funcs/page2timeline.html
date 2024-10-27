@@ -5,4 +5,7 @@
     {{- end -}}
 {{- end -}}
 
+{{- $params = $params | merge (dict "url" .Permalink) -}}
+{{- $params = $params | merge (dict "button" "Read") -}}
+
 {{- return $params -}}
