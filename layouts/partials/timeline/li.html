@@ -14,13 +14,11 @@
         {{ $img.Set "image" (resources.GetRemote .image) }}
       {{ else }}
       {{ $imgs := printf "**%s" .image }}
-      <p>{{.Resources.ByType "image"}}</p>
       {{ $localImage := .Resources.GetMatch $imgs }}
         {{ if $localImage }}
-            <p>Local Image Found: {{ $localImage.Name }}</p>
             {{ $img.Set "image" $localImage }}
         {{ else }}
-            <p>No Local Image Found</p>
+          {{ warnf "No local image found: %s" $imgs }}
         {{ end }}
       {{ end }}
       {{ $image := $img.Get "image" }}
