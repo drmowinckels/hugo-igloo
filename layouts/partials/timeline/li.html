@@ -6,7 +6,7 @@
   </div>
 {{ end }}
   <div class="timeline-dot"></div>
-  <div class="timeline-content ">
+  <div class="timeline-content">
       {{ $isRemote := strings.HasPrefix .image "http" }}
       {{ $img := newScratch }}
 
@@ -14,13 +14,11 @@
         {{ $img.Set "image" (resources.GetRemote .image) }}
       {{ else }}
       {{ $imgs := printf "**%s" .image }}
-      <p>{{.Resources.ByType "image"}}</p>
       {{ $localImage := .Resources.GetMatch $imgs }}
         {{ if $localImage }}
-            <p>Local Image Found: {{ $localImage.Name }}</p>
             {{ $img.Set "image" $localImage }}
         {{ else }}
-            <p>No Local Image Found</p>
+          {{ warnf "No local image found: %s" $imgs }}
         {{ end }}
       {{ end }}
       {{ $image := $img.Get "image" }}
@@ -31,7 +29,9 @@
         ></div>
       {{ end }}
     <h2>{{ .title | markdownify | safeHTML }}</h2>
-    {{ with .summary }}<p>{{ . | markdownify | safeHTML  }}</p>{{ end }}
+    {{ with .summary }}
+      <p>{{ . | markdownify | safeHTML  }}</p>
+    {{ end }}
     <div class="uk-flex uk-flex-between uk-flex-middle ">
       {{ if .url }}
         <a class="btn-more" href="{{ .url }}">

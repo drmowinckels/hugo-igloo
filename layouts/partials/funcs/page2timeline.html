@@ -1,0 +1,11 @@
+{{- $params := dict -}}
+{{- range $key, $value := .Params -}}
+    {{- if in (slice "title" "categories" "tags" "summary" "image" "date") $key -}}
+        {{- $params = $params | merge (dict $key $value) -}}
+    {{- end -}}
+{{- end -}}
+
+{{- $params = $params | merge (dict "url" .Permalink) -}}
+{{- $params = $params | merge (dict "button" "Read") -}}
+
+{{- return $params -}}
