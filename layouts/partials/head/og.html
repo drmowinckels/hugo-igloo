@@ -1,15 +1,19 @@
 
+{{ $summary := .Params.seo | default .Summary}}
+
+<meta prefix="og: http://ogp.me/ns#" property="og:description" content="{{ if not .IsHome }}{{ .Params.seo  | markdownify | safeHTML }}{{else}}{{ site.Params.subtitle  | markdownify | safeHTML }}{{end}}">
+
 <!-- General Meta Tags -->
 <meta prefix="og: http://ogp.me/ns#" property="og:url" content="{{ .RelPermalink | absURL }}">
 <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website">
 <meta prefix="og: http://ogp.me/ns#" property="og:title" content="{{ if not .IsHome }}{{ .Title  | markdownify | safeHTML }} - {{ end }}{{ site.Title | markdownify | safeHTML  }}">
-<meta prefix="og: http://ogp.me/ns#" property="og:description" content="{{ if not .IsHome }}{{.Summary | markdownify | safeHTML }}{{else}}{{ site.Params.subtitle  | markdownify | safeHTML }}{{end}}">
+<meta prefix="og: http://ogp.me/ns#" property="og:description" content="{{ if not .IsHome }}{{ $summary | markdownify | safeHTML }}{{else}}{{ site.Params.subtitle  | markdownify | safeHTML }}{{end}}">
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
 <meta property="twitter:domain" content="{{ .RelPermalink | absURL }}">
 <meta name="twitter:title" content="Igloo">
-<meta name="twitter:description" content="{{ if not .IsHome }}{{.Summary | markdownify | safeHTML }}{{else}}{{ site.Params.subtitle  | markdownify | safeHTML }}{{end}}">
+<meta name="twitter:description" content="{{ if not .IsHome }}{{ $summary | markdownify | safeHTML }}{{else}}{{ site.Params.subtitle  | markdownify | safeHTML }}{{end}}">
 
 {{ $img := (partial "funcs/get_image.html" .) }}
 {{ with $img }}
