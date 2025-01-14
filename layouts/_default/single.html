@@ -4,7 +4,7 @@
             <!-- Image Section -->
             {{ $img := (partial "funcs/get_image.html" .) }}
             <div class="uk-width-1-4@s">
-              <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}" class="uk-border-rounded">
+              <img src="{{ $img.RelPermalink }}" alt="{{ .Params.image_alt | default .Title }}" class="uk-border-rounded">
               {{ with .Params.social_media }}
                   <div class="uk-text-right">
                       {{ range . }}
@@ -73,22 +73,24 @@
     {{- end -}}
 
     {{- if $section.Params.related | default false -}}
-    <div class="uk-section">
-        
-        <div class="uk-position-relative uk-visible-toggle uk-light timeline-horizontal" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
+    <div class="section" style="height: auto !important;">
+        <div class="uk-section">
+            
+            <div class="uk-position-relative uk-visible-toggle uk-light timeline-horizontal" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
 
-            <ul class="uk-slider-items uk-grid" >
-                {{ range .Site.RegularPages.Related .  | first  5 }}
-                {{ $params := (partial "funcs/page2timeline.html" .) }}
-                    <li class="uk-width-3-4" >
-                        {{ partial "timeline/horiz-li.html" $params }}
-                    </li>
-                {{ end }}
-            </ul>
-        
-            <a class="uk-position-center-left uk-position-small slide-nav-primary" href uk-slidenav-previous uk-slider-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small slide-nav-primary" href uk-slidenav-next uk-slider-item="next"></a>
-        
+                <ul class="uk-slider-items uk-grid" >
+                    {{ range .Site.RegularPages.Related .  | first  5 }}
+                    {{ $params := (partial "funcs/page2timeline.html" .) }}
+                        <li class="uk-width-3-4" >
+                            {{ partial "timeline/horiz-li.html" $params }}
+                        </li>
+                    {{ end }}
+                </ul>
+            
+                <a class="uk-position-center-left uk-position-small slide-nav-primary" href uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small slide-nav-primary" href uk-slidenav-next uk-slider-item="next"></a>
+            
+            </div>
         </div>
     </div>
     {{- end -}}
