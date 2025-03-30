@@ -1,0 +1,17 @@
+<!-- highlight.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/{{ .Site.Params.aesthetics.highightStyle}}.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<!-- uikitjs -->
+{{ with resources.Get "uikit/dist/js/uikit.min.js" }}
+    <script src="{{ .RelPermalink }}"></script>
+{{ end }}
+{{ with resources.Get "uikit/dist/js/uikit-icons.min.js" }}
+    <script src="{{ .RelPermalink }}"></script>
+{{ end }}
+
+
+{{ with Site.Params.clicky }}
+    <script async data-id="{{ . }}" src="//static.getclicky.com/js"></script>
+{{ end }}
