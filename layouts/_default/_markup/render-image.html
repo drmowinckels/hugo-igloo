@@ -1,5 +1,7 @@
 
 <div class="uk-thumbnail">
     <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
-    <div class="uk-thumbnail-caption uk-text-small">{{ .Text }}</div>
+    <div class="uk-thumbnail-caption uk-text-small uk-text-muted">
+        {{ .Text }}
+    </div>
 </div>
