@@ -1,7 +1,13 @@
-
-<div class="uk-thumbnail">
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
-    <div class="uk-thumbnail-caption uk-text-small uk-text-muted">
-        {{ .Text }}
-    </div>
-</div>
+{{- if .IsBlock -}}
+    <figure class="uk-thumbnail">
+        <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
+        <figcaption class="uk-thumbnail-caption uk-text-small uk-text-muted">
+            {{ .Title }}
+        </figcaption>
+    </figure>
+{{- else -}}
+    <img class="uk-thumbnail" src="{{ .Destination | safeURL }}"
+        {{- with .PlainText }} alt="{{ . }}"{{ end -}}
+        {{- with .Title }} title="{{ . }}"{{ end -}}
+    >
+{{- end -}}

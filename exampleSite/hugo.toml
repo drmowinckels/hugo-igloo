@@ -128,3 +128,10 @@ canonifyurls            = true   # Turns relative urls into absolutet]
         icon  = "researchgate" # icon name without the 'fa-'
         icon_pack = "fab"
 
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+        unsafe = true
+        [markup.goldmark.parser]
+        wrapStandAloneImageWithinParagraph = false
