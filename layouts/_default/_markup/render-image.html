@@ -1,6 +1,18 @@
+{{- if .IsBlock -}}
 <figure class="uk-thumbnail">
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
-    <figcaption class="uk-thumbnail-caption uk-text-small uk-text-muted">
-        {{ .Title }}
-    </figcaption>
-</figure>
+        <img src="{{ .Destination | safeURL }}" 
+        {{ if .Text }} alt="{{ .Text }}" {{ end }}>
+        {{ if .Text }}
+        <figcaption class="uk-thumbnail-caption uk-text-small uk-text-muted" aria-hidden="true">
+            {{ .Title | default .Text }}
+        </figcaption>
+        {{ end }}
+    </figure>
+{{- else -}}
+    <img class="uk-thumbnail" src="{{ .Destination | safeURL }}"
+    {{ if .Text }}
+         alt="{{ .Text }}"
+        title="{{ .Title | default .Text }}"
+    {{ end }}
+    >
+{{- end -}}
