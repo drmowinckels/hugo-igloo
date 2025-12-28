@@ -1,54 +1,55 @@
 {{ define "main" }}
-    <article class="uk-article">
-        <div class="uk-grid uk-flex-top" uk-grid>
-            <!-- Image Section -->
-            {{ $img := (partial "funcs/get_image.html" .) }}
-            <div class="uk-width-1-4@s">
-              <img src="{{ $img.RelPermalink }}" alt="{{ .Params.image_alt | default .Title }}" class="uk-border-rounded">
-              {{ with .Params.social_media }}
-                  <div class="uk-text-right">
-                      {{ range . }}
-                          {{ partial "social-media.html" . }}
-                      {{ end }}
-                  </div>
-              {{ end }}
+<article class="uk-article">
+    <div class="uk-grid uk-flex-top" uk-grid>
+        <!-- Image Section -->
+        {{ $img := (partial "funcs/get_image.html" .) }}
+        <div class="uk-width-1-4@s">
+            <img src="{{ $img.RelPermalink }}" alt="{{ .Params.image_alt | default .Title }}" class="uk-border-rounded">
+            {{ with .Params.social_media }}
+            <div class="uk-text-right">
+                {{ range . }}
+                {{ partial "social-media.html" . }}
+                {{ end }}
             </div>
-
-        <div class="uk-width-3-4@s">
-        <h1 class="uk-article-title">{{ .Title  | markdownify | safeHTML }}</h1>
-        {{ with .Params.subtitle }}<h3 class="uk-heading-line">
-            <span>{{. | markdownify | safeHTML }}</span></h3>
-        {{ end }}
-        <div class="uk-border-top uk-article-meta uk-flex uk-flex-center uk-flex-between">
-            <h3 class="uk-margin-top-small">
-                {{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}
-            </h3>
-            {{ if and (gt .WordCount 400 ) (.Params.toc) }}
-            <button class="uk-button uk-button-default uk-margin-small-right uk-position-z-index"
-                uk-sticky="offset: 90; show-on-up: true; animation: uk-animation-slide-top"
-                type="button" uk-toggle="target: #offcanvas-reveal">
-                    Table of Content
-                </button>
-            {{ end }}
-
-            {{ with .GetTerms "tags" }}
-                <div class="uk-flex uk-flex-wrap uk-flex-right">
-                    {{ range . }}
-                        {{ $url := .RelPermalink }}
-                        {{ $lastFolder := last 2 (split $url "/") }}
-                        {{ $lastFolder := index $lastFolder 0 }}
-                        {{ $sect := index .Site.Taxonomies .Section }}
-                        {{ $tag := slice (index $sect $lastFolder ) }}
-                        <div class="uk-card uk-margin-left uk-margin-bottom">
-                            <a href="{{ .RelPermalink }}" class="uk-label uk-label-secondary tags" >
-                                {{ .LinkTitle }}
-                            </a>
-                        </div>
-                    {{ end }}
-                </div>
             {{ end }}
         </div>
-    </div>
+
+        <div class="uk-width-3-4@s">
+            <h1 class="uk-article-title">{{ .Title | markdownify | safeHTML }}</h1>
+            {{ with .Params.subtitle }}<h3 class="uk-heading-line">
+                <span>{{. | markdownify | safeHTML }}</span>
+            </h3>
+            {{ end }}
+            <div class="uk-border-top uk-article-meta uk-flex uk-flex-center uk-flex-between">
+                <h3 class="uk-margin-top-small">
+                    {{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}
+                </h3>
+                {{ if and (gt .WordCount 400 ) (.Params.toc | default true) }}
+                <button class="uk-button uk-button-default uk-margin-small-right uk-position-z-index"
+                    uk-sticky="offset: 90; show-on-up: true; animation: uk-animation-slide-top" type="button"
+                    uk-toggle="target: #offcanvas-reveal">
+                    Table of Content
+                </button>
+                {{ end }}
+
+                {{ with .GetTerms "tags" }}
+                <div class="uk-flex uk-flex-wrap uk-flex-right">
+                    {{ range . }}
+                    {{ $url := .RelPermalink }}
+                    {{ $lastFolder := last 2 (split $url "/") }}
+                    {{ $lastFolder := index $lastFolder 0 }}
+                    {{ $sect := index .Site.Taxonomies .Section }}
+                    {{ $tag := slice (index $sect $lastFolder ) }}
+                    <div class="uk-card uk-margin-left uk-margin-bottom">
+                        <a href="{{ .RelPermalink }}" class="uk-label uk-label-secondary tags">
+                            {{ .LinkTitle }}
+                        </a>
+                    </div>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
         <div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true">
             <div class="uk-offcanvas-bar">
                 <button class="uk-offcanvas-close" type="button" uk-close></button>
@@ -57,47 +58,50 @@
             </div>
         </div>
         {{ with .Params.summary }}
-            <p class="uk-text-lead">{{ .| markdownify | safeHTML }}</p>
+        <p class="uk-text-lead">{{ .| markdownify | safeHTML }}</p>
         {{ end }}
         <div class="uk-markdown uk-width">
             {{ .Content }}
         </div>
-    </article>
+</article>
 
-    {{- $currentSection := .Section -}}
-    {{- $section := .Site.GetPage "section" $currentSection -}}
+{{- $currentSection := .Section -}}
+{{- $section := .Site.GetPage "section" $currentSection -}}
 
-    {{- if $section -}}
-    {{- if $section.Params.citation | default true -}}
-        {{ partial "citation.html" . }}
-    {{- end -}}
+{{- if $section -}}
+{{- if $section.Params.citation | default true -}}
+{{ partial "citation.html" . }}
+{{- end -}}
 
-    {{- if $section.Params.related | default false -}}
-    <div class="section" style="height: auto !important;">
-        <div class="uk-section">
-            
-            <div class="uk-position-relative uk-visible-toggle uk-light timeline-horizontal" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
+{{- if $section.Params.related | default false -}}
+<div class="section" style="height: auto !important;">
+    <div class="uk-section">
 
-                <ul class="uk-slider-items uk-grid" >
-                    {{ range .Site.RegularPages.Related .  | first  5 }}
-                    {{ $params := (partial "funcs/page2timeline.html" .) }}
-                        <li class="uk-width-3-4" >
-                            {{ partial "timeline/horiz-li.html" $params }}
-                        </li>
-                    {{ end }}
-                </ul>
-            
-                <a class="uk-position-center-left uk-position-small slide-nav-primary" href uk-slidenav-previous uk-slider-item="previous"></a>
-                <a class="uk-position-center-right uk-position-small slide-nav-primary" href uk-slidenav-next uk-slider-item="next"></a>
-            
-            </div>
+        <div class="uk-position-relative uk-visible-toggle uk-light timeline-horizontal" tabindex="-1"
+            uk-slider="clsActivated: uk-transition-active; center: true">
+
+            <ul class="uk-slider-items uk-grid">
+                {{ range .Site.RegularPages.Related . | first 5 }}
+                {{ $params := (partial "funcs/page2timeline.html" .) }}
+                <li class="uk-width-3-4">
+                    {{ partial "timeline/horiz-li.html" $params }}
+                </li>
+                {{ end }}
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small slide-nav-primary" href uk-slidenav-previous
+                uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small slide-nav-primary" href uk-slidenav-next
+                uk-slider-item="next"></a>
+
         </div>
     </div>
-    {{- end -}}
-    {{- end -}}
+</div>
+{{- end -}}
+{{- end -}}
 
-    <!-- End post content -->
-    {{ if $section.Params.comments | default true }}
-        {{ partial "comments.html" . }}
-    {{ end }}
+<!-- End post content -->
+{{ if $section.Params.comments | default true }}
+{{ partial "comments.html" . }}
+{{ end }}
 {{ end }}
