@@ -4,7 +4,7 @@
             <div class="uk-grid" uk-grid>
                 <div class="uk-width-1-2@m">
                     {{ with .Site.Params.footerSection }}
-                      <h3>{{ .title  | markdownify | safeHTML }}</h3>
+                      <h3><i class="fa-regular fa-copyright"></i> {{ now.Year }} Athanasia Mo Mowinckel</h3>
                       <p>{{ .content | markdownify | safeHTML }}</p>
                     {{ end }}
                   </div>
