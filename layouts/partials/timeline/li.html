@@ -7,26 +7,28 @@
 {{ end }}
   <div class="timeline-dot"></div>
   <div class="timeline-content">
-      {{ $isRemote := strings.HasPrefix .image "http" }}
+      {{ with .image }}
+      {{ $isRemote := strings.HasPrefix . "http" }}
       {{ $img := newScratch }}
 
       {{ if $isRemote }}
-        {{ $img.Set "image" (resources.GetRemote .image) }}
+        {{ $img.Set "image" (resources.GetRemote .) }}
       {{ else }}
-      {{ $imgs := printf "**%s" .image }}
-      {{ $localImage := .Resources.GetMatch $imgs }}
-        {{ if $localImage }}
-            {{ $img.Set "image" $localImage }}
+        {{ $imgs := printf "**%s" . }}
+        {{ with $.Resources.GetMatch $imgs }}
+          {{ $img.Set "image" . }}
         {{ else }}
           {{ warnf "No local image found: %s" $imgs }}
         {{ end }}
       {{ end }}
-      {{ $image := $img.Get "image" }}
-      {{ $image := $image.Process "fit 400x400" }}
-      {{ with $image }}
-        <div class="timeline-img" 
+      {{ with $img.Get "image" }}
+        {{ $processed := .Process "fit 400x400" }}
+        {{ with $processed }}
+        <div class="timeline-img"
             style="background: url('{{ .Permalink }}') center no-repeat;"
         ></div>
+        {{ end }}
+      {{ end }}
       {{ end }}
     <h2>{{ .title | markdownify | safeHTML }}</h2>
     {{ with .summary }}
@@ -42,14 +44,10 @@
       {{ with .tags }}
         <span class="uk-text-right">
           {{ range . }}
-           {{ $tag := lower . | urlize }}
-            {{ with $.Site.Taxonomies.tags.Get $tag }}
-              <a href="{{ $.Site.BaseURL }}tags/{{ . }}" class="uk-label timeline-tags">
-                {{ .Name }}
-              </a>
-            {{ else }}
-                <div class="uk-label timeline-tags">{{ $tag }}</div>
-            {{ end }}
+            {{ $tag := . | urlize }}
+            <a href="{{ $.Site.BaseURL }}tags/{{ $tag }}/" class="uk-label timeline-tags">
+              {{ . }}
+            </a>
           {{ end }}
         </span>
       {{ end }}

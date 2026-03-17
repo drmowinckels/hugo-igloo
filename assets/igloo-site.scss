@@ -616,3 +616,63 @@ blockquote {
 .btn-more{
   background-color: $inverse !important;
 }
+
+.callout {
+  border-left: 4px solid;
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  background-color: $global-muted-background;
+
+  .callout-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .callout-body {
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    blockquote {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &.callout-warning {
+    border-left-color: #e6a117;
+    background-color: rgba(230, 161, 23, 0.08);
+
+    .callout-title {
+      color: #b5800f;
+    }
+  }
+
+  &.callout-important {
+    border-left-color: #d33;
+    background-color: rgba(221, 51, 51, 0.08);
+
+    .callout-title {
+      color: #c22;
+    }
+  }
+
+  &.callout-note {
+    border-left-color: #0072B2;
+    background-color: rgba(0, 114, 178, 0.08);
+
+    .callout-title {
+      color: #0072B2;
+    }
+  }
+
+  &.callout-tip {
+    border-left-color: #198754;
+    background-color: rgba(25, 135, 84, 0.08);
+
+    .callout-title {
+      color: #198754;
+    }
+  }
+}

@@ -4,9 +4,10 @@
     {{ with .Params.color }}style="background-color: {{.}};" {{ end }}
     >
         <div class="uk-flex-last@s uk-card-media-right uk-cover-container ">
-            {{ $image := .Resources.Get .Params.image }}
-            {{ $image := $image.Resize "x660" }}
-            <img src="{{ $image.Permalink }}" alt="" uk-cover>
+            {{ with .Resources.Get .Params.image }}
+            {{ $resized := .Resize "x660" }}
+            <img src="{{ $resized.Permalink }}" alt="" uk-cover>
+            {{ end }}
             <canvas height="330"></canvas>
         </div>
         <div>

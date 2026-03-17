@@ -13,15 +13,20 @@
 {{ end }}
 
 {{ $image := $img.Get "image" }}
-{{ $isRemote := strings.HasPrefix $image "http" }}
+{{ $isRemote := strings.HasPrefix (printf "%s" $image) "http" }}
 
 {{ if $isRemote }}
-  {{ $img.Set "img" (resources.GetRemote $image) }}
+  {{ $img.Set "img" (resources.GetRemote (printf "%s" $image)) }}
 {{ else if eq ($img.Get "func") "assets" }}
   {{ $img.Set "img" (resources.Get $image) }}
 {{ else if eq ($img.Get "func") "local" }}
-  {{ $localImagePath := printf "**%s"  $image }}
-  {{ $img.Set "img" (.Resources.GetMatch $localImagePath) }}
+  {{ $localImagePath := printf "**%s" $image }}
+  {{ with .Resources.GetMatch $localImagePath }}
+    {{ $img.Set "img" . }}
+  {{ else }}
+    {{ warnf "No local image found: %s" $localImagePath }}
+    {{ $img.Set "img" (resources.Get $.Site.Params.aesthetics.logo) }}
+  {{ end }}
 {{ end }}
 
 {{ return ($img.Get "img") }}

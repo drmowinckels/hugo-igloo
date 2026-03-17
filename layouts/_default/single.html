@@ -4,7 +4,9 @@
         <!-- Image Section -->
         {{ $img := (partial "funcs/get_image.html" .) }}
         <div class="uk-width-1-4@s">
-            <img src="{{ $img.RelPermalink }}" alt="{{ .Params.image_alt | default .Title }}" class="uk-border-rounded">
+            {{ with $img }}
+            <img src="{{ .RelPermalink }}" alt="{{ $.Params.image_alt | default $.Title }}" class="uk-border-rounded">
+            {{ end }}
             {{ with .Params.social_media }}
             <div class="uk-text-right">
                 {{ range . }}
